@@ -1,8 +1,15 @@
 # Directories
 __pycache__/
+**/__pycache__/
 .*/
 **/.*/
 
-
 # temporary test files
 test.*
+**/test.*
+
+# Exclude
+!.git/
+!.gitignore
+!.gitattributes
+
