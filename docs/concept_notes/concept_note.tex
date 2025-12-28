@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, margin=0.6in]{geometry}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\begin{document}
+
+%-----------------------------------------------------------------%
+
+\section*{Project Title}
+DocuMind: Intelligent Document Analysis and Question-Answering System
+
+%-----------------------------------------------------------------%
+
+\section*{Proposed Cluster}
+\begin{itemize}
+    \item AIML
+    \item BD
+    \item ANLP
+\end{itemize}
+
+%-----------------------------------------------------------------%
+
+\section*{Team Members}
+\begin{itemize}
+    \item Sachita Aryal (079BCT0)
+    \item Sujal Pandit (079BCT084)
+    \item Sujan Bhattarai (079BCT086)
+\end{itemize}
+
+%-----------------------------------------------------------------%
+
+\section*{Project Overview}
+In the digital world we live in today, vast amounts of information whether reports, research papers, or policy files are stored and accessed in the form of documents such as PDFs, DOCX, and other computer-based text formats. Although these documents contain valuable knowledge, extracting relevant information efficiently remains a significant challenge. Traditional search methods rely on keyword matching and lack contextual understanding, making extraction time-consuming and inefficient for large document collections. This problem affects everyone who deals with numerous documents frequently, from students and researchers to professionals and organizations that need quick and accurate access to information without reading documents end-to-end.
+
+The proposed system, DocuMind: Intelligent Document Analysis and Question-Answering System, addresses this challenge by developing a cross-platform desktop application. Users can load a single document or a collection of documents and interact with them using natural language queries. The system retrieves relevant information from loaded documents and generates context-aware answers with source citations. All document processing and embedding generation occur locally, ensuring user documents remain private and secure, while answer generation leverages cloud-based inference for optimal performance on standard hardware.
+
+DocuMind employs pre-trained transformer models and Retrieval-Augmented Generation (RAG) to combine semantic document retrieval with answer generation. A vector-based database stores document embeddings locally, enabling efficient retrieval from hundreds of documents if required, while precomputing embeddings allows a CPU-only system to operate effectively.
+
+The project focuses on building a working prototype of an intelligent document question-answering system. The primary emphasis is on understanding and applying the concepts of NLP, embedding-based retrieval, and AI-driven generation, rather than achieving state-of-the-art performance. The system serves as a learning tool to explore AI/ML workflows, experiment with RAG pipelines, and develop software engineering skills, providing practical insights into building real-world AI applications.
+
+%-------------------------------------------------------------------%
+\newpage
+\section*{Motivation}
+As students, we spend a significant amount of time reading and searching through large volumes of reports, unstructured text, and research papers to find specific information. This process is inefficient, time-consuming, and often mentally exhausting, especially when the documents are very large or complex. Important details are frequently buried deep inside pages of text, making simple keyword search insufficient and forcing repeated manual reading.
+
+This creates a clear need for an intelligent system that can understand documents and provide precise, context-aware interaction to reduce information overload and improve productivity. By building an intelligent document question-answering prototype, we aim to explore how modern NLP techniques and retrieval-based AI systems can transform static documents into more accessible knowledge sources, while gaining practical experience in real-world AI application development.
+
+%-----------------------------------------------------------------%
+
+\section*{Implementation Plan}
+
+    \subsection*{Phase 1: Project Setup and Environment Configuration}
+        \begin{itemize}
+            \item Set up development environment and project structure
+            \item Install required dependencies and packages
+            \item Project structurization and Git configuration
+        \end{itemize}
+
+    \subsection*{Phase 2: Desktop Application UI and PDF Viewer Setup}
+        \begin{itemize}
+            \item Build the main application interface
+            \item Implement functional PDF viewer with basic navigation functionalities
+            \item Create document management system
+            \item Testing and validation of the application
+        \end{itemize}
+
+    \subsection*{Phase 3: Document Processing Pipeline}
+        \begin{itemize}
+            \item Extract text from uploaded documents
+            \item Clean and preprocess extracted text
+            \item Split text into manageable chunks with metadata
+            \item Create processing pipeline
+            \item Test and validate for various document types
+        \end{itemize}
+
+    \subsection*{Phase 4: Embedding Generation and Vector Database}
+        \begin{itemize}
+            \item Generate vector embeddings for document chunks
+            \item Set up local vector database
+            \item Implement similarity search
+            \item Optimize and test database operations
+        \end{itemize}
+
+    \subsection*{Phase 5: Query Processing and Retrieval Module}
+        \begin{itemize}
+            \item Build query processing module
+            \item Implement retrieval mechanism to perform similarity search in vector database and retrieve relevant chunks
+            \item Develop ranking and filtering
+            \item Context preparation and implementation of retrieval evaluation
+            \item Testing and validation for various edge cases
+        \end{itemize}
+
+    \subsection*{Phase 6: Answer Generation with LLM Integration}
+        \begin{itemize}
+            \item Integrate an LLM via API call for answer generation
+            \item Design effective prompts for context-aware answers
+            \item Implementation of source citation mechanism
+            \item Handle conversation history for follow-up questions
+            \item Testing and optimization of response quality
+        \end{itemize}
+    
+    \subsection*{Phase 7: Full System Integration and Chat Interface}
+        \begin{itemize}
+            \item Connect all modules into a cohesive system
+            \item Complete chat interface implementation
+            \item Implement end-to-end Q\&A workflows
+            \item Final UI polish and features as needed
+        \end{itemize}
+
+    \subsection*{Phase 8: Testing, Optimization and Documentation}
+        \begin{itemize}
+            \item End-to-end testing of all features
+            \item Performance optimization
+            \item Complete documentation
+            \item Preparation for demonstration
+        \end{itemize}
+
+%-----------------------------------------------------------------%
+\newpage
+\section*{Use Cases}
+Application areas \& scope of the proposed project: The system is targeted to be applicable where dealing with large volumes of documents is required.
+\begin{enumerate}
+    \item \textbf{Students and Researchers:}
+    \begin{itemize}
+        \item Quickly query textbooks, lecture notes, and research papers for the required information without needing to read end-to-end.
+    \end{itemize}
+    \item \textbf{Legal Professionals:}
+    \begin{itemize}
+        \item Analyze contracts, agreements, or case files efficiently.
+        \item Identify specific clauses or compare terms across multiple documents.
+    \end{itemize}
+    \item \textbf{Healthcare Professionals:}
+    \begin{itemize}
+        \item Query medical literature and guidelines efficiently.
+        \item Extract relevant information from patient reports and research papers.
+        \item Compare procedure documentation and clinical protocols.
+    \end{itemize}
+    \item \textbf{Technical Teams:}
+    \begin{itemize}
+        \item Search through product manuals or troubleshooting guides.
+        \item Reduce time to resolve support tickets by retrieving precise information.
+    \end{itemize}
+
+\end{enumerate}
+
+%-----------------------------------------------------------------%
+
+\section*{Resources Required}
+Computing resources and hardware requirements:
+\begin{itemize}
+
+    \item \textbf{Personal computer:} Minimum 8 GB RAM and multicore CPU
+    \item \textbf{Local storage:} 20-30 GB for documents, embeddings, and application data
+    \item \textbf{Vector database:} Local lightweight database to store document embeddings
+    \item \textbf{NLP frameworks:} Pre-trained transformer models (CPU compatible)
+    \item \textbf{LLM API:} Groq API (free tier) for answer generation
+    \item \textbf{Internet connection:} Required for answer generation via API\\
+    \textit{While answer generation requires internet connectivity, all document processing, text extraction, embedding generation, and retrieval operations are performed locally.}
+    \item \textbf{Development Tools:} Python, IDE (VS Code, PyCharm), Git
+    \item \textbf{Optional GPU:} For faster embedding generation and model inference
+    \item \textbf{References:} Relevant research papers, official framework documentation, Hugging Face guides, and reputable online tutorials
+
+\end{itemize}
+
+%-----------------------------------------------------------------%
+
+\end{document}
