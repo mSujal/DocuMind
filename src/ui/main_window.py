@@ -5,6 +5,7 @@ import os
 from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel
 from PyQt5.QtCore import Qt
 from src.ui.pdf_viewer import PDF_viewer
+from src.document_processing.pdf_extractor import Text_Extractor
 
 
 class MainWindow(QWidget):
@@ -124,6 +125,7 @@ class MainWindow(QWidget):
         """)
         layout.addWidget(title)
 
+        # if (config.CURRENT_PDF == None):
         self.chat_label = QLabel('Load a file first')
         self.chat_label.setStyleSheet(f"""
             font-size: {config.SIDEBAR_TITLE_FONT_SIZE};
@@ -142,6 +144,8 @@ class MainWindow(QWidget):
         Args:
             pdf_path (str): path to the pdf file
         """
+        config.CURRENT_PDF = pdf_path 
+        #print(config.CURRENT_PDF)
         filename = os.path.basename(pdf_path)
         filesize = os.path.getsize(pdf_path)
         # need to implement the pdf loading here
@@ -159,7 +163,9 @@ class MainWindow(QWidget):
         pdf_viewer = PDF_viewer(pdf_path, parent=self.center_area)
         self.center_area.layout().addWidget(pdf_viewer)
 
-        self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
+        text_ext = Text_Extractor(config.CURRENT_PDF)
+        self.chat_label.setText(text_ext.print_md())
+        #self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
 
  
     def on_button_clicked(self):

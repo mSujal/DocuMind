@@ -12,9 +12,13 @@ SIDEBAR_TITLE_PADDING= '10px'
 SIDEBAR_PADDING= '10px'
 SIDEBAR_MIN_WIDTH= 200
 SIDEBAR_MAX_WIDTH= 300
-SIDEBAR_FONT_SIZE= '14px'
+SIDEBAR_FONT_SIZE= '10px'
 SIDEBAR_FONT_PADDING= '20px'
 
 # Pdf area
 CENTER_BG= 'white' # placeholder, need to change 
 
+####################################################
+# STATE MANAGEMENT
+####################################################
+CURRENT_PDF = None # holds the currently loaded pdf 

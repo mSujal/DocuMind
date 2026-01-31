@@ -1,6 +1,7 @@
 """Main entry point for the application"""
 
 import sys
+import config
 from PyQt5.QtWidgets import QApplication
 from src.app import App
 
