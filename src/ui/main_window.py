@@ -4,6 +4,8 @@ import config
 import os
 from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel
 from PyQt5.QtCore import Qt
+from src.ui.pdf_viewer import PDF_viewer
+
 
 class MainWindow(QWidget):
     """
@@ -97,6 +99,7 @@ class MainWindow(QWidget):
 
         center.setLayout(layout)
         return center
+
     
     def create_right_sidebar(self):
         """Creates and returns right sidebar"""
@@ -142,11 +145,19 @@ class MainWindow(QWidget):
         filename = os.path.basename(pdf_path)
         filesize = os.path.getsize(pdf_path)
         # need to implement the pdf loading here
-        self.pdf_label.setText(
-            f"Loaded ˙◡˙.✦ ݁˖\n\n" 
-            f"file: {filename} \n\n"
-            f"{pdf_path}"
-        )
+        # self.pdf_label.setText(
+        #     f"Loaded ˙◡˙.✦ ݁˖\n\n" 
+        #     f"file: {filename} \n\n"
+        #     f"{pdf_path}"
+        # )
+        if self.pdf_label:
+            self.center_area.layout().removeWidget(self.pdf_label)
+            self.pdf_label.deleteLater()
+            self.pdf_label = None
+
+        # create and add PDF viewer to center area
+        pdf_viewer = PDF_viewer(pdf_path, parent=self.center_area)
+        self.center_area.layout().addWidget(pdf_viewer)
 
         self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
 
