@@ -19,7 +19,7 @@ class Text_Extractor:
         self.pdf_path = pdf_path
 
     def process(self):
-        self.md_text = pymupdf4llm.to_markdown(pdf_path).replace("**", "")
+        self.md_text = pymupdf4llm.to_markdown(self.pdf_path).replace("**", "")
         return self.md_text
 
     def get_mdtext(self):
@@ -31,14 +31,14 @@ class Chunker:
     Chunk the extracted markdown file based on headers and subheaders in markdown text
     """
     def __init__(self):
-        headers = [
-            ("#", "header")
-            ("##", "subheader")
-            ("###", "subsubheader")
+        self.headers = [
+            ("#", "header"),
+            ("##", "subheader"),
+            ("###", "subsubheader"),
         ]
 
     def process(self, md_text):
-        md_splitter = MarkdownHeaderTextSplitter(headers)
+        md_splitter = MarkdownHeaderTextSplitter(self.headers)
         docs = md_splitter.split_text(md_text)
 
         chunk_splitter = RecursiveCharacterTextSplitter(

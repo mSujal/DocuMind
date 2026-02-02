@@ -1,10 +1,15 @@
 from src.document_processing.processors import Text_Extractor, Chunker
 
-def run_pipeline(pdf_path):
-    extractor = Text_Extractor(pdf_path=pdf_path)
-    chunker = Chunker
+class ProcessingPipeline():
 
-    md_Text = extractor.process()
-    chunks = chunk.process(md_Text)
+    def __init__(self, pdf_path):
+        self.pdf_path = pdf_path
 
-    print(chunks)
+    def run_pipeline(self):
+        extractor = Text_Extractor(pdf_path=self.pdf_path)
+        chunker = Chunker()
+
+        md_Text = extractor.process()
+        chunks = chunker.process(md_Text)
+
+        return chunks 

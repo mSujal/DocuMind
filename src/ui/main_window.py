@@ -5,7 +5,7 @@ import os
 from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel
 from PyQt5.QtCore import Qt
 from src.ui.pdf_viewer import PDF_viewer
-from src.document_processing.pdf_extractor import Text_Extractor
+from src.document_processing.pipeline import ProcessingPipeline
 
 
 class MainWindow(QWidget):
@@ -163,8 +163,11 @@ class MainWindow(QWidget):
         pdf_viewer = PDF_viewer(pdf_path, parent=self.center_area)
         self.center_area.layout().addWidget(pdf_viewer)
 
-        text_ext = Text_Extractor(config.CURRENT_PDF)
-        self.chat_label.setText(text_ext.print_md())
+        doc_processing = ProcessingPipeline(pdf_path)
+        chunks = doc_processing.run_pipeline()
+        if chunks:
+            self.chat_label.setText("Chunked")
+            
         #self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
 
  
