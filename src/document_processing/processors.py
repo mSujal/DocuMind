@@ -7,9 +7,11 @@ Modules for document processing
 4. Chromastore
 """
 
-import pymupdf4llm
-from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 import config
+
+import pymupdf4llm # text extractor
+from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter # text_splitter
+# from sentence_transformers import SentenceTransformer
 
 class Text_Extractor:
     """
@@ -42,8 +44,8 @@ class Chunker:
         docs = md_splitter.split_text(md_text)
 
         chunk_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=80
+            chunk_size=1500,
+            chunk_overlap=150
         )
 
         self.chunked_doc = chunk_splitter.split_documents(docs)
@@ -51,3 +53,9 @@ class Chunker:
 
     def get_chunks(self):
         return self.chunked_doc
+
+# class Embedder:
+#     """
+#     Embed the chunks and user query
+#     """
+#     def __init__(self, chunks)

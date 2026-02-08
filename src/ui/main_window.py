@@ -167,7 +167,10 @@ class MainWindow(QWidget):
         chunks = doc_processing.run_pipeline()
         if chunks:
             self.chat_label.setText("Chunked")
-            
+        else:
+            self.chat_label.setText("Not returned")
+        
+        print(chunks)
         #self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
 
  

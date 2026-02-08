@@ -11,5 +11,6 @@ class ProcessingPipeline():
 
         md_Text = extractor.process()
         chunks = chunker.process(md_Text)
-
-        return chunks 
+        
+        # print(chunks) 
+        return chunks
