@@ -4,8 +4,6 @@ import config
 import os
 from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel
 from PyQt5.QtCore import Qt
-from src.ui.pdf_viewer import PDF_viewer
-from src.document_processing.pipeline import ProcessingPipeline
 
 
 class MainWindow(QWidget):
@@ -136,42 +134,4 @@ class MainWindow(QWidget):
         sidebar.setLayout(layout)
         return sidebar
 
-
-    def load_pdf(self, pdf_path):
-        """
-        Load and Display PDF file
-
-        Args:
-            pdf_path (str): path to the pdf file
-        """
-        config.CURRENT_PDF = pdf_path 
-        #print(config.CURRENT_PDF)
-        filename = os.path.basename(pdf_path)
-        filesize = os.path.getsize(pdf_path)
-        # need to implement the pdf loading here
-        # self.pdf_label.setText(
-        #     f"Loaded ˙◡˙.✦ ݁˖\n\n" 
-        #     f"file: {filename} \n\n"
-        #     f"{pdf_path}"
-        # )
-        if self.pdf_label:
-            self.center_area.layout().removeWidget(self.pdf_label)
-            self.pdf_label.deleteLater()
-            self.pdf_label = None
-
-        # create and add PDF viewer to center area
-        pdf_viewer = PDF_viewer(pdf_path, parent=self.center_area)
-        self.center_area.layout().addWidget(pdf_viewer)
-
-        doc_processing = ProcessingPipeline(pdf_path)
-        chunks = doc_processing.run_pipeline()
-        if chunks:
-            self.chat_label.setText("Chunked")
-            
-        #self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
-
- 
-    def on_button_clicked(self):
-        """Just a placeholder butten action. No need for the application itself"""
-        self.label.setText(f"Button clicked")
     
