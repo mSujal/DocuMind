@@ -1,145 +1,8 @@
-# """Main application window UI components and Layouts"""
-
-# import config
-# import os
-# from PyQt5.QtWidgets import QFrame, QWidget, QVBoxLayout, QHBoxLayout, QPushButton, QLabel
-# from PyQt5.QtCore import Qt
-
-
-# class MainWindow(QWidget):
-#     """
-#     Main windoe containing the user interface
-
-#     Provides all the containers, widgets, labels and buttons
-#     Responsible for handling the user interactions and updates displays accordingly
-#     """
-
-#     def __init__(self):
-#         """Initialize the main window"""
-#         super().__init__()
-#         self.init_ui()
-
-#     def init_ui(self):
-#         """Setup the iser interface and components and layouts"""
-#         # Layout creation
-#         main_layout = QHBoxLayout()
-#         main_layout.setSpacing(0)
-#         main_layout.setContentsMargins(0, 0, 0, 0)
-
-#         # create three sections
-#         self.left_sidebar = self.create_left_sidebar() # doc preview
-#         self.center_area = self.create_center_area() # pdf doc 
-#         self.right_sidebar = self.create_right_sidebar() # chat 
-
-#         # adding sections to main layouts
-#         main_layout.addWidget(self.left_sidebar, 1) # 1 part preview area 
-#         main_layout.addWidget(self.center_area, 2) # 2 part pdf area 
-#         main_layout.addWidget(self.right_sidebar, 2) # 2 part chat area
-
-#         # set the layout
-#         self.setLayout(main_layout)
-
-#     def create_left_sidebar(self):
-#         """Creates and returns left sidebar"""
-#         sidebar = QFrame()
-#         sidebar.setFrameShape(QFrame.StyledPanel)
-#         sidebar.setStyleSheet(f"""
-#             background-color: {config.SIDEBAR_BG};
-#             border-right: {config.SIDEBAR_BORDER_RIGHT}
-#         """)
-
-#         sidebar.setMinimumWidth(config.SIDEBAR_MIN_WIDTH)
-#         sidebar.setMaximumWidth(config.SIDEBAR_MAX_WIDTH)
-
-#         layout = QVBoxLayout()
-#         layout.setAlignment(Qt.AlignTop)
-
-#         # sidebar titles
-#         title = QLabel("Navigation")
-#         title.setStyleSheet(f"""
-#             font-size: {config.SIDEBAR_TITLE_FONT_SIZE}; 
-#             font-weight: {config.SIDEBAR_TITLE_FONT_WEIGHT}; 
-#             padding: {config.SIDEBAR_TITLE_PADDING}
-#         """
-#         )
-#         layout.addWidget(title)
-
-#         # control buttons (placeholder for now)
-#         btn1 = QPushButton("Thumbnails")
-#         btn2 = QPushButton("Bookmarks")
-#         btn3 = QPushButton("Annotations")
-
-#         layout.addWidget(btn1)
-#         layout.addWidget(btn2)
-#         layout.addWidget(btn3)
-#         layout.addStretch() # push all to the top
-
-#         sidebar.setLayout(layout)
-#         return sidebar
-
-#     def create_center_area(self):
-#         """Creates and returns the center (PDF viwer) area"""
-#         center = QFrame()
-#         center.setFrameShape(QFrame.StyledPanel)
-#         center.setStyleSheet(
-#             f"background-color: {config.CENTER_BG}"
-#         )
-
-#         layout = QVBoxLayout()
-
-#         self.pdf_label = QLabel("NO PDF LOADED ˙◠˙")
-#         self.pdf_label.setAlignment(Qt.AlignCenter)
-#         self.pdf_label.setStyleSheet(f"""
-#             background-color: "#666";
-#             font-size: 16px;
-#             padding: 20px;
-#         """)
-#         layout.addWidget(self.pdf_label)
-
-#         center.setLayout(layout)
-#         return center
-
-    
-#     def create_right_sidebar(self):
-#         """Creates and returns right sidebar"""
-#         sidebar = QFrame()
-#         sidebar.setFrameShape(QFrame.StyledPanel)
-#         sidebar.setStyleSheet(f"""
-#             background-color: {config.SIDEBAR_BG}; 
-#             border-left: {config.SIDEBAR_BORDER_LEFT}
-#         """)
-#         sidebar.setMinimumWidth(config.SIDEBAR_MIN_WIDTH)
-#         sidebar.setMaximumWidth(config.SIDEBAR_MAX_WIDTH)
-
-#         layout = QVBoxLayout()
-#         layout.setAlignment(Qt.AlignTop)
-
-#         # sidebar titles
-#         title = QLabel("Chat")
-#         title.setStyleSheet( f"""
-#             font-size: {config.SIDEBAR_TITLE_FONT_SIZE}; 
-#             font-weight: {config.SIDEBAR_TITLE_FONT_WEIGHT}; 
-#             padding: {config.SIDEBAR_TITLE_PADDING}
-#         """)
-#         layout.addWidget(title)
-
-#         # if (config.CURRENT_PDF == None):
-#         self.chat_label = QLabel('Load a file first')
-#         self.chat_label.setStyleSheet(f"""
-#             font-size: {config.SIDEBAR_TITLE_FONT_SIZE};
-#             padding: {config.SIDEBAR_FONT_PADDING}
-#         """)
-
-#         layout.addWidget(self.chat_label)
-#         sidebar.setLayout(layout)
-#         return sidebar
-
-    
 """
 Main application window UI components and Layouts
 """
 
-from PyQt5.QtWidgets import QWidget, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel
 from PyQt5.QtCore import Qt
 # from top_bar import TopBar
 from src.ui.top_bar import TopBar
@@ -178,24 +41,126 @@ class MainWindow(QWidget):
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
         
-        # Create components
+        # Create top bar
         self.top_bar = TopBar()
-        # self.pdf_toolbar = PDFToolbar()
-        # self.pdf_viewer = PDFViewer()
-        
-        # Connect signals
-        # self.pdf_toolbar.page_changed.connect(self.pdf_viewer.set_page)
-        # self.pdf_toolbar.zoom_changed.connect(self.pdf_viewer.set_zoom)
-        
-        # Add components to layout
         main_layout.addWidget(self.top_bar)
-        # main_layout.addWidget(self.pdf_toolbar)
-        # main_layout.addWidget(self.pdf_viewer)
+        
+        # Create three-panel layout
+        panels_layout = QHBoxLayout()
+        panels_layout.setContentsMargins(0, 0, 0, 0)
+        panels_layout.setSpacing(0)
+        
+        # Left panel - Explorer
+        self.left_panel = self.create_explorer_panel()
+        
+        # Center panel - PDF Viewer
+        self.center_panel = self.create_pdf_viewer_panel()
+        
+        # Right panel - AI Assistant
+        self.right_panel = self.create_ai_assistant_panel()
+        
+        # Add panels to layout with proportions (1:3:2 ratio approximately)
+        panels_layout.addWidget(self.left_panel, 1)
+        panels_layout.addWidget(self.center_panel, 3)
+        panels_layout.addWidget(self.right_panel, 2)
+        
+        # Add panels layout to main layout
+        main_layout.addLayout(panels_layout)
         
         self.setLayout(main_layout)
+    
+    def create_explorer_panel(self):
+        """Create the left explorer panel"""
+        panel = QFrame()
+        panel.setStyleSheet(f"""
+            QFrame {{
+                background-color: {config.BG_SECONDARY};
+                border-right: 1px solid {config.BORDER_COLOR};
+            }}
+        """)
         
-        # Initialize with default zoom
-        # self.pdf_viewer.set_zoom(config.PDF_DEFAULT_ZOOM)
+        layout = QVBoxLayout()
+        layout.setContentsMargins(10, 10, 10, 10)
+        
+        # Explorer title
+        title = QLabel("EXPLORER")
+        title.setStyleSheet(f"""
+            font-size: 12px;
+            font-weight: bold;
+            color: {config.TEXT_SECONDARY};
+            padding: 5px 0;
+        """)
+        
+        # Placeholder content
+        content = QLabel("File tree will go here")
+        content.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
+        content.setAlignment(Qt.AlignTop)
+        
+        layout.addWidget(title)
+        layout.addWidget(content)
+        layout.addStretch()
+        
+        panel.setLayout(layout)
+        return panel
+    
+    def create_pdf_viewer_panel(self):
+        """Create the center PDF viewer panel"""
+        panel = QFrame()
+        panel.setStyleSheet(f"""
+            QFrame {{
+                background-color: {config.BG_PRIMARY};
+            }}
+        """)
+        
+        layout = QVBoxLayout()
+        layout.setContentsMargins(0, 0, 0, 0)
+        
+        # Placeholder for PDF viewer
+        viewer = QLabel("PDF Viewer")
+        viewer.setAlignment(Qt.AlignCenter)
+        viewer.setStyleSheet(f"""
+            font-size: 24px;
+            color: {config.TEXT_SECONDARY};
+        """)
+        
+        layout.addWidget(viewer)
+        
+        panel.setLayout(layout)
+        return panel
+    
+    def create_ai_assistant_panel(self):
+        """Create the right AI assistant panel"""
+        panel = QFrame()
+        panel.setStyleSheet(f"""
+            QFrame {{
+                background-color: {config.BG_SECONDARY};
+                border-left: 1px solid {config.BORDER_COLOR};
+            }}
+        """)
+        
+        layout = QVBoxLayout()
+        layout.setContentsMargins(10, 10, 10, 10)
+        
+        # AI Assistant title
+        title = QLabel("AI Assistant")
+        title.setStyleSheet(f"""
+            font-size: 14px;
+            font-weight: bold;
+            color: {config.TEXT_PRIMARY};
+            padding: 5px 0;
+        """)
+        
+        # Placeholder content
+        content = QLabel("Chat interface will go here")
+        content.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
+        content.setAlignment(Qt.AlignTop)
+        
+        layout.addWidget(title)
+        layout.addWidget(content)
+        layout.addStretch()
+        
+        panel.setLayout(layout)
+        return panel
 
     # def load_pdf(self, pdf_path):
     #     """
