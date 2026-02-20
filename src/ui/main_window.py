@@ -2,32 +2,33 @@
 Main application window UI components and Layouts
 """
 
+import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel
 from PyQt5.QtCore import Qt
-# from top_bar import TopBar
 from src.ui.top_bar import TopBar
-# from pdf_toolbar import PDFToolbar
-# from pdf_viewer import PDFViewer
+from src.ui.pdf_toolbar import PDFToolbar
+from src.ui.pdf_viewer import PDFViewer
+from src.ui.explorer_panel import ExplorerPanel
+from src.ui.status_bar import StatusBar
 import config
 
 
 class MainWindow(QWidget):
     """
-    Main window containing the user interface
+    Main window containing the user interface.
 
-    Provides all the containers, widgets, labels and buttons
-    Responsible for handling the user interactions and updates displays accordingly
+    Layout (top to bottom):
+        TopBar
+        ── three panels ──────────────────────────────────────────────────
+        Left (ExplorerPanel + StatusBar) | Center (toolbar + viewer) | Right (AI chat)
     """
 
     def __init__(self):
-        """Initialize the main window"""
         super().__init__()
         self.current_pdf = None
         self.init_ui()
 
     def init_ui(self):
-        """Setup the user interface components and layouts"""
-        # Set widget styling
         self.setStyleSheet(f"""
             QWidget {{
                 background-color: {config.BG_PRIMARY};
@@ -35,42 +36,35 @@ class MainWindow(QWidget):
                 font-family: {config.FONT_FAMILY};
             }}
         """)
-        
-        # Main layout
+
         main_layout = QVBoxLayout()
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
-        
-        # Create top bar
+
         self.top_bar = TopBar()
         main_layout.addWidget(self.top_bar)
-        
-        # Create three-panel layout
+
         panels_layout = QHBoxLayout()
         panels_layout.setContentsMargins(0, 0, 0, 0)
         panels_layout.setSpacing(0)
-        
-        # Left panel - Explorer
-        self.left_panel = self.create_explorer_panel()
-        
-        # Center panel - PDF Viewer
-        self.center_panel = self.create_pdf_viewer_panel()
-        
-        # Right panel - AI Assistant
-        self.right_panel = self.create_ai_assistant_panel()
-        
-        # Add panels to layout with proportions (1:3:2 ratio approximately)
-        panels_layout.addWidget(self.left_panel, 1)
+
+        self.left_panel   = self._create_left_panel()
+        self.center_panel = self._create_pdf_panel()
+        self.right_panel  = self._create_ai_panel()
+
+        panels_layout.addWidget(self.left_panel,   1)
         panels_layout.addWidget(self.center_panel, 3)
-        panels_layout.addWidget(self.right_panel, 2)
-        
-        # Add panels layout to main layout
+        panels_layout.addWidget(self.right_panel,  2)
+
         main_layout.addLayout(panels_layout)
-        
         self.setLayout(main_layout)
-    
-    def create_explorer_panel(self):
-        """Create the left explorer panel"""
+
+    # ------------------------------------------------------------------ #
+    #  Panel builders                                                      #
+    # ------------------------------------------------------------------ #
+
+    def _create_left_panel(self):
+        """Explorer tree on top, status bar pinned to bottom."""
         panel = QFrame()
         panel.setStyleSheet(f"""
             QFrame {{
@@ -78,58 +72,57 @@ class MainWindow(QWidget):
                 border-right: 1px solid {config.BORDER_COLOR};
             }}
         """)
-        
-        layout = QVBoxLayout()
-        layout.setContentsMargins(10, 10, 10, 10)
-        
-        # Explorer title
-        title = QLabel("EXPLORER")
-        title.setStyleSheet(f"""
-            font-size: 12px;
-            font-weight: bold;
-            color: {config.TEXT_SECONDARY};
-            padding: 5px 0;
-        """)
-        
-        # Placeholder content
-        content = QLabel("File tree will go here")
-        content.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
-        content.setAlignment(Qt.AlignTop)
-        
-        layout.addWidget(title)
-        layout.addWidget(content)
-        layout.addStretch()
-        
-        panel.setLayout(layout)
-        return panel
-    
-    def create_pdf_viewer_panel(self):
-        """Create the center PDF viewer panel"""
-        panel = QFrame()
-        panel.setStyleSheet(f"""
-            QFrame {{
-                background-color: {config.BG_PRIMARY};
-            }}
-        """)
-        
+
         layout = QVBoxLayout()
         layout.setContentsMargins(0, 0, 0, 0)
-        
-        # Placeholder for PDF viewer
-        viewer = QLabel("PDF Viewer")
-        viewer.setAlignment(Qt.AlignCenter)
-        viewer.setStyleSheet(f"""
-            font-size: 24px;
-            color: {config.TEXT_SECONDARY};
-        """)
-        
-        layout.addWidget(viewer)
-        
+        layout.setSpacing(0)
+
+        # Explorer takes all available space
+        self.explorer = ExplorerPanel(parent=panel)
+        self.explorer.file_selected.connect(self._on_explorer_file_selected)
+
+        # Status bar pinned to bottom
+        self.status_bar = StatusBar(parent=panel)
+
+        layout.addWidget(self.explorer, 1)
+        layout.addWidget(self.status_bar)
+
         panel.setLayout(layout)
         return panel
-    
-    def create_ai_assistant_panel(self):
-        """Create the right AI assistant panel"""
+
+    def _create_pdf_panel(self):
+        """Center panel: PDFToolbar on top, PDFViewer below."""
+        panel = QFrame()
+        panel.setStyleSheet(f"QFrame {{ background-color: {config.BG_PRIMARY}; }}")
+
+        layout = QVBoxLayout()
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
+
+        self.pdf_toolbar = PDFToolbar(parent=panel)
+        self.pdf_viewer  = PDFViewer(parent=panel)
+
+        # Toolbar → viewer
+        self.pdf_toolbar.go_to_page.connect(self.pdf_viewer.go_to_page)
+        self.pdf_toolbar.zoom_changed.connect(self.pdf_viewer.set_zoom)
+        self.pdf_toolbar.fit_width_requested.connect(self.pdf_viewer.fit_width)
+        self.pdf_toolbar.fit_page_requested.connect(self.pdf_viewer.fit_page)
+        self.pdf_toolbar.rotate_requested.connect(self.pdf_viewer.rotate)
+
+        # Viewer → toolbar
+        self.pdf_viewer.page_changed.connect(self.pdf_toolbar.set_current_page)
+        self.pdf_viewer.zoom_changed.connect(self.pdf_toolbar.set_zoom)
+        self.pdf_viewer.pdf_loaded.connect(self.pdf_toolbar.set_total_pages)
+
+        # Viewer → status bar (page count)
+        self.pdf_viewer.pdf_loaded.connect(self._on_pdf_loaded_pages)
+
+        layout.addWidget(self.pdf_toolbar)
+        layout.addWidget(self.pdf_viewer)
+        panel.setLayout(layout)
+        return panel
+
+    def _create_ai_panel(self):
         panel = QFrame()
         panel.setStyleSheet(f"""
             QFrame {{
@@ -137,53 +130,57 @@ class MainWindow(QWidget):
                 border-left: 1px solid {config.BORDER_COLOR};
             }}
         """)
-        
         layout = QVBoxLayout()
         layout.setContentsMargins(10, 10, 10, 10)
-        
-        # AI Assistant title
+
         title = QLabel("AI Assistant")
         title.setStyleSheet(f"""
-            font-size: 14px;
-            font-weight: bold;
-            color: {config.TEXT_PRIMARY};
-            padding: 5px 0;
+            font-size: 14px; font-weight: bold;
+            color: {config.TEXT_PRIMARY}; padding: 5px 0;
         """)
-        
-        # Placeholder content
-        content = QLabel("Chat interface will go here")
-        content.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
-        content.setAlignment(Qt.AlignTop)
-        
+        self.chat_label = QLabel("Load a file first")
+        self.chat_label.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
+        self.chat_label.setAlignment(Qt.AlignTop)
+
         layout.addWidget(title)
-        layout.addWidget(content)
+        layout.addWidget(self.chat_label)
         layout.addStretch()
-        
         panel.setLayout(layout)
         return panel
 
-    # def load_pdf(self, pdf_path):
-    #     """
-    #     Load a PDF file and update the display
-        
-    #     Args:
-    #         pdf_path (str): Path to the PDF file to load
-    #     """
-    #     self.current_pdf = pdf_path
-        
-    #     # Extract filename from path
-    #     import os
-    #     filename = os.path.basename(pdf_path)
-        
-    #     # Update top bar with document name
-    #     self.top_bar.set_document_name(filename)
-        
-    #     # Update PDF viewer
-    #     self.pdf_viewer.load_pdf(pdf_path)
-        
-    #     # Reset to first page
-    #     self.pdf_toolbar.current_page = 1
-    #     self.pdf_toolbar.page_input.setText("1")
-    #     self.pdf_toolbar.update_nav_buttons()
-        
-    #     print(f"PDF loaded: {pdf_path}")
+    # ------------------------------------------------------------------ #
+    #  Slots                                                               #
+    # ------------------------------------------------------------------ #
+
+    def _on_pdf_loaded_pages(self, page_count: int):
+        """Forward page count to status bar after PDF is rendered."""
+        if self.current_pdf:
+            self.status_bar.update_file(self.current_pdf, page_count)
+
+    def _on_explorer_file_selected(self, filepath: str):
+        """User clicked a file in the explorer — load it."""
+        self.load_pdf(filepath)
+
+    # ------------------------------------------------------------------ #
+    #  Load PDF                                                            #
+    # ------------------------------------------------------------------ #
+
+    def load_pdf(self, pdf_path: str):
+        """
+        Load a PDF — called by App when the user picks a file,
+        or by the explorer when a file is clicked.
+        """
+        self.current_pdf = pdf_path
+        filename = os.path.basename(pdf_path)
+
+        # Update top bar
+        self.top_bar.set_document_name(filename)
+
+        # Add to explorer and mark active
+        self.explorer.add_file(pdf_path)
+
+        # Render PDF (triggers pdf_loaded → toolbar + status bar)
+        self.pdf_viewer.load_pdf(pdf_path)
+
+        # Update chat panel
+        self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
