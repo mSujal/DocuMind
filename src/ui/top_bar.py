@@ -27,9 +27,12 @@ class TopBar(QWidget):
     def init_ui(self):
         """Initialize the top bar ui"""
         self.setFixedHeight(config.TOPBAR_HEIGHT)
+
+        self.setAttribute(Qt.WA_StyledBackground, True)
+
         self.setStyleSheet(f"""
             QWidget {{
-                background-color: {config.TOPBAR_BG};
+                background-color: {config.BG_SECONDARY};
                 color: {config.TEXT_PRIMARY};
             }}
         """)

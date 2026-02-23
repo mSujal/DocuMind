@@ -43,7 +43,8 @@ TOPBAR_BG = "#2d2d30"
 
 # Toolbar (PDF controls)
 TOOLBAR_HEIGHT = 50
-TOOLBAR_BG = "#252526"
+# TOOLBAR_BG = "#252526"
+TOOLBAR_BG = "1e1e1e"
 
 # Button styles
 BUTTON_BG = "transparent"
