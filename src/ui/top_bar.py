@@ -105,7 +105,6 @@ class TopBar(QWidget):
             (ICON_TOGGLE_SIDEBAR, "Toggle sidebar"),
             (ICON_UPLOAD,         "Upload PDF"),
             (ICON_PRINT,          "Print"),
-            (ICON_DOWNLOAD,       "Download"),
             (ICON_TOGGLE_CHAT,    "Toggle AI chat"),
             (ICON_SETTINGS,       "Settings"),
         ]
