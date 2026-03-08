@@ -2,7 +2,7 @@
 Top bar component containing the document title and the action buttons
 """
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QLabel, QPushButton, QFrame, QSpacerItem, QSizePolicy
-from PyQt5.QtCore import Qt, QSize
+from PyQt5.QtCore import Qt, QSize, pyqtSignal
 from PyQt5.QtGui import QFont
 from src.ui.icons import (
     svg_to_icon,
@@ -19,6 +19,8 @@ import config
 
 class TopBar(QWidget):
     """Top bar with app title, document name and action buttons"""
+
+    upload_requested = pyqtSignal()  
 
     def __init__(self):
         super().__init__()
@@ -117,6 +119,10 @@ class TopBar(QWidget):
             btn.setStyleSheet(button_style)
             btn.setCursor(Qt.PointingHandCursor)
             layout.addWidget(btn)
+
+            # Connect upload button to signal
+            if tooltip == "Upload PDF":
+                btn.clicked.connect(self.upload_requested.emit)
 
     def set_document_name(self, name):
         """Update the document name displayed"""

@@ -3,7 +3,7 @@ Main application window UI components and Layouts
 """
 
 import os
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel, QFileDialog
 from PyQt5.QtCore import Qt
 from src.ui.top_bar import TopBar
 from src.ui.pdf_toolbar import PDFToolbar
@@ -42,6 +42,7 @@ class MainWindow(QWidget):
         main_layout.setSpacing(0)
 
         self.top_bar = TopBar()
+        self.top_bar.upload_requested.connect(self._on_upload_requested)  # connect upload signal
         main_layout.addWidget(self.top_bar)
 
         panels_layout = QHBoxLayout()
@@ -151,6 +152,17 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
     #  Slots                                                               #
     # ------------------------------------------------------------------ #
+
+    def _on_upload_requested(self):
+        """Open file dialog when upload button in top bar is clicked."""
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Open PDF File",
+            "",
+            "PDF Files (*.pdf)"
+        )
+        if file_path:
+            self.load_pdf(file_path)
 
     def _on_pdf_loaded_pages(self, page_count: int):
         """Forward page count to status bar after PDF is rendered."""
