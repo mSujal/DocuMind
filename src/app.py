@@ -21,41 +21,41 @@ class App(QMainWindow):
         self.current_pdf = None
         self.main_window = MainWindow()
         self.setCentralWidget(self.main_window)
-        self.setup_menu()
+        # self.setup_menu()
         self.update_title()
         self.setGeometry(100, 100, 800, 600)
         # geometry is set as x, y, height, width
 
-    def setup_menu(self):
-        """setup application menu bar"""
-        menubar = self.menuBar()
+    # def setup_menu(self):
+    #     """setup application menu bar"""
+    #     menubar = self.menuBar()
 
-        # menu entries
-        file_menu = menubar.addMenu("Files") # just for now...
+    #     # menu entries
+    #     file_menu = menubar.addMenu("Files") # just for now...
         
-        # action
-        open_action = QAction("Open PDF", self)
+    #     # action
+    #     open_action = QAction("Open PDF", self)
         
-        # could add the shortcuts...
+    #     # could add the shortcuts...
 
-        # triggers 
-        open_action.triggered.connect(self.open_file_dialog)
+    #     # triggers 
+    #     open_action.triggered.connect(self.open_file_dialog)
 
-        # action entries
-        file_menu.addAction(open_action)
+    #     # action entries
+    #     file_menu.addAction(open_action)
 
-    def open_file_dialog(self):
-        """Open file dialog to select a PDF file"""
-        file_path, temp = QFileDialog.getOpenFileName(
-            self, 
-            'Open PDF File',
-            '', 
-            'PDF Files (*.pdf)'''
-        ) # returns file path and file type
+    # def open_file_dialog(self):
+    #     """Open file dialog to select a PDF file"""
+    #     file_path, temp = QFileDialog.getOpenFileName(
+    #         self, 
+    #         'Open PDF File',
+    #         '', 
+    #         'PDF Files (*.pdf)'''
+    #     ) # returns file path and file type
 
-        if file_path:
-            self.open_pdf(file_path)
-            # print(temp)
+    #     if file_path:
+    #         self.open_pdf(file_path)
+    #         # print(temp)
 
 
     def open_pdf(self, pdf_path):
