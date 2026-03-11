@@ -6,6 +6,7 @@ import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel, QFileDialog
 from PyQt5.QtCore import Qt
 from src.ui.top_bar import TopBar
+from src.ui.chat_panel import ChatPanel
 from src.ui.pdf_toolbar import PDFToolbar
 from src.ui.pdf_viewer import PDFViewer
 from src.ui.explorer_panel import ExplorerPanel
@@ -139,13 +140,15 @@ class MainWindow(QWidget):
             font-size: 14px; font-weight: bold;
             color: {config.TEXT_PRIMARY}; padding: 5px 0;
         """)
-        self.chat_label = QLabel("Load a file first")
-        self.chat_label.setStyleSheet(f"color: {config.TEXT_SECONDARY};")
-        self.chat_label.setAlignment(Qt.AlignTop)
 
+       
+        # Placeholder content
         layout.addWidget(title)
-        layout.addWidget(self.chat_label)
-        layout.addStretch()
+
+        self.chat_panel = ChatPanel()
+        layout.addWidget(self.chat_panel)
+        
+
         panel.setLayout(layout)
         return panel
 
