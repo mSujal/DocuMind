@@ -181,10 +181,6 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
 
     def load_pdf(self, pdf_path: str):
-        """
-        Load a PDF — called by App when the user picks a file,
-        or by the explorer when a file is clicked.
-        """
         self.current_pdf = pdf_path
         filename = os.path.basename(pdf_path)
 
@@ -194,8 +190,8 @@ class MainWindow(QWidget):
         # Add to explorer and mark active
         self.explorer.add_file(pdf_path)
 
-        # Render PDF (triggers pdf_loaded → toolbar + status bar)
+        # Render PDF
         self.pdf_viewer.load_pdf(pdf_path)
 
-        # Update chat panel
-        self.chat_label.setText(f"Ready to chat about:\n\n{filename}")
+        # Update chat panel (old chat_label replaced)
+        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False)
