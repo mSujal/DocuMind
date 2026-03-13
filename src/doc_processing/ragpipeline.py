@@ -1,9 +1,11 @@
 """
 Main RAG pipeline handling retrieval to query
 """
+import torch
 import torch.nn.functional as F
 from groq import Groq
 import config
+
 
 class RAGPipeline():
     def __init__(self, late_chunking, api_key, top_k=config.TOP_K):
@@ -15,31 +17,37 @@ class RAGPipeline():
     def index(self, corpus):
         self.corpus = corpus
         self.chunk_embeddings = self.lc.run(corpus)
-        
+
     def _embed_query(self, query):
         """
-        Embed the query using same tokenizer model
+        Embed the query using the same tokenizer/model as late chunking.
 
-        Returns: query embeddings vectors
+        Returns: query embedding tensor
         """
-        tokens = self.lc.tokenizer(
-            query, 
-            return_tensors="pt", 
-            return_offsets_mapping=False
-        )
+        
+        prefixed_query = "search_query: " + query
 
-        with torch.no_grad(): # not keeping track of gradient
+        tokens = self.lc.tokenizer(
+            prefixed_query,
+            return_tensors="pt",
+            return_offsets_mapping=False,
+            truncation=True,
+            max_length=8192
+        )
+        tokens = {k: v.to(self.lc.device) for k, v in tokens.items()}
+
+        with torch.no_grad():
             outputs = self.lc.model(
-                input_ids = tokens["input_ids"],
-                attention_mask = tokens["attention_mask"]
+                input_ids=tokens["input_ids"],
+                attention_mask=tokens["attention_mask"]
             )
         query_embedding = outputs.last_hidden_state[0].mean(dim=0)
-        
+
         return query_embedding
 
     def _retrieve(self, query):
         """
-        Retrieve top 5 chunks based on similarity search
+        Retrieve top-k chunks by cosine similarity.
         """
         query_embedding = self._embed_query(query)
         similarities = []
@@ -47,7 +55,7 @@ class RAGPipeline():
         for i, chunk_emb in enumerate(self.chunk_embeddings):
             score = F.cosine_similarity(
                 query_embedding.unsqueeze(0),
-                chunk_emb.unsequeeze(0)
+                chunk_emb.unsqueeze(0)
             )
             similarities.append((score.item(), i))
 
@@ -60,36 +68,33 @@ class RAGPipeline():
 
     def query_qna(self, question):
         """
-        Prompt for question answering
-
-        Args:
-            question: user input question to be passed to the LLM
-
-        Function:
-            retrieve chunks and create context, using the the context and question make prompt and call LLM for response
+        Q&A prompt: answer the question strictly from retrieved context.
         """
         retrieved_chunks = self._retrieve(question)
         context = '\n\n'.join(retrieved_chunks)
 
         prompt = f"""
-        You are a helpful assistant. Answer the question based strictly based on the context provided below.
+        You are a helpful assistant. Answer the question based strictly on the context provided below.
         Context: {context}
         Question: {question}
         Answer:
         """
 
         response = self.client.chat.completions.create(
-            model = config.LLM_MODEL,
-            messages=[{"role":"user", "content":prompt}]
+            model=config.LLM_MODEL,
+            messages=[{"role": "user", "content": prompt}]
         )
         return response.choices[0].message.content
 
     def query_mcq(self, question):
+        """
+        MCQ prompt: generate a multiple choice question from retrieved context.
+        """
         retrieved_chunks = self._retrieve(question)
         context = '\n\n'.join(retrieved_chunks)
 
         prompt = f"""
-        You are a helpful assistant. Based only on context provided below, generate a multiple choice question with 4 options with (A, B, C, D) and indicate the correct answer.
+        You are a helpful assistant. Based only on context provided below, generate a multiple choice question with 4 options (A, B, C, D) and indicate the correct answer.
 
         Context: {context}
 
@@ -98,13 +103,13 @@ class RAGPipeline():
         Format your response exactly like this:
         Question: <question here>
         A) <option>           B) <option>
-        c) <option>           D) <option>
+        C) <option>           D) <option>
         Correct Answer: <letter>
         Explanation: <brief explanation based on context>
         """
 
         response = self.client.chat.completions.create(
-            model = config.LLM_MODEL,
-            messages = [{"role": "user", "content": prompt}]
+            model=config.LLM_MODEL,
+            messages=[{"role": "user", "content": prompt}]
         )
         return response.choices[0].message.content

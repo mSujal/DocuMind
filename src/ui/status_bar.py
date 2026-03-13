@@ -1,5 +1,5 @@
 """
-Status bar — sits at the bottom of the explorer panel.
+Status bar 
 Shows size, page count, and last modified date of the active file.
 """
 
@@ -32,14 +32,21 @@ class StatusBar(QWidget):
         layout.setContentsMargins(12, 8, 12, 10)
         layout.setSpacing(5)
 
-        self.size_row     = self._make_row("Size",     "—")
-        self.pages_row    = self._make_row("Pages",    "—")
+        self.size_row = self._make_row("Size",     "—")
+        self.pages_row = self._make_row("Pages",    "—")
         self.modified_row = self._make_row("Modified", "—")
+        self.pipeline_row = self._make_row("Status", "—")
+    
 
         layout.addWidget(self.size_row)
         layout.addWidget(self.pages_row)
         layout.addWidget(self.modified_row)
+        layout.addWidget(self.pipeline_row)
         self.setLayout(layout)
+
+    def set_status_text(self, text: str):
+        """Update the RAG pipeline status label."""
+        self.pipeline_row._value_label.setText(text)
 
     def _make_row(self, label_text: str, value_text: str) -> QWidget:
         row = QWidget()
@@ -65,7 +72,6 @@ class StatusBar(QWidget):
             border: none;
         """)
 
-        # store reference so we can update later
         row._value_label = value
 
         row_layout.addWidget(label)
@@ -74,12 +80,8 @@ class StatusBar(QWidget):
         row.setLayout(row_layout)
         return row
 
-    # ------------------------------------------------------------------ #
-    #  Public API                                                          #
-    # ------------------------------------------------------------------ #
-
     def update_file(self, filepath: str, page_count: int = 0):
-        """Refresh all three rows from a real file on disk."""
+        """Refresh all  rows from a file on disk."""
         try:
             size_bytes = os.path.getsize(filepath)
             size_str   = self._format_size(size_bytes)
@@ -103,10 +105,7 @@ class StatusBar(QWidget):
         self.size_row._value_label.setText("—")
         self.pages_row._value_label.setText("—")
         self.modified_row._value_label.setText("—")
-
-    # ------------------------------------------------------------------ #
-    #  Helper                                                              #
-    # ------------------------------------------------------------------ #
+        self.pipeline_row._value_label.setText("—")
 
     @staticmethod
     def _format_size(n: int) -> str:
