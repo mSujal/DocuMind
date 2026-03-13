@@ -10,8 +10,12 @@ test/
 test.*
 **/test.*
 
+# env file 
+.env
+
 # Exclude
 !.git/
 !.gitignore
 !.gitattributes
+
 
