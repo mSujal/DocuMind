@@ -1,10 +1,16 @@
 """
 Late chunking implementation
 """
+import os
+import platform
+
+# suppress the cuda for dll error in windows
+if platform.system() == "Windows":
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
 from transformers import AutoTokenizer, AutoModel
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import torch
-
 
 class LateChunking():
     def __init__(self, model_name, tokenizer_name, chunk_size=512, chunk_overlap=50):
