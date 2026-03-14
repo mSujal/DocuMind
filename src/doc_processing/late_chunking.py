@@ -11,6 +11,7 @@ if platform.system() == "Windows":
 from transformers import AutoTokenizer, AutoModel
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import torch
+import config
 
 class LateChunking():
     def __init__(self, model_name, tokenizer_name, chunk_size=512, chunk_overlap=50):
@@ -18,7 +19,7 @@ class LateChunking():
         self.model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
 
         # Use GPU if available else CPU 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = config.DEVICE
         self.model = self.model.to(self.device)
         self.model.eval() 
 

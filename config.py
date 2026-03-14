@@ -6,7 +6,7 @@ TOP_K = 5
 MODEL = "nomic-ai/nomic-embed-text-v1.5"
 TOKENIZER = "nomic-ai/nomic-embed-text-v1.5"
 
-
+DEVICE = "cpu"
 ####################################################
 #    PANEL PARAMETERS
 ####################################################
