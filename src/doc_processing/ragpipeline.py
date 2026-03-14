@@ -1,6 +1,13 @@
 """
 Main RAG pipeline handling retrieval to query
 """
+import os
+import platform
+
+# suppress the cuda for dll error in windows
+if platform.system() == "Windows":
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
 import torch
 import torch.nn.functional as F
 from groq import Groq
