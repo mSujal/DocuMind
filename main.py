@@ -1,4 +1,11 @@
 """Main entry point for the application"""
+import os
+import platform
+
+# suppress the cuda for dll error in windows
+if platform.system() == "Windows":
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
 import sys
 import config
 from PyQt5.QtWidgets import QApplication, QSplashScreen
