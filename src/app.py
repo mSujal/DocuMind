@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMainWindow, QFileDialog, QAction
 from src.ui.main_window import MainWindow
 from src.doc_processing.late_chunking import LateChunking
 from src.doc_processing.ragpipeline import RAGPipeline
+from src.doc_processing.vector_store import VectorStore
 from src.workers.indexing_worker import IndexingWorker
 import os
 import config
@@ -12,6 +13,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / ".env")
 api_key = os.getenv("GROQ_API_KEY")
+
+PROJECT_ROOT = Path(__file__).parent.parent
+DB_PATH = PROJECT_ROOT / "chroma_db"
+
 
 class App(QMainWindow):
     """
@@ -34,9 +39,13 @@ class App(QMainWindow):
             model_name=config.MODEL,
             tokenizer_name=config.TOKENIZER
         )
+
+        self.vector_store = VectorStore(persist_dir=str(DB_PATH))
+
         self.rag_pipeline = RAGPipeline(
             late_chunking=self.late_chunking,
-            api_key=api_key
+            api_key=api_key, 
+            vector_store=self.vector_store
         )
 
         self.main_window = MainWindow()
@@ -86,7 +95,10 @@ class App(QMainWindow):
         self.main_window.set_pipeline_status("Extracting text...")
  
     def _on_indexing_started(self):
-        self.main_window.set_pipeline_status("Building embeddings...")
+        if self.vector_store.is_indexed(self.current_pdf):
+            self.main_window.set_pipeline_status("Loading embeddings from store...")
+        else:
+            self.main_window.set_pipeline_status("Building embeddings...")
  
     def _on_indexing_finished(self):
         self.main_window.set_pipeline_status("Ready")

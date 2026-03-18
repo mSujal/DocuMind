@@ -7,6 +7,8 @@ MODEL = "nomic-ai/nomic-embed-text-v1.5"
 TOKENIZER = "nomic-ai/nomic-embed-text-v1.5"
 
 DEVICE = "cpu"
+
+PERSIST_DIR = './chroma_db/'
 ####################################################
 #    PANEL PARAMETERS
 ####################################################

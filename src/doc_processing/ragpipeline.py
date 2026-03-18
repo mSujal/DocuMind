@@ -15,15 +15,24 @@ import config
 
 
 class RAGPipeline():
-    def __init__(self, late_chunking, api_key, top_k=config.TOP_K):
+    def __init__(self, late_chunking, api_key, vector_store, top_k=config.TOP_K):
         self.lc = late_chunking
         self.client = Groq(api_key=api_key)
         self.top_k = top_k
+        self.vector_store = vector_store
         self.chunk_embeddings = None
 
-    def index(self, corpus):
+    def index(self, corpus, pdf_path):
         self.corpus = corpus
-        self.chunk_embeddings = self.lc.run(corpus)
+        self.pdf_path = pdf_path
+
+        # load from database instead of re-embedding
+        if self.vector_store.is_indexed(pdf_path):
+            self.lc.chunks, self.chunk_embeddings = self.vector_store.load(pdf_path)
+        else: # embed using latechunking 
+            self.chunk_embeddings = self.lc.run(corpus)
+            self.vector_store.store(pdf_path, self.lc.chunks, self.chunk_embeddings)
+    
 
     def _embed_query(self, query):
         """

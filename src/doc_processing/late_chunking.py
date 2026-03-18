@@ -15,7 +15,7 @@ import config
 
 class LateChunking():
     def __init__(self, model_name, tokenizer_name, chunk_size=512, chunk_overlap=50):
-        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, trust_remote_code=True)
         self.model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
 
         # Use GPU if available else CPU 
