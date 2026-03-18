@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SplashScreen</class>
+ <widget class="QWidget" name="SplashScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>WaitCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #0f0f1a;
+    border-radius: 20px;
+}</string>
+  </property>
+  <widget class="QLabel" name="bgLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>350</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-image: url(assets/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="logoLabel">
+   <property name="geometry">
+    <rect>
+     <x>264</x>
+     <y>55</y>
+     <width>72</width>
+     <height>72</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-image: url(assets/logo_small.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="appNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>145</y>
+     <width>300</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: #c7d2fe;
+    font-family: "Segoe UI";
+    font-size: 28px;
+    font-weight: 700;
+    background: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>DocuMind</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="taglineLabel">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>193</y>
+     <width>300</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: rgba(148, 163, 184, 0.6);
+    font-family: "Courier New";
+    font-size: 11px;
+    letter-spacing: 1px;
+    background: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Initializing...</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="versionLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>324</y>
+     <width>55</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: rgba(99, 102, 241, 0.4);
+    font-family: "Courier New";
+    font-size: 10px;
+    background: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>v1.0.0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -42,7 +42,7 @@ class IndexingWorker(QThread):
 
             # Phase 2: chunking + embedding 
             self.started_indexing.emit()
-            self.rag_pipeline.index(corpus)
+            self.rag_pipeline.index(corpus, pdf_path=self.pdf_path)
 
             self.finished.emit()
 
