@@ -4,9 +4,9 @@ Main application window UI components and Layouts
 
 import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel, QFileDialog
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, pyqtSignal 
 from src.ui.top_bar import TopBar
-from src.ui.chat_panel import ChatPanel
+from src.ui.chat_panel import ChatPanel  
 from src.ui.pdf_toolbar import PDFToolbar
 from src.ui.pdf_viewer import PDFViewer
 from src.ui.explorer_panel import ExplorerPanel
@@ -23,6 +23,8 @@ class MainWindow(QWidget):
         ── three panels ──────────────────────────────────────────────────
         Left (ExplorerPanel + StatusBar) | Center (toolbar + viewer) | Right (AI chat)
     """
+
+    pdf_opened = pyqtSignal(str)  
 
     def __init__(self):
         super().__init__()
@@ -43,7 +45,7 @@ class MainWindow(QWidget):
         main_layout.setSpacing(0)
 
         self.top_bar = TopBar()
-        self.top_bar.upload_requested.connect(self._on_upload_requested)  # connect upload signal
+        self.top_bar.upload_requested.connect(self._on_upload_requested)
         main_layout.addWidget(self.top_bar)
 
         panels_layout = QHBoxLayout()
@@ -79,11 +81,9 @@ class MainWindow(QWidget):
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
 
-        # Explorer takes all available space
         self.explorer = ExplorerPanel(parent=panel)
         self.explorer.file_selected.connect(self._on_explorer_file_selected)
 
-        # Status bar pinned to bottom
         self.status_bar = StatusBar(parent=panel)
 
         layout.addWidget(self.explorer, 1)
@@ -116,7 +116,7 @@ class MainWindow(QWidget):
         self.pdf_viewer.zoom_changed.connect(self.pdf_toolbar.set_zoom)
         self.pdf_viewer.pdf_loaded.connect(self.pdf_toolbar.set_total_pages)
 
-        # Viewer → status bar (page count)
+        # Viewer → status bar
         self.pdf_viewer.pdf_loaded.connect(self._on_pdf_loaded_pages)
 
         layout.addWidget(self.pdf_toolbar)
@@ -141,13 +141,10 @@ class MainWindow(QWidget):
             color: {config.TEXT_PRIMARY}; padding: 5px 0;
         """)
 
-       
-        # Placeholder content
         layout.addWidget(title)
 
-        self.chat_panel = ChatPanel()
+        self.chat_panel = ChatPanel()  # from GUI
         layout.addWidget(self.chat_panel)
-        
 
         panel.setLayout(layout)
         return panel
@@ -159,10 +156,7 @@ class MainWindow(QWidget):
     def _on_upload_requested(self):
         """Open file dialog when upload button in top bar is clicked."""
         file_path, _ = QFileDialog.getOpenFileName(
-            self,
-            "Open PDF File",
-            "",
-            "PDF Files (*.pdf)"
+            self, "Open PDF File", "", "PDF Files (*.pdf)"
         )
         if file_path:
             self.load_pdf(file_path)
@@ -181,17 +175,22 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
 
     def load_pdf(self, pdf_path: str):
+        """
+        Load a PDF — called by App when the user picks a file,
+        or by the explorer when a file is clicked.
+        """
         self.current_pdf = pdf_path
         filename = os.path.basename(pdf_path)
 
-        # Update top bar
         self.top_bar.set_document_name(filename)
-
-        # Add to explorer and mark active
         self.explorer.add_file(pdf_path)
-
-        # Render PDF
         self.pdf_viewer.load_pdf(pdf_path)
 
-        # Update chat panel (old chat_label replaced)
-        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False)
+        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False)  
+
+        self.pdf_opened.emit(pdf_path)  
+
+    def set_pipeline_status(self, message: str):
+        """Updates the status bar with the current RAG pipeline phase."""
+        if hasattr(self, 'status_bar'):
+            self.status_bar.set_status_text(message)  
