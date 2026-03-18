@@ -44,7 +44,7 @@ class App(QMainWindow):
 
         self.rag_pipeline = RAGPipeline(
             late_chunking=self.late_chunking,
-            api_key=api_key, 
+            api_key=api_key,
             vector_store=self.vector_store
         )
 
@@ -54,7 +54,6 @@ class App(QMainWindow):
         self.main_window.pdf_opened.connect(self._on_pdf_opened)
         self.update_title()
         self.setGeometry(100, 100, 800, 600)
-        # geometry is set as x, y, height, width
 
     def open_pdf(self, pdf_path):
         """
@@ -65,10 +64,9 @@ class App(QMainWindow):
         """
         self.main_window.load_pdf(pdf_path)
 
-
     def _on_pdf_opened(self, pdf_path):
         """
-        Caleed whenever pdf is loaded in mainwindow.
+        Called whenever pdf is loaded in mainwindow.
 
         Triggered by MainWindow.pdf_opened signal
         Cancels any in-progress indexing and starts a fresh worker.
@@ -83,7 +81,6 @@ class App(QMainWindow):
             self._worker.quit()
             self._worker.wait()
 
-        # background worker
         self._worker = IndexingWorker(self.rag_pipeline, pdf_path)
         self._worker.started_extraction.connect(self._on_extraction_started)
         self._worker.started_indexing.connect(self._on_indexing_started)
@@ -93,27 +90,23 @@ class App(QMainWindow):
 
     def _on_extraction_started(self):
         self.main_window.set_pipeline_status("Extracting text...")
- 
+
     def _on_indexing_started(self):
         if self.vector_store.is_indexed(self.current_pdf):
             self.main_window.set_pipeline_status("Loading embeddings from store...")
         else:
             self.main_window.set_pipeline_status("Building embeddings...")
- 
+
     def _on_indexing_finished(self):
         self.main_window.set_pipeline_status("Ready")
- 
+
     def _on_indexing_error(self, message: str):
         self.main_window.set_pipeline_status(f"Error: {message}")
 
     def update_title(self):
         """Update window title based on opened pdf"""
-        # print("updated title")
         if self.current_pdf:
             filename = os.path.basename(self.current_pdf)
             self.setWindowTitle(f"{filename} - DocuMind")
-            # print(filename)
         else:
             self.setWindowTitle("DocuMind")
-
-
