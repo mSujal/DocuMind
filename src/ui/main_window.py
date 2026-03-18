@@ -4,9 +4,9 @@ Main application window UI components and Layouts
 
 import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel, QFileDialog
-from PyQt5.QtCore import Qt, pyqtSignal  
+from PyQt5.QtCore import Qt, pyqtSignal  # added pyqtSignal
 from src.ui.top_bar import TopBar
-from src.ui.chat_panel import ChatPanel 
+from src.ui.chat_panel import ChatPanel  # from GUI
 from src.ui.pdf_toolbar import PDFToolbar
 from src.ui.pdf_viewer import PDFViewer
 from src.ui.explorer_panel import ExplorerPanel
@@ -24,7 +24,7 @@ class MainWindow(QWidget):
         Left (ExplorerPanel + StatusBar) | Center (toolbar + viewer) | Right (AI chat)
     """
 
-    pdf_opened = pyqtSignal(str)  
+    pdf_opened = pyqtSignal(str)  # from doc_processing
 
     def __init__(self):
         super().__init__()
@@ -46,6 +46,8 @@ class MainWindow(QWidget):
 
         self.top_bar = TopBar()
         self.top_bar.upload_requested.connect(self._on_upload_requested)
+        self.top_bar.toggle_explorer.connect(self._toggle_explorer)
+        self.top_bar.toggle_chat.connect(self._toggle_chat)
         main_layout.addWidget(self.top_bar)
 
         panels_layout = QHBoxLayout()
@@ -143,7 +145,7 @@ class MainWindow(QWidget):
 
         layout.addWidget(title)
 
-        self.chat_panel = ChatPanel()  
+        self.chat_panel = ChatPanel()  # from GUI
         layout.addWidget(self.chat_panel)
 
         panel.setLayout(layout)
@@ -152,6 +154,12 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
     #  Slots                                                               #
     # ------------------------------------------------------------------ #
+
+    def _toggle_explorer(self):
+        self.left_panel.setVisible(not self.left_panel.isVisible())
+
+    def _toggle_chat(self):
+        self.right_panel.setVisible(not self.right_panel.isVisible())
 
     def _on_upload_requested(self):
         """Open file dialog when upload button in top bar is clicked."""
@@ -186,11 +194,11 @@ class MainWindow(QWidget):
         self.explorer.add_file(pdf_path)
         self.pdf_viewer.load_pdf(pdf_path)
 
-        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False) 
+        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False)  # from GUI
 
-        self.pdf_opened.emit(pdf_path)  
+        self.pdf_opened.emit(pdf_path)  # from doc_processing
 
     def set_pipeline_status(self, message: str):
         """Updates the status bar with the current RAG pipeline phase."""
         if hasattr(self, 'status_bar'):
-            self.status_bar.set_status_text(message)  
+            self.status_bar.set_status_text(message)  # from doc_processing

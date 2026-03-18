@@ -9,8 +9,7 @@ from src.ui.icons import (
     ICON_LOGO,
     ICON_TOGGLE_SIDEBAR,
     ICON_UPLOAD,
-    ICON_PRINT,
-    ICON_DOWNLOAD,
+    ICON_MCQ,
     ICON_TOGGLE_CHAT,
     ICON_SETTINGS,
 )
@@ -19,8 +18,10 @@ import config
 
 class TopBar(QWidget):
     """Top bar with app title, document name and action buttons"""
-
-    upload_requested = pyqtSignal()  
+    upload_requested = pyqtSignal()
+    toggle_explorer = pyqtSignal()
+    toggle_chat = pyqtSignal()
+    toggle_mode = pyqtSignal()
 
     def __init__(self):
         super().__init__()
@@ -29,16 +30,13 @@ class TopBar(QWidget):
     def init_ui(self):
         """Initialize the top bar ui"""
         self.setFixedHeight(config.TOPBAR_HEIGHT)
-
         self.setAttribute(Qt.WA_StyledBackground, True)
-
         self.setStyleSheet(f"""
             QWidget {{
                 background-color: {config.BG_SECONDARY};
                 color: {config.TEXT_PRIMARY};
             }}
         """)
-
         layout = QHBoxLayout()
         layout.setContentsMargins(12, 0, 12, 0)
         layout.setSpacing(8)
@@ -81,7 +79,6 @@ class TopBar(QWidget):
 
         # Action buttons
         self.create_action_buttons(layout)
-
         self.setLayout(layout)
 
     def create_action_buttons(self, layout):
@@ -106,7 +103,7 @@ class TopBar(QWidget):
         buttons = [
             (ICON_TOGGLE_SIDEBAR, "Toggle sidebar"),
             (ICON_UPLOAD,         "Upload PDF"),
-            (ICON_PRINT,          "Print"),
+            (ICON_MCQ,            "Toggle MCQ mode"),
             (ICON_TOGGLE_CHAT,    "Toggle AI chat"),
             (ICON_SETTINGS,       "Settings"),
         ]
@@ -120,9 +117,14 @@ class TopBar(QWidget):
             btn.setCursor(Qt.PointingHandCursor)
             layout.addWidget(btn)
 
-            # Connect upload button to signal
             if tooltip == "Upload PDF":
                 btn.clicked.connect(self.upload_requested.emit)
+            elif tooltip == "Toggle sidebar":
+                btn.clicked.connect(self.toggle_explorer.emit)
+            elif tooltip == "Toggle AI chat":
+                btn.clicked.connect(self.toggle_chat.emit)
+            elif tooltip == "Toggle MCQ mode":
+                btn.clicked.connect(self.toggle_mode.emit)
 
     def set_document_name(self, name):
         """Update the document name displayed"""

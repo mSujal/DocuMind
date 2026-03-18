@@ -244,3 +244,17 @@ ICON_IMAGE_PLACEHOLDER = """<svg viewBox="0 0 24 24" fill="none" stroke="current
     <circle cx="8.5" cy="8.5" r="1.5"/>
     <polyline points="21 15 16 10 5 21"/>
 </svg>"""
+
+# ═══════════════════════════════════════════════════════════════════════════ #
+#  MCQ                                                                        #
+# ═══════════════════════════════════════════════════════════════════════════ #
+ICON_MCQ = """<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="3"/>
+    <circle cx="7.5" cy="8" r="1" fill="currentColor" stroke="none"/>
+    <line x1="10" y1="8" x2="18" y2="8"/>
+    <circle cx="7.5" cy="12" r="1" fill="currentColor" stroke="none"/>
+    <line x1="10" y1="12" x2="18" y2="12"/>
+    <circle cx="7.5" cy="16" r="1" fill="currentColor" stroke="none"/>
+    <line x1="10" y1="16" x2="18" y2="16"/>
+    <polyline points="5 8 6.5 9.5 9 6.5" stroke-width="1.5"/>
+</svg>"""

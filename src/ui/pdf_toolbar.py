@@ -169,8 +169,13 @@ class PDFToolbar(QWidget):
         self.btn_rotate.clicked.connect(self.rotate_requested.emit)
         layout.addWidget(self.btn_rotate)
 
-        layout.addStretch()
-        self.setLayout(layout)
+        outer_layout = QHBoxLayout()
+        outer_layout.setContentsMargins(0, 0, 0, 0)
+        outer_layout.addStretch()
+        outer_layout.addLayout(layout)
+        outer_layout.addStretch()
+        self.setLayout(outer_layout)
+
         self._update_nav_buttons()
 
     # ------------------------------------------------------------------ #
