@@ -9,6 +9,8 @@ TOKENIZER = "nomic-ai/nomic-embed-text-v1.5"
 DEVICE = "cpu"
 
 PERSIST_DIR = './chroma_db/'
+
+LLM_MODEL = 'llama-3.1-8b-instant'
 ####################################################
 #    PANEL PARAMETERS
 ####################################################

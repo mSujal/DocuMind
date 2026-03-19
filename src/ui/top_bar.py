@@ -124,8 +124,14 @@ class TopBar(QWidget):
             elif tooltip == "Toggle AI chat":
                 btn.clicked.connect(self.toggle_chat.emit)
             elif tooltip == "Toggle MCQ mode":
+                self.mcq_btn = btn  
                 btn.clicked.connect(self.toggle_mode.emit)
 
     def set_document_name(self, name):
         """Update the document name displayed"""
         self.doc_name.setText(name)
+        
+        
+    def set_mcq_active(self, active: bool):
+        color = config.TEXT_ACCENT if active else config.ICON_COLOR
+        self.mcq_btn.setIcon(svg_to_icon(ICON_MCQ, color=color, size=16))

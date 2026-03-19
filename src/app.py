@@ -99,6 +99,7 @@ class App(QMainWindow):
 
     def _on_indexing_finished(self):
         self.main_window.set_pipeline_status("Ready")
+        self.main_window.attach_pipeline(self.rag_pipeline)
 
     def _on_indexing_error(self, message: str):
         self.main_window.set_pipeline_status(f"Error: {message}")
