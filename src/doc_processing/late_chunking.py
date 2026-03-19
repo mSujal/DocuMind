@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModel
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import torch
 import config
-
+ 
 class LateChunking():
     def __init__(self, model_name, tokenizer_name, chunk_size=512, chunk_overlap=50):
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, trust_remote_code=True)
@@ -28,16 +28,22 @@ class LateChunking():
         )
 
         self.chunks = []
+        self.chunk_pages = []
 
-    def _chunk(self, corpus):
+    def _chunk(self, pages):
         """
         Recursive character-level text splitting using LangChain.
         Tries separators in order: paragraphs → lines → sentences → words → characters.
 
         Args:
-            corpus: extracted text from pdf file
+            pages: list of (page_num, text) from Extraction
         """
-        self.chunks = self.splitter.split_text(corpus)
+        self.chunks = []
+        self.chunk_pages = []
+        for page_num, text in pages:
+            splits = self.splitter.split_text(text)
+            self.chunks.extend(splits)
+            self.chunk_pages.extend([page_num] * len(splits))
 
     def _tokenize(self, corpus):
         """
@@ -113,14 +119,15 @@ class LateChunking():
         print(self.chunk_embeddings)
         return self.chunk_embeddings
 
-    def run(self, corpus):
+    def run(self, pages):
         """
         Full late-chunking pipeline.
 
         Returns:
             chunk_embeddings: list of embedding tensors, one per chunk
         """
-        self._chunk(corpus)
+        corpus = "\n\n".join(text for _, text in pages) # just full text corpus from (page_num, text)
+        self._chunk(pages)
         self._tokenize(corpus)
         self._find_token_boundaries(corpus)
         chunk_embeddings = self._embed()

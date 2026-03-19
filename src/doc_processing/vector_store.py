@@ -7,7 +7,7 @@ from unittest import expectedFailure, result
 import chromadb
 from chromadb.config import Settings
 import config
-
+ 
 class VectorStore:
     def __init__(self, persist_dir = config.PERSIST_DIR):
         """
@@ -44,7 +44,7 @@ class VectorStore:
         col = self.client.get_collection(name=name, embedding_function=None)
         return col.count() > 0
 
-    def store(self, pdf_path, chunks, embeddings):
+    def store(self, pdf_path, chunks, embeddings, chunk_pages):
         """
         Persists chunks and their embeddings for pdf 
 
@@ -58,7 +58,7 @@ class VectorStore:
         # tensor => python list for storing in chromadb
         embeddings_list = [e.cpu().float().tolist() for e in embeddings]
         ids = [f"chunk-{i}" for i in range(len(chunks))]
-        metadatas = [{"chunk_index": i} for i in range(len(chunks))]
+        metadatas = [{"chunk_index": i, "page": chunk_pages[i]} for i in range(len(chunks))]
 
         # upsert for re-indexing the same pdf is safe
         col.upsert(
@@ -77,12 +77,13 @@ class VectorStore:
             (chunks, embeddings) where embeddings are python list
         """
         col = self._get_or_create_collection(pdf_path)
-        result = col.get(include=["documents", "embeddings"])
+        result = col.get(include=["documents", "embeddings", "metadatas"])
+        pages = [m["page"] for m in result["metadatas"]]
 
         chunks = result["documents"]
         embeddings = result["embeddings"]
         print(f"[VectorStore] Loaded {len(chunks)} chunks for '{pdf_path}'")
-        return chunks, embeddings
+        return chunks, embeddings, pages
 
     def query(self, pdf_path, query_embedding, top_k):
         """
