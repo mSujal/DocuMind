@@ -17,9 +17,9 @@ class Extraction:
                     for char in span["chars"]:
                         all_chars.append({
                             "text": char["c"],
-                            "x0": char["origin"][0],
-                            "x1": char["origin"][0] + span_size * 0.5,
-                            "top": char["origin"][1],
+                            "x0": char["bbox"][0],
+                            "x1": char["bbox"][2],
+                            "top": char["bbox"][1],
                             "size": span_size
                         })
 
@@ -36,7 +36,7 @@ class Extraction:
                 return ""
             lines = {}
             for c in char_list:
-                y = round(c["top"] / 3) * 3
+                y = round(c["top"] / (c["size"] * 0.5)) * round(c["size"] * 0.5)
                 lines.setdefault(y, []).append(c)
 
             result = []
@@ -49,9 +49,9 @@ class Extraction:
 
                 if gaps:
                     median_gap = sorted(gaps)[len(gaps) // 2]
-                    space_threshold = max(median_gap * 2.5, line_chars[0]["size"] * 0.15)
+                    space_threshold = max(median_gap * 2.5, line_chars[0]["size"] * 0.3)
                 else:
-                    space_threshold = line_chars[0]["size"] * 0.2
+                    space_threshold = line_chars[0]["size"] * 0.3
 
                 line = ""
                 for i, c in enumerate(line_chars):
@@ -88,6 +88,8 @@ class Extraction:
         doc = fitz.open(pdf_path)
         pages = [Extraction.extract_page_text(page) for page in doc]
         doc.close()
-        return Extraction.clean_text('\n\n'.join(pages))
+        text = Extraction.clean_text('\n\n'.join(pages))
+        print(text)
+        return text
 
 
