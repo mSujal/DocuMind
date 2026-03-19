@@ -4,9 +4,9 @@ Main application window UI components and Layouts
 
 import os
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QFrame, QLabel, QFileDialog
-from PyQt5.QtCore import Qt, pyqtSignal  # added pyqtSignal
+from PyQt5.QtCore import Qt, pyqtSignal
 from src.ui.top_bar import TopBar
-from src.ui.chat_panel import ChatPanel  # from GUI
+from src.ui.chat_panel import ChatPanel
 from src.ui.pdf_toolbar import PDFToolbar
 from src.ui.pdf_viewer import PDFViewer
 from src.ui.explorer_panel import ExplorerPanel
@@ -20,11 +20,10 @@ class MainWindow(QWidget):
 
     Layout (top to bottom):
         TopBar
-        ── three panels ──────────────────────────────────────────────────
-        Left (ExplorerPanel + StatusBar) | Center (toolbar + viewer) | Right (AI chat)
+        Left (ExplorerPanel + StatusBar) | Center (toolbar + viewer) | Right (ChatPanel)
     """
 
-    pdf_opened = pyqtSignal(str)  # from doc_processing
+    pdf_opened = pyqtSignal(str)
 
     def __init__(self):
         super().__init__()
@@ -70,7 +69,6 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
 
     def _create_left_panel(self):
-        """Explorer tree on top, status bar pinned to bottom."""
         panel = QFrame()
         panel.setStyleSheet(f"""
             QFrame {{
@@ -78,27 +76,22 @@ class MainWindow(QWidget):
                 border-right: 1px solid {config.BORDER_COLOR};
             }}
         """)
-
         layout = QVBoxLayout()
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
 
         self.explorer = ExplorerPanel(parent=panel)
         self.explorer.file_selected.connect(self._on_explorer_file_selected)
-
         self.status_bar = StatusBar(parent=panel)
 
         layout.addWidget(self.explorer, 1)
         layout.addWidget(self.status_bar)
-
         panel.setLayout(layout)
         return panel
 
     def _create_pdf_panel(self):
-        """Center panel: PDFToolbar on top, PDFViewer below."""
         panel = QFrame()
         panel.setStyleSheet(f"QFrame {{ background-color: {config.BG_PRIMARY}; }}")
-
         layout = QVBoxLayout()
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
@@ -106,19 +99,15 @@ class MainWindow(QWidget):
         self.pdf_toolbar = PDFToolbar(parent=panel)
         self.pdf_viewer  = PDFViewer(parent=panel)
 
-        # Toolbar → viewer
         self.pdf_toolbar.go_to_page.connect(self.pdf_viewer.go_to_page)
         self.pdf_toolbar.zoom_changed.connect(self.pdf_viewer.set_zoom)
         self.pdf_toolbar.fit_width_requested.connect(self.pdf_viewer.fit_width)
         self.pdf_toolbar.fit_page_requested.connect(self.pdf_viewer.fit_page)
         self.pdf_toolbar.rotate_requested.connect(self.pdf_viewer.rotate)
 
-        # Viewer → toolbar
         self.pdf_viewer.page_changed.connect(self.pdf_toolbar.set_current_page)
         self.pdf_viewer.zoom_changed.connect(self.pdf_toolbar.set_zoom)
         self.pdf_viewer.pdf_loaded.connect(self.pdf_toolbar.set_total_pages)
-
-        # Viewer → status bar
         self.pdf_viewer.pdf_loaded.connect(self._on_pdf_loaded_pages)
 
         layout.addWidget(self.pdf_toolbar)
@@ -127,6 +116,7 @@ class MainWindow(QWidget):
         return panel
 
     def _create_ai_panel(self):
+        """Right panel — ChatPanel fills the entire space."""
         panel = QFrame()
         panel.setStyleSheet(f"""
             QFrame {{
@@ -135,21 +125,48 @@ class MainWindow(QWidget):
             }}
         """)
         layout = QVBoxLayout()
-        layout.setContentsMargins(10, 10, 10, 10)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
 
+        # ── optional "AI Assistant" title bar ─────────────────────────
+        title_bar = QFrame()
+        title_bar.setFixedHeight(36)
+        title_bar.setStyleSheet(f"""
+            QFrame {{
+                background-color: {config.BG_TERTIARY};
+                border-bottom: 1px solid {config.BORDER_COLOR};
+            }}
+        """)
+        title_layout = QHBoxLayout(title_bar)
+        title_layout.setContentsMargins(12, 0, 12, 0)
         title = QLabel("AI Assistant")
         title.setStyleSheet(f"""
-            font-size: 14px; font-weight: bold;
-            color: {config.TEXT_PRIMARY}; padding: 5px 0;
+            font-size: {config.FONT_SIZE_LARGE};
+            font-weight: bold;
+            color: {config.TEXT_PRIMARY};
         """)
+        title_layout.addWidget(title)
 
-        layout.addWidget(title)
+        self.chat_panel = ChatPanel()
 
-        self.chat_panel = ChatPanel()  # from GUI
+        layout.addWidget(title_bar)
         layout.addWidget(self.chat_panel)
-
         panel.setLayout(layout)
         return panel
+
+    # ------------------------------------------------------------------ #
+    #  Pipeline wiring                                                     #
+    # ------------------------------------------------------------------ #
+
+    def attach_pipeline(self, pipeline):
+        """
+        Call this after RAGPipeline.index() finishes to enable chat.
+
+        In your App class:
+            def _on_indexing_done(self, pipeline):
+                self.main_window.attach_pipeline(pipeline)
+        """
+        self.chat_panel.set_pipeline(pipeline)
 
     # ------------------------------------------------------------------ #
     #  Slots                                                               #
@@ -162,7 +179,6 @@ class MainWindow(QWidget):
         self.right_panel.setVisible(not self.right_panel.isVisible())
 
     def _on_upload_requested(self):
-        """Open file dialog when upload button in top bar is clicked."""
         file_path, _ = QFileDialog.getOpenFileName(
             self, "Open PDF File", "", "PDF Files (*.pdf)"
         )
@@ -170,12 +186,10 @@ class MainWindow(QWidget):
             self.load_pdf(file_path)
 
     def _on_pdf_loaded_pages(self, page_count: int):
-        """Forward page count to status bar after PDF is rendered."""
         if self.current_pdf:
             self.status_bar.update_file(self.current_pdf, page_count)
 
     def _on_explorer_file_selected(self, filepath: str):
-        """User clicked a file in the explorer — load it."""
         self.load_pdf(filepath)
 
     # ------------------------------------------------------------------ #
@@ -183,10 +197,6 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
 
     def load_pdf(self, pdf_path: str):
-        """
-        Load a PDF — called by App when the user picks a file,
-        or by the explorer when a file is clicked.
-        """
         self.current_pdf = pdf_path
         filename = os.path.basename(pdf_path)
 
@@ -194,11 +204,8 @@ class MainWindow(QWidget):
         self.explorer.add_file(pdf_path)
         self.pdf_viewer.load_pdf(pdf_path)
 
-        self.chat_panel.add_message(f"Ready to chat about:\n\n{filename}", is_user=False)  # from GUI
-
-        self.pdf_opened.emit(pdf_path)  # from doc_processing
+        self.pdf_opened.emit(pdf_path)
 
     def set_pipeline_status(self, message: str):
-        """Updates the status bar with the current RAG pipeline phase."""
-        if hasattr(self, 'status_bar'):
-            self.status_bar.set_status_text(message)  # from doc_processing
+        if hasattr(self, "status_bar"):
+            self.status_bar.set_status_text(message)
