@@ -16,3 +16,8 @@ test.*
 !.gitignore
 !.gitattributes
 
+# env
+.env 
+
+#chroma
+chroma_db
