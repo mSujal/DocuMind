@@ -8,10 +8,10 @@ class LoadWorker(QThread):
     finished = pyqtSignal(object)
 
     def run(self):
-        self.status.emit("Modules...")
+        self.status.emit("Initializing Modules...")
         from src.app import App
 
-        self.status.emit("Tokenizer & Model...")
+        self.status.emit("Loading Tokenizer & Model...")
         instance = App()
 
         self.status.emit("Ready!")

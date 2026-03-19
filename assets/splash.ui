@@ -54,7 +54,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    background-image: url(assets/logo_small.png);
+    background-image: url(assets/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
