@@ -266,7 +266,7 @@ class ChatPanel(QWidget):
 
     # ── send / receive ────────────────────────────────────────────────
 
-    def handle_send(self):
+    def handle_send(self):     
         text = self._input.toPlainText().strip()
         if not text or self._worker is not None:
             return

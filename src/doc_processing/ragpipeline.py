@@ -69,6 +69,10 @@ class RAGPipeline():
         similarities = []
 
         for i, chunk_emb in enumerate(self.chunk_embeddings):
+            
+            if not isinstance(chunk_emb, torch.Tensor):
+                chunk_emb = torch.tensor(chunk_emb, dtype=torch.float32).to(self.lc.device)
+        
             score = F.cosine_similarity(
                 query_embedding.unsqueeze(0),
                 chunk_emb.unsqueeze(0)

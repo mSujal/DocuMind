@@ -28,6 +28,7 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.current_pdf = None
+        self._chat_mode = "qna" 
         self.init_ui()
 
     def init_ui(self):
@@ -47,6 +48,7 @@ class MainWindow(QWidget):
         self.top_bar.upload_requested.connect(self._on_upload_requested)
         self.top_bar.toggle_explorer.connect(self._toggle_explorer)
         self.top_bar.toggle_chat.connect(self._toggle_chat)
+        self.top_bar.toggle_mode.connect(self._on_toggle_mode)
         main_layout.addWidget(self.top_bar)
 
         panels_layout = QHBoxLayout()
@@ -159,13 +161,6 @@ class MainWindow(QWidget):
     # ------------------------------------------------------------------ #
 
     def attach_pipeline(self, pipeline):
-        """
-        Call this after RAGPipeline.index() finishes to enable chat.
-
-        In your App class:
-            def _on_indexing_done(self, pipeline):
-                self.main_window.attach_pipeline(pipeline)
-        """
         self.chat_panel.set_pipeline(pipeline)
 
     # ------------------------------------------------------------------ #
@@ -191,6 +186,11 @@ class MainWindow(QWidget):
 
     def _on_explorer_file_selected(self, filepath: str):
         self.load_pdf(filepath)
+        
+    def _on_toggle_mode(self):
+        self._chat_mode = "mcq" if self._chat_mode == "qna" else "qna"
+        self.chat_panel.set_mode(self._chat_mode)
+        self.top_bar.set_mcq_active(self._chat_mode == "mcq")
 
     # ------------------------------------------------------------------ #
     #  Load PDF                                                            #
