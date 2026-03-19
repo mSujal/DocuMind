@@ -122,8 +122,10 @@ class RAGPipeline():
 
         Format your response exactly like this:
         Question: <question here>
-        A) <option>           B) <option>
-        C) <option>           D) <option>
+        A) <option>          
+        B) <option>
+        C) <option>           
+        D) <option>
         Correct Answer: <letter>
         Explanation: <brief explanation based on context>
         """
@@ -132,4 +134,5 @@ class RAGPipeline():
             model=config.LLM_MODEL,
             messages=[{"role": "user", "content": prompt}]
         )
+        print(response)
         return response.choices[0].message.content
