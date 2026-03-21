@@ -1,0 +1,18 @@
+{
+  "pdf": "LoRA.pdf",
+  "pdf_path": "test_docs/medium/LoRA.pdf",
+  "profiled_at": "2026-03-21T07:33:01.328613",
+  "mode": "cached",
+  "page_count": null,
+  "chunk_count": 420,
+  "token_count": null,
+  "window_count": null,
+  "time_extraction_s": null,
+  "time_chunking_s": null,
+  "time_tokenize_s": null,
+  "time_embedding_s": null,
+  "time_store_s": null,
+  "time_cache_load_s": 0.031,
+  "time_total_s": 0.057,
+  "error": null
+}

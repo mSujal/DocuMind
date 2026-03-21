@@ -1,0 +1,18 @@
+{
+  "pdf": "Gradient Centralization.pdf",
+  "pdf_path": "test_docs/medium/Gradient Centralization.pdf",
+  "profiled_at": "2026-03-21T07:33:01.230648",
+  "mode": "cached",
+  "page_count": null,
+  "chunk_count": 223,
+  "token_count": null,
+  "window_count": null,
+  "time_extraction_s": null,
+  "time_chunking_s": null,
+  "time_tokenize_s": null,
+  "time_embedding_s": null,
+  "time_store_s": null,
+  "time_cache_load_s": 0.017,
+  "time_total_s": 0.036,
+  "error": null
+}

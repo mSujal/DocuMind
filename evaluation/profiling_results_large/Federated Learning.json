@@ -1,0 +1,18 @@
+{
+  "pdf": "Federated Learning.pdf",
+  "pdf_path": "test_docs/large/Federated Learning.pdf",
+  "profiled_at": "2026-03-21T08:08:12.104553",
+  "mode": "fresh",
+  "page_count": 21,
+  "chunk_count": 290,
+  "token_count": 16429,
+  "window_count": 3,
+  "time_extraction_s": 5.259,
+  "time_chunking_s": 0.002,
+  "time_tokenize_s": 0.075,
+  "time_embedding_s": 109.998,
+  "time_store_s": 0.212,
+  "time_cache_load_s": null,
+  "time_total_s": 115.561,
+  "error": null
+}

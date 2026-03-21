@@ -1,0 +1,18 @@
+{
+  "pdf": "attention_is_all_you_need.pdf",
+  "pdf_path": "test_docs/medium/attention_is_all_you_need.pdf",
+  "profiled_at": "2026-03-21T07:25:33.102011",
+  "mode": "fresh",
+  "page_count": 15,
+  "chunk_count": 180,
+  "token_count": 12656,
+  "window_count": 2,
+  "time_extraction_s": 4.039,
+  "time_chunking_s": 0.001,
+  "time_tokenize_s": 0.052,
+  "time_embedding_s": 73.282,
+  "time_store_s": 0.451,
+  "time_cache_load_s": null,
+  "time_total_s": 77.829,
+  "error": null
+}

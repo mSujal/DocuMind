@@ -1,23 +1,20 @@
-"""
-Late chunking implementation
-"""
-import os
-import platform
-
 from transformers import AutoTokenizer, AutoModel
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import torch
+import os
+import bisect
 import config
- 
+
+
 class LateChunking():
-    def __init__(self, model_name, tokenizer_name, chunk_size=512, chunk_overlap=50):
+    def __init__(self, model_name, tokenizer_name, chunk_size=384, chunk_overlap=50, window_size=8192, window_overlap=1024):
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, trust_remote_code=True)
         self.model = AutoModel.from_pretrained(model_name, trust_remote_code=True)
 
-        # Use GPU if available else CPU 
         self.device = config.DEVICE
         self.model = self.model.to(self.device)
-        self.model.eval() 
+        self.model.eval()
+        torch.set_num_threads(os.cpu_count()) 
 
         self.splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
@@ -27,17 +24,14 @@ class LateChunking():
             is_separator_regex=False
         )
 
+        self.window_size = window_size
+        self.window_overlap = window_overlap
+        self.window_stride = window_size - window_overlap
+
         self.chunks = []
         self.chunk_pages = []
 
     def _chunk(self, pages):
-        """
-        Recursive character-level text splitting using LangChain.
-        Tries separators in order: paragraphs → lines → sentences → words → characters.
-
-        Args:
-            pages: list of (page_num, text) from Extraction
-        """
         self.chunks = []
         self.chunk_pages = []
         for page_num, text in pages:
@@ -45,91 +39,109 @@ class LateChunking():
             self.chunks.extend(splits)
             self.chunk_pages.extend([page_num] * len(splits))
 
-    def _tokenize(self, corpus):
-        """
-        Tokenize the full corpus (not individual chunks) for late chunking.
-
-        Args:
-            corpus: extracted text from pdf file
-        """
-        prefixed_corpus = "search_document: " + corpus
-
-        self.tokens = self.tokenizer(
-            prefixed_corpus,
+    def _tokenize_full(self, corpus):
+        prefixed = "search_document: " + corpus
+        encoded = self.tokenizer(
+            prefixed,
             return_tensors="pt",
             return_offsets_mapping=True,
-            truncation=True,
-            max_length=8192  
+            truncation=False,
+            add_special_tokens=True,
         )
-       
-        self._offset_mapping = self.tokens.pop("offset_mapping")
-        self.tokens = {k: v.to(self.device) for k, v in self.tokens.items()}
+        return encoded["input_ids"], encoded["offset_mapping"]
 
-    def _find_token_boundaries(self, corpus):
-        """
-        Map each text chunk's character span to token indices in the full corpus.
-        """
-        self.chunk_boundaries = []
+    def _find_token_boundaries(self, corpus, offset_mapping):
+        prefix_len = len("search_document: ")
+
+        chunk_boundaries = []
         current_pos = 0
         for chunk in self.chunks:
             start_char = corpus.find(chunk, current_pos)
             if start_char == -1:
                 start_char = corpus.find(chunk)
             end_char = start_char + len(chunk)
-            self.chunk_boundaries.append((start_char, end_char))
+            chunk_boundaries.append((start_char + prefix_len, end_char + prefix_len))
             current_pos = end_char
 
-        offset_mapping = self._offset_mapping[0]
-        self.token_boundaries = []
-        for (chunk_start, chunk_end) in self.chunk_boundaries:
-            token_start = None
-            token_end = None
-            for i, (tok_start, tok_end) in enumerate(offset_mapping):
-                tok_start = tok_start.item()
-                tok_end = tok_end.item()
-                if tok_start == 0 and tok_end == 0:  # skip special tokens
+        offsets = offset_mapping[0]
+        # build lookup arrays once, then binary search per chunk
+        tok_starts = [offsets[i][0].item() for i in range(len(offsets))]
+        tok_ends   = [offsets[i][1].item() for i in range(len(offsets))]
+
+        token_boundaries = []
+        for char_start, char_end in chunk_boundaries:
+            # first token whose start >= char_start
+            tok_start = bisect.bisect_left(tok_starts, char_start)
+            if tok_start >= len(tok_starts):
+                tok_start = 1
+            # last token whose end <= char_end
+            tok_end = bisect.bisect_right(tok_ends, char_end) - 1
+            if tok_end < 0:
+                tok_end = tok_start
+            # skip special tokens (start=0, end=0)
+            while tok_start < len(tok_starts) and tok_starts[tok_start] == 0 and tok_ends[tok_start] == 0:
+                tok_start += 1
+            token_boundaries.append((tok_start, tok_end))
+
+        return token_boundaries
+
+    def _embed_windowed(self, input_ids, token_boundaries):
+        T = input_ids.shape[1]
+        chunk_embeddings = [None] * len(token_boundaries)
+
+        starts = list(range(0, max(T - self.window_size + 1, 1), self.window_stride))
+        if starts[-1] + self.window_size < T:
+            starts.append(max(0, T - self.window_size))
+
+        for win_start in starts:
+            win_end = min(win_start + self.window_size, T)
+            win_ids = input_ids[:, win_start:win_end].to(self.device)
+            win_mask = torch.ones_like(win_ids)
+
+            with torch.inference_mode():
+                outputs = self.model(
+                    input_ids=win_ids,
+                    attention_mask=win_mask,
+                )
+            win_token_embs = outputs.last_hidden_state[0]
+
+            for ci, (tok_start, tok_end) in enumerate(token_boundaries):
+                if tok_end < win_start or tok_start >= win_end:
                     continue
-                if tok_start >= chunk_start and token_start is None:
-                    token_start = i
-                if tok_end <= chunk_end:
-                    token_end = i
-           
-            if token_start is None or token_end is None:
-                token_start = token_start or 1
-                token_end = token_end or token_start
-            self.token_boundaries.append((token_start, token_end))
 
-    def _embed(self):
-        """
-        Run the full corpus through the model, then mean-pool each chunk's
-        token embeddings — this is the core of late chunking.
-        """
-        with torch.no_grad():
-            outputs = self.model(
-                input_ids=self.tokens["input_ids"],
-                attention_mask=self.tokens["attention_mask"]
-            )
-        all_token_embeddings = outputs.last_hidden_state[0] 
-        self.chunk_embeddings = []
-        for (token_start, token_end) in self.token_boundaries:
-            chunk_token_embeddings = all_token_embeddings[token_start:token_end + 1]
-            chunk_embedding = chunk_token_embeddings.mean(dim=0)
-            self.chunk_embeddings.append(chunk_embedding)
+                local_start = max(tok_start, win_start) - win_start
+                local_end   = min(tok_end,   win_end)   - win_start
 
-        print(self.chunk_embeddings)
-        return self.chunk_embeddings
+                if local_start > local_end:
+                    continue
 
-    def run(self, pages):
-        """
-        Full late-chunking pipeline.
+                chunk_emb = win_token_embs[local_start : local_end + 1].mean(dim=0)
 
-        Returns:
-            chunk_embeddings: list of embedding tensors, one per chunk
-        """
-        corpus = "\n\n".join(text for _, text in pages) # just full text corpus from (page_num, text)
-        self._chunk(pages)
-        self._tokenize(corpus)
-        self._find_token_boundaries(corpus)
-        chunk_embeddings = self._embed()
+                if chunk_embeddings[ci] is None:
+                    chunk_embeddings[ci] = chunk_emb
+
+        hidden = self.model.config.hidden_size
+        for ci in range(len(chunk_embeddings)):
+            if chunk_embeddings[ci] is None:
+                print(f"[LateChunking] WARNING: chunk {ci} has no embedding — using zeros")
+                chunk_embeddings[ci] = torch.zeros(hidden, device=self.device)
 
         return chunk_embeddings
+
+    def run(self, pages):
+        corpus = "\n\n".join(text for _, text in pages)
+
+        self._chunk(pages)
+        print(f"[LateChunking] {len(self.chunks)} chunks from {len(pages)} pages")
+
+        input_ids, offset_mapping = self._tokenize_full(corpus)
+        T = input_ids.shape[1]
+        n_windows = max(1, (T - self.window_overlap - 1) // self.window_stride + 1)
+        print(f"[LateChunking] {T} tokens → {n_windows} window(s) (size={self.window_size}, overlap={self.window_overlap})")
+
+        token_boundaries = self._find_token_boundaries(corpus, offset_mapping)
+
+        self.chunk_embeddings = self._embed_windowed(input_ids, token_boundaries)
+
+        print(f"[LateChunking] embedded {len(self.chunk_embeddings)} chunks")
+        return self.chunk_embeddings
