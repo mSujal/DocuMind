@@ -1,0 +1,6356 @@
+{
+  "meta": {
+    "run_at": "2026-03-21T15:27:44.688488",
+    "eval_set": "evaluation/eval_set.json",
+    "pdf_dir": "test_docs",
+    "top_k": 5,
+    "n_total": 171,
+    "n_run": 171
+  },
+  "aggregate": {
+    "n_queries": 171,
+    "top_k": 5,
+    "recall_pct": 71.3,
+    "precision_pct": 32.0,
+    "mrr": 0.547,
+    "avg_retrieval_time_s": 0.145,
+    "avg_cosine_similarity": 0.524,
+    "correct_page_found_pct": 55.6,
+    "rank_distribution": {
+      "rank_1": 55,
+      "rank_2": 15,
+      "rank_3": 13,
+      "rank_4_5": 12,
+      "not_found": 76
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "document": "Edge Computing.pdf",
+      "query": "By what amount was response time reduced when moving face recognition computation from cloud to the edge in the proof-of-concept platform described in the paper?",
+      "correct_page": 3,
+      "keywords": [
+        "proof-of-concept",
+        "face recognition",
+        "response time",
+        "169 ms",
+        "cloud to the edge"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        6,
+        2,
+        3,
+        2
+      ],
+      "retrieval_time_s": 0.355,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.4924,
+      "cosine_scores": [
+        0.511,
+        0.4957,
+        0.4907,
+        0.4839,
+        0.4808
+      ],
+      "_top_chunk_preview": ". Researchers built a proof-of-concept platform to run face recognition application in [20], and the response time is re",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 2,
+      "document": "Edge Computing.pdf",
+      "query": "What percentage of IoT-created data was predicted to be stored, processed, analyzed, and acted upon close to or at the edge of the network by 2019?",
+      "correct_page": 1,
+      "keywords": [
+        "45%",
+        "IoT-created data",
+        "stored",
+        "processed",
+        "edge of the network"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        6,
+        1,
+        7,
+        2
+      ],
+      "retrieval_time_s": 0.213,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5513,
+      "cosine_scores": [
+        0.5681,
+        0.5571,
+        0.5471,
+        0.5427,
+        0.5417
+      ],
+      "_top_chunk_preview": ". By 2019, data produced by people, machines, and things will reach 500 zettabytes, as estimated by Cisco Global Cloud I",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 3,
+      "document": "Anomaly Detection in Power Grids via Context-Agnostic Learning.pdf",
+      "query": "What real-world power grid test case is used extensively in the numerical simulations, and how many buses and lines does it contain?",
+      "correct_page": 4,
+      "keywords": [
+        "Polish power grid",
+        "case2383wp",
+        "2383",
+        "buses",
+        "2896 lines"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        7,
+        1,
+        7,
+        7
+      ],
+      "retrieval_time_s": 0.087,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4058,
+      "cosine_scores": [
+        0.4188,
+        0.4152,
+        0.4033,
+        0.3987,
+        0.3929
+      ],
+      "_top_chunk_preview": ". Through numerical simulations on networks up to 2383 nodes, we show that our approach is accurate, outperforming state",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 4,
+      "document": "Anomaly Detection in Power Grids via Context-Agnostic Learning.pdf",
+      "query": "What two real datasets were used to estimate load patterns when generating the synthetic load profiles for the numerical analysis?",
+      "correct_page": 4,
+      "keywords": [
+        "Eastern Interconnect",
+        "Carnegie Mellon University",
+        "CMU campus load",
+        "20 days",
+        "synthetic load profiles"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        4,
+        1,
+        7,
+        1,
+        6
+      ],
+      "retrieval_time_s": 0.082,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4385,
+      "cosine_scores": [
+        0.4492,
+        0.4408,
+        0.4388,
+        0.4342,
+        0.4293
+      ],
+      "_top_chunk_preview": "III. NUMERICAL ANALYSIS AND DISCUSSION \n\nA. Load Data Generation \n\nIn this paper, we use the same load data that was use",
+      "_top_chunk_page": 4
+    },
+    {
+      "id": 5,
+      "document": "Time-dependent_resonant_magneto-optical_rotation.pdf",
+      "query": "At what cell temperature were experimental data obtained, and what was the corresponding concentration of rubidium-87 atoms per cubic centimeter?",
+      "correct_page": 4,
+      "keywords": [
+        "cell temperature",
+        "73.2",
+        "concentration",
+        "87Rb atoms",
+        "cm3"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        1,
+        4,
+        1,
+        1
+      ],
+      "retrieval_time_s": 0.146,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4833,
+      "cosine_scores": [
+        0.5059,
+        0.4921,
+        0.4848,
+        0.4668,
+        0.4667
+      ],
+      "_top_chunk_preview": ". Reported measurements conducted using a vapor cell without any buffer gas or an anti-relaxation wall coating show that",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 6,
+      "document": "Time-dependent_resonant_magneto-optical_rotation.pdf",
+      "query": "How long was the light pulse applied during each measurement cycle, and what was the sample period used for recording detector waveforms?",
+      "correct_page": 4,
+      "keywords": [
+        "80 \u00b5s",
+        "sample period",
+        "20 ns",
+        "waveforms",
+        "measurement cycle"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        1,
+        3,
+        4,
+        1
+      ],
+      "retrieval_time_s": 0.31,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4447,
+      "cosine_scores": [
+        0.4636,
+        0.452,
+        0.4379,
+        0.4374,
+        0.4328
+      ],
+      "_top_chunk_preview": ". Reported measurements conducted using a vapor cell without any buffer gas or an anti-relaxation wall coating show that",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 7,
+      "document": "GAN.pdf",
+      "query": "What is the global minimum value of the virtual training criterion C(G) in the GAN framework, and under what condition is it achieved?",
+      "correct_page": 5,
+      "keywords": [
+        "global minimum",
+        "virtual training criterion",
+        "log 4",
+        "pg equals pdata",
+        "Jensen-Shannon divergence"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        5,
+        3,
+        3,
+        3,
+        1
+      ],
+      "retrieval_time_s": 0.194,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.485,
+      "cosine_scores": [
+        0.5248,
+        0.5028,
+        0.4723,
+        0.4627,
+        0.4625
+      ],
+      "_top_chunk_preview": "Theorem 1. The global minimum of the virtual training criterion C ( G ) is achieved if and only if pg = pdata. At that p",
+      "_top_chunk_page": 5
+    },
+    {
+      "id": 8,
+      "document": "GAN.pdf",
+      "query": "What log-likelihood score did Adversarial nets achieve on the MNIST dataset in the Parzen window evaluation, and how did it compare to Deep GSN?",
+      "correct_page": 6,
+      "keywords": [
+        "Parzen window",
+        "log-likelihood",
+        "MNIST",
+        "225",
+        "Deep GSN"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        1,
+        5,
+        2,
+        2
+      ],
+      "retrieval_time_s": 0.133,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4444,
+      "cosine_scores": [
+        0.4465,
+        0.4463,
+        0.4458,
+        0.4427,
+        0.4405
+      ],
+      "_top_chunk_preview": ". (b) In the inner loop of the algorithm D is trained to discriminate samples from data, converging to D[\u2217] ( x ) = p da",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 9,
+      "document": "Yolo.pdf",
+      "query": "What mAP score did YOLO achieve on the PASCAL VOC 2012 test set, and on which specific object categories did it score 8\u201310% lower than R-CNN or Feature Edit?",
+      "correct_page": 7,
+      "keywords": [
+        "VOC 2012",
+        "57.9% mAP",
+        "bottle",
+        "sheep",
+        "tv/monitor"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.137,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5868,
+      "cosine_scores": [
+        0.5917,
+        0.5911,
+        0.5843,
+        0.5836,
+        0.5832
+      ],
+      "_top_chunk_preview": "The best Fast R-CNN model achieves a mAP of 71.8% on the VOC 2007 test set. When combined with YOLO, its",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 10,
+      "document": "Yolo.pdf",
+      "query": "What values were set for the two loss weighting parameters \u03bbcoord and \u03bbnoobj in YOLO's training, and what problem do they address?",
+      "correct_page": 3,
+      "keywords": [
+        "lambda coord",
+        "lambda noobj",
+        "confidence scores",
+        "grid cells",
+        "bounding box coordinate predictions"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        3,
+        2,
+        2,
+        6
+      ],
+      "retrieval_time_s": 0.092,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.475,
+      "cosine_scores": [
+        0.489,
+        0.4823,
+        0.472,
+        0.4694,
+        0.4621
+      ],
+      "_top_chunk_preview": "We also train a fast version of YOLO designed to push the boundaries of fast object detection. Fast YOLO uses a neural n",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 11,
+      "document": "LoRA.pdf",
+      "query": "What is the reduction in checkpoint size when applying LoRA with rank 4 to only the query and value projection matrices on GPT-3 175B?",
+      "correct_page": 5,
+      "keywords": [
+        "checkpoint size",
+        "query",
+        "value projection",
+        "350GB",
+        "35MB"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        8,
+        7,
+        11,
+        10
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4914,
+      "cosine_scores": [
+        0.519,
+        0.4865,
+        0.486,
+        0.484,
+        0.4813
+      ],
+      "_top_chunk_preview": "Having shown that LoRA can be a competitive alternative to full fine-tuning on NLU, we hope to answer if LoRA still prev",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 12,
+      "document": "LoRA.pdf",
+      "query": "According to the inference latency study in Table 1, by what percentage does AdapterH increase latency over LoRA when the batch size is 1 and sequence length is 128?",
+      "correct_page": 4,
+      "keywords": [
+        "AdapterH",
+        "inference latency",
+        "batch size",
+        "sequence length",
+        "milliseconds"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        17,
+        7
+      ],
+      "retrieval_time_s": 0.104,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5312,
+      "cosine_scores": [
+        0.5705,
+        0.5357,
+        0.5223,
+        0.5154,
+        0.5119
+      ],
+      "_top_chunk_preview": ". (2021) according to their setup. To ensure a fair comparison, we make two crucial changes to how we evaluate LoRA when",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 13,
+      "document": "LoRA.pdf",
+      "query": "When adapting GPT-3 175B with a fixed parameter budget of 18M, which combination of attention weight matrices yields the best overall performance on WikiSQL and MultiNLI?",
+      "correct_page": 10,
+      "keywords": [
+        "parameter budget",
+        "18M",
+        "WikiSQL",
+        "MultiNLI",
+        "attention weights"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        10,
+        10,
+        10,
+        11,
+        10
+      ],
+      "retrieval_time_s": 0.11,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5412,
+      "cosine_scores": [
+        0.5465,
+        0.5459,
+        0.5432,
+        0.5371,
+        0.5331
+      ],
+      "_top_chunk_preview": "+------------------+--------------------------+--------------------------------+\n|                  | Weight Type       ",
+      "_top_chunk_page": 10
+    },
+    {
+      "id": 14,
+      "document": "LoRA.pdf",
+      "query": "What does the analysis of the Frobenius norm in Table 7 reveal about the relationship between the adaptation matrix \u0394W and the pre-trained weight matrix W in GPT-3's 48th layer?",
+      "correct_page": 12,
+      "keywords": [
+        "Frobenius norm",
+        "amplification factor",
+        "singular directions",
+        "48th layer",
+        "pre-trained"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        11,
+        7,
+        11,
+        11
+      ],
+      "retrieval_time_s": 0.111,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5304,
+      "cosine_scores": [
+        0.5685,
+        0.5262,
+        0.5206,
+        0.5197,
+        0.5171
+      ],
+      "_top_chunk_preview": "Table 7: The Frobenius norm of U[\u22a4] WqV[\u22a4] where U and V are the left/right top r singular vector directions of either (",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 15,
+      "document": "Deep_residual_learning_for_image_recognition.pdf",
+      "query": "What top-5 error rate did the ensemble of residual nets achieve on the ImageNet test set, and what competition did this result win?",
+      "correct_page": 2,
+      "keywords": [
+        "ensemble",
+        "3.57%",
+        "top-5 error",
+        "ILSVRC 2015",
+        "classification"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        5,
+        5,
+        6,
+        5,
+        5
+      ],
+      "retrieval_time_s": 0.455,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5351,
+      "cosine_scores": [
+        0.5451,
+        0.5378,
+        0.5344,
+        0.5322,
+        0.5262
+      ],
+      "_top_chunk_preview": "Residual Networks. Next we evaluate 18-layer and 34layer residual nets ( ResNets ). The baseline architectures are the s",
+      "_top_chunk_page": 5
+    },
+    {
+      "id": 16,
+      "document": "Deep_residual_learning_for_image_recognition.pdf",
+      "query": "What are the three layer types used in the bottleneck building block introduced for ResNet-50/101/152, and what is the role of the 1\u00d71 convolution layers?",
+      "correct_page": 6,
+      "keywords": [
+        "bottleneck",
+        "1x1",
+        "3x3",
+        "reducing",
+        "restoring dimensions"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        6,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.69,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4994,
+      "cosine_scores": [
+        0.5118,
+        0.5116,
+        0.4952,
+        0.4945,
+        0.4838
+      ],
+      "_top_chunk_preview": "34-layer net with this 3-layer bottleneck block, resulting in a 50-layer ResNet (Table 1). We use option B for increasin",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 17,
+      "document": "Deep_residual_learning_for_image_recognition.pdf",
+      "query": "What training error did the 1202-layer ResNet achieve on CIFAR-10, and why did the authors argue its test error was worse than the 110-layer network despite similar training error?",
+      "correct_page": 8,
+      "keywords": [
+        "1202-layer",
+        "overfitting",
+        "19.4M",
+        "training error",
+        "CIFAR-10"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        5,
+        5,
+        6,
+        5
+      ],
+      "retrieval_time_s": 0.104,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5387,
+      "cosine_scores": [
+        0.5812,
+        0.5468,
+        0.5277,
+        0.5198,
+        0.518
+      ],
+      "_top_chunk_preview": "Figure 6. Training on CIFAR-10 . Dashed lines denote training error, and bold lines denote testing error. Left : plain n",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 18,
+      "document": "Deep_residual_learning_for_image_recognition.pdf",
+      "query": "What improvement did ResNet-101 achieve over VGG-16 on the COCO validation set using baseline Faster R-CNN, and what metric was used?",
+      "correct_page": 8,
+      "keywords": [
+        "ResNet-101",
+        "VGG-16",
+        "COCO",
+        "mAP",
+        "28% relative improvement"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        6,
+        11,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.095,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5298,
+      "cosine_scores": [
+        0.5581,
+        0.5332,
+        0.5224,
+        0.5181,
+        0.5174
+      ],
+      "_top_chunk_preview": "Table 9. Object detection improvements on MS COCO using Faster R-CNN and ResNet-101.",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 19,
+      "document": "Bert.pdf",
+      "query": "What are the exact architectural specifications (number of layers, hidden size, and attention heads) for BERTBASE and BERTLARGE as reported in the paper?",
+      "correct_page": 3,
+      "keywords": [
+        "BERTBASE",
+        "BERTLARGE",
+        "hidden size",
+        "attention heads",
+        "parameters"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        15,
+        16,
+        15,
+        15
+      ],
+      "retrieval_time_s": 0.099,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5523,
+      "cosine_scores": [
+        0.5646,
+        0.5573,
+        0.5545,
+        0.5431,
+        0.542
+      ],
+      "_top_chunk_preview": "RTE Recognizing Textual Entailment is a binary entailment task similar to MNLI, but with much less training data (Bentiv",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 20,
+      "document": "Bert.pdf",
+      "query": "What two corpora were used to pre-train BERT, and what are their respective sizes in terms of word count?",
+      "correct_page": 5,
+      "keywords": [
+        "BooksCorpus",
+        "Wikipedia",
+        "800M",
+        "2500M",
+        "pre-training corpus"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        16,
+        15,
+        16,
+        15,
+        16
+      ],
+      "retrieval_time_s": 0.094,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.6093,
+      "cosine_scores": [
+        0.6223,
+        0.6138,
+        0.6067,
+        0.6023,
+        0.6014
+      ],
+      "_top_chunk_preview": "1. Question: Does BERT really need such a large amount of pre-training (128,000 words/batch * 1,000,000 steps) to achiev",
+      "_top_chunk_page": 16
+    },
+    {
+      "id": 21,
+      "document": "Bert.pdf",
+      "query": "In the ablation study on pre-training tasks (Table 5), what is the SQuAD F1 score drop when switching from the full BERTBASE model to the LTR and No NSP configuration?",
+      "correct_page": 8,
+      "keywords": [
+        "LTR",
+        "No NSP",
+        "SQuAD",
+        "ablation",
+        "pre-training tasks"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        3,
+        7,
+        3,
+        3
+      ],
+      "retrieval_time_s": 0.102,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5396,
+      "cosine_scores": [
+        0.5456,
+        0.5399,
+        0.5391,
+        0.5382,
+        0.5353
+      ],
+      "_top_chunk_preview": "ing and auto-encoder objectives have been used for pre-training such models (Howard and Ruder, 2018; Radford et al., 201",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 22,
+      "document": "Bert.pdf",
+      "query": "What is the best performing feature-based approach configuration for BERT on the CoNLL-2003 NER task, and what Dev F1 score does it achieve?",
+      "correct_page": 9,
+      "keywords": [
+        "feature-based",
+        "CoNLL-2003",
+        "top four hidden layers",
+        "concatenate",
+        "NER"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        7,
+        9,
+        9,
+        7
+      ],
+      "retrieval_time_s": 0.145,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5234,
+      "cosine_scores": [
+        0.5349,
+        0.5235,
+        0.5204,
+        0.5197,
+        0.5187
+      ],
+      "_top_chunk_preview": "RTE Recognizing Textual Entailment is a binary entailment task similar to MNLI, but with much less training data (Bentiv",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 23,
+      "document": "attention_is_all_you_need.pdf",
+      "query": "What are the exact dimensions used for keys, values, and queries in each of the 8 attention heads of the base Transformer model?",
+      "correct_page": 5,
+      "keywords": [
+        "attention heads",
+        "dk",
+        "dv",
+        "dmodel",
+        "64"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        4,
+        9,
+        9,
+        9
+      ],
+      "retrieval_time_s": 0.09,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5059,
+      "cosine_scores": [
+        0.5237,
+        0.5076,
+        0.5066,
+        0.4962,
+        0.4953
+      ],
+      "_top_chunk_preview": "| base | 6 512 2048 8 64 64 0.1 0.1 100K   | 4.92 25.8 65                     |\n+------+--------------------------------",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 24,
+      "document": "attention_is_all_you_need.pdf",
+      "query": "How many sentence pairs were in the WMT 2014 English-German training dataset, and what vocabulary size was used for encoding?",
+      "correct_page": 7,
+      "keywords": [
+        "WMT 2014",
+        "English-German",
+        "4.5 million",
+        "byte-pair encoding",
+        "37000 tokens"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        9,
+        7,
+        1,
+        8
+      ],
+      "retrieval_time_s": 0.086,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5568,
+      "cosine_scores": [
+        0.574,
+        0.5554,
+        0.5547,
+        0.5526,
+        0.5475
+      ],
+      "_top_chunk_preview": "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million sentence pairs. Sentences wer",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 25,
+      "document": "attention_is_all_you_need.pdf",
+      "query": "What BLEU score did the big Transformer model achieve on the WMT 2014 English-to-German translation task, and how much did it improve over the previous best results?",
+      "correct_page": 8,
+      "keywords": [
+        "big model",
+        "28.4 BLEU",
+        "English-to-German",
+        "state-of-the-art",
+        "ensembles"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        8,
+        8,
+        1,
+        1
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5929,
+      "cosine_scores": [
+        0.6167,
+        0.6082,
+        0.5995,
+        0.5721,
+        0.5681
+      ],
+      "_top_chunk_preview": ". Our model achieves 28.4 BLEU on the WMT 2014 Englishto-German translation task, improving over the existing best resul",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 26,
+      "document": "attention_is_all_you_need.pdf",
+      "query": "In the model variations table (Table 3), what effect did reducing the attention key size dk to 16 (row A) have on the development set BLEU score compared to the base model?",
+      "correct_page": 9,
+      "keywords": [
+        "attention key size",
+        "dk",
+        "model variations",
+        "newstest2013",
+        "BLEU"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        9,
+        8,
+        8,
+        9
+      ],
+      "retrieval_time_s": 0.098,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5463,
+      "cosine_scores": [
+        0.5501,
+        0.5488,
+        0.5447,
+        0.5447,
+        0.5432
+      ],
+      "_top_chunk_preview": "| base | 6 512 2048 8 64 64 0.1 0.1 100K   | 4.92 25.8 65                     |\n+------+--------------------------------",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 27,
+      "document": "MPNet.pdf",
+      "query": "On the GLUE development set, by how many points does MPNet outperform BERT, XLNet, and RoBERTa respectively under the BERT-base setting?",
+      "correct_page": 7,
+      "keywords": [
+        "outperforms",
+        "BERT",
+        "XLNet",
+        "RoBERTa",
+        "dev set"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        7,
+        8,
+        7,
+        7
+      ],
+      "retrieval_time_s": 0.095,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.568,
+      "cosine_scores": [
+        0.5811,
+        0.5666,
+        0.5645,
+        0.5641,
+        0.5638
+      ],
+      "_top_chunk_preview": ". PLM). Moreover, MPNet outperforms previous well-known models BERT, XLNet and RoBERTa by 4.8, 3.4 and 1.5 points respec",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 28,
+      "document": "MPNet.pdf",
+      "query": "In the ablation study of MPNet, what happens to performance when position compensation is removed?",
+      "correct_page": 8,
+      "keywords": [
+        "position compensation",
+        "degenerates",
+        "PLM",
+        "accuracy drops",
+        "ablation"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        13,
+        8,
+        13,
+        6
+      ],
+      "retrieval_time_s": 0.081,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4741,
+      "cosine_scores": [
+        0.4892,
+        0.4773,
+        0.4703,
+        0.4675,
+        0.4662
+      ],
+      "_top_chunk_preview": ". Experimental results show that MPNet outperforms MLM and PLM by a large margin, which demonstrates that 1) the effecti",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 29,
+      "document": "MPNet.pdf",
+      "query": "What percentage of input tokens and positions does MPNet leverage when predicting masked tokens, assuming 15% of tokens are predicted?",
+      "correct_page": 6,
+      "keywords": [
+        "92.5%",
+        "100%",
+        "positions",
+        "tokens",
+        "conditional information"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        6,
+        6,
+        5,
+        6
+      ],
+      "retrieval_time_s": 0.088,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.5476,
+      "cosine_scores": [
+        0.5583,
+        0.547,
+        0.5456,
+        0.5453,
+        0.5417
+      ],
+      "_top_chunk_preview": ". For the pre-training objective of MPNet, we randomly permute the sentence following PLM [5][5] , choose the rightmost ",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 30,
+      "document": "MPNet.pdf",
+      "query": "How many NVIDIA Tesla V100 GPUs were used to pre-train MPNet, and how long did the total training procedure take?",
+      "correct_page": 6,
+      "keywords": [
+        "NVIDIA Tesla",
+        "V100",
+        "35 days",
+        "FP16",
+        "pre-train"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        13,
+        8,
+        8,
+        12
+      ],
+      "retrieval_time_s": 0.089,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5103,
+      "cosine_scores": [
+        0.5451,
+        0.5056,
+        0.5013,
+        0.5006,
+        0.4991
+      ],
+      "_top_chunk_preview": ". We use 32 NVIDIA Tesla 32GB V100 GPUs, with FP16 for speedup. The total training procedure needs 35 days.",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 31,
+      "document": "MPNet.pdf",
+      "query": "In the training efficiency comparison, how many training FLOPs does MPNet-500K use, and what average GLUE score does it achieve?",
+      "correct_page": 13,
+      "keywords": [
+        "Train FLOPS",
+        "MPNet-500K",
+        "GLUE",
+        "training efficiency",
+        "computations"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        13,
+        13,
+        8
+      ],
+      "retrieval_time_s": 0.1,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5552,
+      "cosine_scores": [
+        0.5717,
+        0.5585,
+        0.5556,
+        0.5467,
+        0.5434
+      ],
+      "_top_chunk_preview": "| MPNet \u2212MNLI-init | 81.0 90.7 89.1 79.8 90.7 88.7 | 86.5 86.3 |\n+------------------+-------------------------------+---",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 32,
+      "document": "An_Image_is_worth_16x16_words.pdf",
+      "query": "What accuracy does the best Vision Transformer model achieve on ImageNet, and which model variant is it?",
+      "correct_page": 2,
+      "keywords": [
+        "88.55",
+        "ImageNet",
+        "CIFAR-100",
+        "VTAB",
+        "pre-trained"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        16,
+        2,
+        5,
+        1,
+        1
+      ],
+      "retrieval_time_s": 0.122,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5535,
+      "cosine_scores": [
+        0.5879,
+        0.5548,
+        0.5495,
+        0.54,
+        0.5353
+      ],
+      "_top_chunk_preview": "Figure 8: Scaling different model dimensions of the Vision Transformer.",
+      "_top_chunk_page": 16
+    },
+    {
+      "id": 33,
+      "document": "An_Image_is_worth_16x16_words.pdf",
+      "query": "How many parameters does the ViT-Huge model have, and what are its depth, hidden size, and number of attention heads?",
+      "correct_page": 5,
+      "keywords": [
+        "ViT-Huge",
+        "632M",
+        "1280",
+        "MLP size",
+        "Heads"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        8,
+        1,
+        1,
+        6
+      ],
+      "retrieval_time_s": 0.113,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5387,
+      "cosine_scores": [
+        0.5552,
+        0.5454,
+        0.5352,
+        0.5314,
+        0.5263
+      ],
+      "_top_chunk_preview": ". When pre-trained on the smallest dataset, ImageNet, ViT-Large models underperform compared to ViT-Base models, despite",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 34,
+      "document": "An_Image_is_worth_16x16_words.pdf",
+      "query": "What accuracy does the self-supervised ViT-B/16 model achieve on ImageNet, and how does it compare to training from scratch?",
+      "correct_page": 9,
+      "keywords": [
+        "masked patch prediction",
+        "79.9%",
+        "training from scratch",
+        "self-supervised",
+        "supervised pre-training"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        2,
+        1,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5804,
+      "cosine_scores": [
+        0.597,
+        0.5821,
+        0.5781,
+        0.5739,
+        0.5707
+      ],
+      "_top_chunk_preview": "Figure 2 decomposes the VTAB tasks into their respective groups, and compares to previous SOTA methods on this benchmark",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 35,
+      "document": "An_Image_is_worth_16x16_words.pdf",
+      "query": "In the positional embedding ablation study, what is the ImageNet 5-shot linear accuracy difference between having no positional embedding versus using 1D positional embeddings?",
+      "correct_page": 17,
+      "keywords": [
+        "No Pos. Emb.",
+        "1-D Pos. Emb.",
+        "0.61382",
+        "0.64206",
+        "ablation study"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        1,
+        8,
+        8,
+        1
+      ],
+      "retrieval_time_s": 0.207,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5025,
+      "cosine_scores": [
+        0.5068,
+        0.506,
+        0.5029,
+        0.4995,
+        0.4971
+      ],
+      "_top_chunk_preview": ". When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks ",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 36,
+      "document": "An_Image_is_worth_16x16_words.pdf",
+      "query": "According to the scaling study, by approximately how much less compute does ViT require compared to ResNets to achieve the same transfer performance?",
+      "correct_page": 8,
+      "keywords": [
+        "performance/compute trade-off",
+        "2 \u2212 4\u00d7",
+        "ResNets",
+        "saturate",
+        "scaling"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        5,
+        6,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.5,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.518,
+      "cosine_scores": [
+        0.5326,
+        0.5214,
+        0.5152,
+        0.5142,
+        0.5066
+      ],
+      "_top_chunk_preview": ". When pre-trained on large amounts of data and transferred to multiple mid-sized or small image recognition benchmarks ",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 37,
+      "document": "Hurtful_words.pdf",
+      "query": "What MIMIC-III dataset statistics are reported for the in-hospital mortality cohort regarding gender, language, race, and insurance?",
+      "correct_page": 3,
+      "keywords": [
+        "15,892",
+        "55.3%",
+        "English speakers",
+        "Medicare",
+        "in-hospital mortality"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        6,
+        8,
+        15,
+        7
+      ],
+      "retrieval_time_s": 0.1,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5168,
+      "cosine_scores": [
+        0.5279,
+        0.5273,
+        0.5206,
+        0.5044,
+        0.5038
+      ],
+      "_top_chunk_preview": ". Further, we note that the model performs poorly for the \"Other\" ethnicity label when compared to other ethnicities in ",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 38,
+      "document": "Hurtful_words.pdf",
+      "query": "How many of the 57 downstream clinical tasks show a statistically significant recall gap between Medicare and non-Medicare patients, and what percentage of those favor Medicare?",
+      "correct_page": 8,
+      "keywords": [
+        "Medicare",
+        "Recall Gap",
+        "85%",
+        "significant difference",
+        "insurance"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        8,
+        8,
+        8,
+        16
+      ],
+      "retrieval_time_s": 0.109,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5186,
+      "cosine_scores": [
+        0.5303,
+        0.5202,
+        0.5195,
+        0.5159,
+        0.5071
+      ],
+      "_top_chunk_preview": "|           | (% of Tasks Favoring | (20%)                | (19%)                | (83%)                |\n|           | ",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 39,
+      "document": "Hurtful_words.pdf",
+      "query": "In the log probability bias score results, how many of the eight medical context categories show a statistically significant gender difference in the baseline clinical BERT model?",
+      "correct_page": 7,
+      "keywords": [
+        "7/8",
+        "significant difference",
+        "clinical BERT",
+        "log probability",
+        "gender"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        7,
+        9,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.108,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5615,
+      "cosine_scores": [
+        0.5787,
+        0.5717,
+        0.5569,
+        0.553,
+        0.5472
+      ],
+      "_top_chunk_preview": "First, we demonstrate that there are significant differences in the log probability bias scores [36] of clinical text fo",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 40,
+      "document": "Hurtful_words.pdf",
+      "query": "What correlation in AUPRC does the debiased clinical BERT model retain compared to the baseline clinical BERT model?",
+      "correct_page": 7,
+      "keywords": [
+        "0.996",
+        "AUPRC",
+        "debiased",
+        "baseline",
+        "correlation"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        9,
+        8,
+        9,
+        7
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 5,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5693,
+      "cosine_scores": [
+        0.6006,
+        0.5749,
+        0.562,
+        0.5592,
+        0.5498
+      ],
+      "_top_chunk_preview": "Table 5: Comparison of classifiers based on our original clinical BERT and the gender-debiased clinical BERT on 57 tasks",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 41,
+      "document": "Hurtful_words.pdf",
+      "query": "In the adversarial debiasing comparison for gender, how does the number of significant recall gaps change between the baseline and debiased models?",
+      "correct_page": 9,
+      "keywords": [
+        "Baseline",
+        "Debiased",
+        "Recall Gap",
+        "significant gaps",
+        "gender-debiased"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        9,
+        6,
+        7,
+        8
+      ],
+      "retrieval_time_s": 0.146,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5567,
+      "cosine_scores": [
+        0.6054,
+        0.5488,
+        0.5476,
+        0.5421,
+        0.5397
+      ],
+      "_top_chunk_preview": "Table 5: Comparison of classifiers based on our original clinical BERT and the gender-debiased clinical BERT on 57 tasks",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 42,
+      "document": "Unseen Object Segmentation in Videos.pdf",
+      "query": "What average IoU does the proposed method with ResNet-101 architecture achieve on the DAVIS 2016 dataset with unseen object categories, and how does it compare to FSEG?",
+      "correct_page": 11,
+      "keywords": [
+        "ResNet",
+        "85.9",
+        "FSEG",
+        "Avg.",
+        "DAVIS"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        14,
+        10
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.489,
+      "cosine_scores": [
+        0.5041,
+        0.4972,
+        0.4833,
+        0.481,
+        0.4794
+      ],
+      "_top_chunk_preview": "+----------+------+------+------+------+----+------+\n| \u03bbm       |  0   |  5   | 15   | 25   | 35 | 45   |\n+----------+--",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 43,
+      "document": "Unseen Object Segmentation in Videos.pdf",
+      "query": "What are the two stopping conditions used in the greedy algorithm for optimizing the segment mining submodular function?",
+      "correct_page": 9,
+      "keywords": [
+        "threshold",
+        "energy gain",
+        "selected proposals",
+        "converged",
+        "stopping"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        5,
+        10,
+        11,
+        2,
+        10
+      ],
+      "retrieval_time_s": 0.091,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.461,
+      "cosine_scores": [
+        0.4742,
+        0.4717,
+        0.4576,
+        0.4511,
+        0.4502
+      ],
+      "_top_chunk_preview": ". We then formulate segment mining as a submodular optimization problem, aiming to select a subset of object-like segmen",
+      "_top_chunk_page": 5
+    },
+    {
+      "id": 44,
+      "document": "Unseen Object Segmentation in Videos.pdf",
+      "query": "On the YouTube-Objects dataset, what average IoU does the proposed method with VGG-16 architecture achieve, and by how much does it improve over the baseline FCN model?",
+      "correct_page": 13,
+      "keywords": [
+        "YouTube-Objects",
+        "65.9",
+        "FCN",
+        "performance gain",
+        "weakly-supervised"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        14,
+        15,
+        11,
+        11
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.525,
+      "cosine_scores": [
+        0.5286,
+        0.526,
+        0.5238,
+        0.5236,
+        0.5232
+      ],
+      "_top_chunk_preview": "2. Chen, L.C., Papandreou, G., Kokkinos, I., Murphy, K., Yuille, A.L.: Deeplab: Semantic image segmentation with deep co",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 45,
+      "document": "Unseen Object Segmentation in Videos.pdf",
+      "query": "How is the weight initialization of the transferable layer computed for each source category?",
+      "correct_page": 8,
+      "keywords": [
+        "initialized weight",
+        "inner product",
+        "global average pooling",
+        "fc7",
+        "similarity score"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        1,
+        11
+      ],
+      "retrieval_time_s": 0.077,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4833,
+      "cosine_scores": [
+        0.5051,
+        0.4856,
+        0.4819,
+        0.4737,
+        0.47
+      ],
+      "_top_chunk_preview": ". Since the GloVe is not learned in the image domain between categories, the initialized weights may not reflect the tru",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 46,
+      "document": "Unseen Object Segmentation in Videos.pdf",
+      "query": "What parameter values are used for the submodular function's facility location cost and the two unary term weights in all experiments?",
+      "correct_page": 10,
+      "keywords": [
+        "alpha",
+        "lambda",
+        "objectness",
+        "motion",
+        "submodular"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        10,
+        10,
+        10,
+        6,
+        11
+      ],
+      "retrieval_time_s": 0.086,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4484,
+      "cosine_scores": [
+        0.4727,
+        0.4543,
+        0.4412,
+        0.4371,
+        0.4365
+      ],
+      "_top_chunk_preview": "In the submodular function for segment mining, we set \u03b1 = 1 for the facility location term in (2), and \u03bbo = 20, \u03bbm = 35 ",
+      "_top_chunk_page": 10
+    },
+    {
+      "id": 47,
+      "document": "Spectre Attacks.pdf",
+      "query": "Which specific Intel processor architectures were empirically verified to be vulnerable to Spectre attacks in the conditional branch misprediction experiments?",
+      "correct_page": 6,
+      "keywords": [
+        "Ivy Bridge",
+        "Haswell",
+        "Skylake",
+        "AMD Ryzen",
+        "empirically"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        2,
+        2,
+        3,
+        6
+      ],
+      "retrieval_time_s": 0.093,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 5,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5573,
+      "cosine_scores": [
+        0.5753,
+        0.5558,
+        0.5527,
+        0.5518,
+        0.5511
+      ],
+      "_top_chunk_preview": "Exploiting Conditional Branches. To exploit conditional branches, the attacker needs the branch predictor to mispredict ",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 48,
+      "document": "Spectre Attacks.pdf",
+      "query": "What read speed in KB/second does the unoptimized Spectre demonstration code achieve on an i7 Surface Pro 3?",
+      "correct_page": 6,
+      "keywords": [
+        "unoptimized",
+        "10KB/second",
+        "Surface Pro 3",
+        "flush+probe",
+        "cache line"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        6,
+        6,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.096,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4432,
+      "cosine_scores": [
+        0.4496,
+        0.4469,
+        0.4406,
+        0.4399,
+        0.4389
+      ],
+      "_top_chunk_preview": "The leaked results are conveyed via the cache status of probeTable[n*4096] for n \u2208 0..255, so each attempt begins with a",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 49,
+      "document": "Spectre Attacks.pdf",
+      "query": "What byte sequence found in ntdll.dll was chosen as the gadget in the Windows proof-of-concept implementation of the indirect branch poisoning attack?",
+      "correct_page": 9,
+      "keywords": [
+        "ntdll.dll",
+        "byte sequence",
+        "adc",
+        "Windows 8",
+        "Windows 10"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        6,
+        2,
+        1,
+        6
+      ],
+      "retrieval_time_s": 0.099,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5285,
+      "cosine_scores": [
+        0.535,
+        0.5299,
+        0.529,
+        0.5251,
+        0.5235
+      ],
+      "_top_chunk_preview": ". More broadly, the paper shows that speculative execution implementations violate the security assumptions underpinning",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 50,
+      "document": "Spectre Attacks.pdf",
+      "query": "What does the paper identify as the CVE identifiers assigned to the Spectre family of attacks?",
+      "correct_page": 3,
+      "keywords": [
+        "CVE-2017-5753",
+        "CVE-2017-5715",
+        "responsible disclosure",
+        "Qualcomm",
+        "current status"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        2,
+        1,
+        1,
+        13
+      ],
+      "retrieval_time_s": 0.086,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5474,
+      "cosine_scores": [
+        0.5511,
+        0.5492,
+        0.5487,
+        0.5456,
+        0.5425
+      ],
+      "_top_chunk_preview": "Current Status. Using the practice of responsible disclosure, we have disclosed a preliminary version of our results to ",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 51,
+      "document": "Spectre Attacks.pdf",
+      "query": "What does the paper say about the KAISER patch as a countermeasure against Spectre attacks?",
+      "correct_page": 3,
+      "keywords": [
+        "KAISER patch",
+        "Meltdown",
+        "does not protect",
+        "non-Intel processors",
+        "AMD and ARM"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        13,
+        12,
+        13,
+        1
+      ],
+      "retrieval_time_s": 0.086,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4933,
+      "cosine_scores": [
+        0.4951,
+        0.4935,
+        0.493,
+        0.4924,
+        0.4923
+      ],
+      "_top_chunk_preview": "Unlike Meltdown, the Spectre attack works on nonIntel processors, including AMD and ARM processors. Furthermore, the KAI",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 52,
+      "document": "PrivGAN_ .pdf",
+      "query": "What are the two specific training tricks described for initializing and stabilizing the privacy discriminator Dp during privGAN training?",
+      "correct_page": 7,
+      "keywords": [
+        "initial weights",
+        "privacy discriminator",
+        "convergence",
+        "ni",
+        "nd"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        20,
+        15,
+        15,
+        13
+      ],
+      "retrieval_time_s": 0.128,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.5891,
+      "cosine_scores": [
+        0.6026,
+        0.5883,
+        0.5876,
+        0.586,
+        0.5811
+      ],
+      "_top_chunk_preview": ". In such circumstances, it is strongly recommended to not share the Dp (privacy discriminator) module of privGAN. Since",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 53,
+      "document": "PrivGAN_ .pdf",
+      "query": "What white-box attack accuracy does a non-private GAN achieve on the LFW dataset, and what does privGAN with \u03bb=10 reduce it to?",
+      "correct_page": 13,
+      "keywords": [
+        "LFW",
+        "white-box attack accuracy",
+        "lambda",
+        "Table 1",
+        "max attack"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "retrieval_time_s": 0.167,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5839,
+      "cosine_scores": [
+        0.5934,
+        0.5894,
+        0.5848,
+        0.5786,
+        0.5735
+      ],
+      "_top_chunk_preview": "+-------------------+-------------------+------------------+-------------------+-------------------+\n| Dataset          ",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 54,
+      "document": "PrivGAN_ .pdf",
+      "query": "What is the size of the LFW dataset used in the privGAN experiments, and what version of it is used?",
+      "correct_page": 11,
+      "keywords": [
+        "LFW",
+        "13,223",
+        "grayscale",
+        "scikit-learn",
+        "faces"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        15,
+        14,
+        19
+      ],
+      "retrieval_time_s": 0.14,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5211,
+      "cosine_scores": [
+        0.5267,
+        0.5233,
+        0.5214,
+        0.518,
+        0.516
+      ],
+      "_top_chunk_preview": ". 1 , 1 , 10) on 10% of the dataset. We find again that for all datasets and all three values of \u03bb , privGAN leads to co",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 55,
+      "document": "PrivGAN_ .pdf",
+      "query": "In the Monte-Carlo set membership attack, what distance metric and dimensionality reduction technique does the paper identify as most effective?",
+      "correct_page": 10,
+      "keywords": [
+        "PCA",
+        "40 principal components",
+        "Euclidean distance",
+        "median heuristic",
+        "vectorized images"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "retrieval_time_s": 0.485,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5959,
+      "cosine_scores": [
+        0.6216,
+        0.5984,
+        0.5949,
+        0.5892,
+        0.5755
+      ],
+      "_top_chunk_preview": ". 1 , 1 , 10) on 10% of the dataset. We find again that for all datasets and all three values of \u03bb , privGAN leads to co",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 56,
+      "document": "PrivGAN_ .pdf",
+      "query": "What optimizer, learning rate, and beta value are used when training all GAN models while evaluating adversarial attacks in the privGAN experiments?",
+      "correct_page": 11,
+      "keywords": [
+        "Adam",
+        "learning rate",
+        "0.0002",
+        "500 epochs",
+        "beta"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        15,
+        16,
+        16,
+        15
+      ],
+      "retrieval_time_s": 0.506,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5897,
+      "cosine_scores": [
+        0.6171,
+        0.5903,
+        0.5851,
+        0.5788,
+        0.5772
+      ],
+      "_top_chunk_preview": "Figure 5. Comparison of test\u2013set performance of CNN models trained real data, synthetic data generated using GAN and syn",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 57,
+      "document": "Gradient Centralization.pdf",
+      "query": "How much extra training time per epoch does GC add when training ResNet50 on CIFAR100, according to the paper?",
+      "correct_page": 6,
+      "keywords": [
+        "0.6 sec",
+        "extra training time",
+        "CIFAR100",
+        "ResNet50",
+        "negligible"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        20,
+        11,
+        11,
+        20
+      ],
+      "retrieval_time_s": 0.09,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5673,
+      "cosine_scores": [
+        0.5903,
+        0.5694,
+        0.5659,
+        0.5572,
+        0.5536
+      ],
+      "_top_chunk_preview": "Different networks: We testify GC on different DNN architectures, including ResNet18 (R18), ResNet101 (R101) [15], ResNe",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 58,
+      "document": "Gradient Centralization.pdf",
+      "query": "What Top-1 error rate does ResNet50 with Batch Normalization achieve on ImageNet without GC, and what does it achieve with GC?",
+      "correct_page": 13,
+      "keywords": [
+        "Top-1 error",
+        "R50BN",
+        "ImageNet",
+        "Table 5",
+        "R50GN"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        11,
+        20,
+        20,
+        11
+      ],
+      "retrieval_time_s": 0.134,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5114,
+      "cosine_scores": [
+        0.5269,
+        0.5162,
+        0.508,
+        0.5031,
+        0.5029
+      ],
+      "_top_chunk_preview": "Different networks: We testify GC on different DNN architectures, including ResNet18 (R18), ResNet101 (R101) [15], ResNe",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 59,
+      "document": "Gradient Centralization.pdf",
+      "query": "What are the four fine-grained image classification datasets used to evaluate GC on pre-trained models, and what backbone network is used?",
+      "correct_page": 13,
+      "keywords": [
+        "FGVC Aircraft",
+        "Stanford Cars",
+        "Stanford Dogs",
+        "CUB-200-2011",
+        "pre-trained ResNet50"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        10,
+        20,
+        20,
+        20,
+        15
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5284,
+      "cosine_scores": [
+        0.5445,
+        0.5265,
+        0.5246,
+        0.5235,
+        0.523
+      ],
+      "_top_chunk_preview": "\u2022 We consequently perform experiments on four fine-grained image classification datasets (FGVC Aircraft [34], Stanford C",
+      "_top_chunk_page": 10
+    },
+    {
+      "id": 60,
+      "document": "Gradient Centralization.pdf",
+      "query": "On the CIFAR100 dataset, by how much does GC improve the testing accuracy of the SGDM optimizer with ResNet50, according to Table 2?",
+      "correct_page": 11,
+      "keywords": [
+        "SGDM",
+        "CIFAR100",
+        "Table 2",
+        "AdamW",
+        "testing accuracies"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        10,
+        11,
+        11,
+        15
+      ],
+      "retrieval_time_s": 0.113,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5229,
+      "cosine_scores": [
+        0.5399,
+        0.5238,
+        0.52,
+        0.5177,
+        0.5129
+      ],
+      "_top_chunk_preview": "Different networks: We testify GC on different DNN architectures, including ResNet18 (R18), ResNet101 (R101) [15], ResNe",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 61,
+      "document": "Gradient Centralization.pdf",
+      "query": "What detection framework and training dataset are used in the GC object detection and segmentation experiments?",
+      "correct_page": 14,
+      "keywords": [
+        "MMDetection",
+        "COCO train2017",
+        "118K images",
+        "val2017",
+        "Faster R-CNN"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "retrieval_time_s": 0.082,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5077,
+      "cosine_scores": [
+        0.535,
+        0.5067,
+        0.506,
+        0.4965,
+        0.4945
+      ],
+      "_top_chunk_preview": ". Moreover, we can see that BN+GC achieves the highest testing accuracy, validating that GC can accelerate training and ",
+      "_top_chunk_page": 11
+    },
+    {
+      "id": 62,
+      "document": "Reduction for asynchronous Boolean networks.pdf",
+      "query": "What is the precise definition of an attractor in the asynchronous state transition graph as given in the paper?",
+      "correct_page": 3,
+      "keywords": [
+        "trap set",
+        "minimal",
+        "attractors",
+        "fixed points",
+        "cyclic attractors"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4742,
+      "cosine_scores": [
+        0.4867,
+        0.4762,
+        0.4759,
+        0.4753,
+        0.4567
+      ],
+      "_top_chunk_preview": "Denote by p the path from y[\u2032] to y . Note that component u does not change in p . In addition, \u03b1 \u2212 1 is bounded by the ",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 63,
+      "document": "Reduction for asynchronous Boolean networks.pdf",
+      "query": "According to Corollary 3.4, what is the relationship between the number of fixed points of the original network f and the reduced network f-tilde after eliminating component v?",
+      "correct_page": 7,
+      "keywords": [
+        "Corollary 3.4",
+        "fixed points",
+        "cyclic attractors",
+        "elimination",
+        "inequalities"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        8,
+        7,
+        7
+      ],
+      "retrieval_time_s": 0.1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5042,
+      "cosine_scores": [
+        0.5283,
+        0.5125,
+        0.4973,
+        0.4924,
+        0.4904
+      ],
+      "_top_chunk_preview": "Example 3.6. The Boolean network f ( x 1 ,x 2) = ( x \u00af2 , \u00af x 2) reduces to f[\u02dc] ( x 1) = x \u00af1 when the second variable ",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 64,
+      "document": "Reduction for asynchronous Boolean networks.pdf",
+      "query": "What specific counterexample does the paper give to show that the claim in Saadatpour et al. (2013) about mediator node removal is incorrect?",
+      "correct_page": 10,
+      "keywords": [
+        "mediator",
+        "Saadatpour",
+        "cyclic attractor",
+        "interaction graph",
+        "Example 4.2"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        7,
+        2,
+        7,
+        7
+      ],
+      "retrieval_time_s": 0.126,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4451,
+      "cosine_scores": [
+        0.4808,
+        0.4521,
+        0.4435,
+        0.4321,
+        0.417
+      ],
+      "_top_chunk_preview": ". (2010, 2013) since such counterexamples can be quite artificial in nature.",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 65,
+      "document": "Reduction for asynchronous Boolean networks.pdf",
+      "query": "What upper bound on the number of attractors of an asynchronous Boolean network is proven in Theorem 3.13, and in terms of what graph-theoretic quantity?",
+      "correct_page": 9,
+      "keywords": [
+        "positive feedback vertex set",
+        "attractors",
+        "Richard",
+        "2009",
+        "Theorem 3.13"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        14,
+        12,
+        15,
+        12,
+        14
+      ],
+      "retrieval_time_s": 0.103,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5018,
+      "cosine_scores": [
+        0.5204,
+        0.5051,
+        0.5019,
+        0.4922,
+        0.4895
+      ],
+      "_top_chunk_preview": ". We also illustrated how the reduction method can be extended to variables that are negatively autoregulated, and discu",
+      "_top_chunk_page": 14
+    },
+    {
+      "id": 66,
+      "document": "Reduction for asynchronous Boolean networks.pdf",
+      "query": "What journal and volume is this paper on reduction of asynchronous Boolean networks published in, and in what year was it accepted?",
+      "correct_page": 1,
+      "keywords": [
+        "Discrete Mathematics and Theoretical Computer Science",
+        "vol. 25:2",
+        "accepted",
+        "November 2023",
+        "arXiv"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        16,
+        15,
+        16,
+        15
+      ],
+      "retrieval_time_s": 0.11,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4613,
+      "cosine_scores": [
+        0.4807,
+        0.4648,
+        0.4638,
+        0.4521,
+        0.4451
+      ],
+      "_top_chunk_preview": "15 \n\nReduction for asynchronous Boolean networks \n\nReferences \n\nW. Abou-Jaoud\u00b4e, P. Traynard, P. T. Monteiro, J. Saez-Ro",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 67,
+      "document": "Federated Learning.pdf",
+      "query": "What is Federated Averaging (FedAvg) and what is its key limitation when data is heterogeneous across devices?",
+      "correct_page": 5,
+      "keywords": [
+        "FedAvg",
+        "Federated Averaging",
+        "local updating",
+        "convergence guarantees",
+        "heterogeneous"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        10,
+        10,
+        9,
+        4
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5465,
+      "cosine_scores": [
+        0.5567,
+        0.5468,
+        0.5452,
+        0.5451,
+        0.5389
+      ],
+      "_top_chunk_preview": "Challenge 2: Systems Heterogeneity. The storage, computational, and communication capabilities of each device in federat",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 68,
+      "document": "Federated Learning.pdf",
+      "query": "What specific limitation makes error compensation techniques from classical distributed learning unsuitable for federated compression schemes?",
+      "correct_page": 6,
+      "keywords": [
+        "error compensation",
+        "stale",
+        "non-identically distributed",
+        "low participation",
+        "compression"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        12,
+        4,
+        4,
+        6
+      ],
+      "retrieval_time_s": 0.084,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 5,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5154,
+      "cosine_scores": [
+        0.5266,
+        0.5251,
+        0.5097,
+        0.5089,
+        0.5069
+      ],
+      "_top_chunk_preview": "\u2022 Communication reduction and the Pareto frontier. We discussed several ways to reduce communication in federated traini",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 69,
+      "document": "Federated Learning.pdf",
+      "query": "Why are classical bounded-delay assumptions used in asynchronous communication schemes considered unrealistic in federated settings?",
+      "correct_page": 7,
+      "keywords": [
+        "bounded-delay",
+        "asynchronous",
+        "staleness",
+        "hours to days",
+        "unbounded"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        12,
+        12,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.091,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4836,
+      "cosine_scores": [
+        0.5087,
+        0.4791,
+        0.478,
+        0.4768,
+        0.4756
+      ],
+      "_top_chunk_preview": ". While asynchronous parameter servers have been successful in distributed data centers [e.g., 27, 48, 141], classical b",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 70,
+      "document": "Federated Learning.pdf",
+      "query": "What is the q-FFL objective proposed by Li et al. and what fairness problem does it aim to address in federated learning?",
+      "correct_page": 9,
+      "keywords": [
+        "q-FFL",
+        "higher loss",
+        "higher relative weight",
+        "variance",
+        "accuracy distribution"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        1,
+        9,
+        9,
+        4
+      ],
+      "retrieval_time_s": 0.094,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5068,
+      "cosine_scores": [
+        0.513,
+        0.5093,
+        0.5059,
+        0.5059,
+        0.4999
+      ],
+      "_top_chunk_preview": ". Li et al. [64] propose locally differentially-private algorithms in the context of meta-learning, which can be applied",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 71,
+      "document": "Federated Learning.pdf",
+      "query": "What are the two categories of privacy definitions in federated learning, and how do they differ from each other?",
+      "correct_page": 11,
+      "keywords": [
+        "global privacy",
+        "local privacy",
+        "trusted server",
+        "model updates",
+        "untrusted third parties"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        4,
+        11,
+        11,
+        12,
+        10
+      ],
+      "retrieval_time_s": 0.092,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5615,
+      "cosine_scores": [
+        0.5744,
+        0.5674,
+        0.5618,
+        0.5579,
+        0.5458
+      ],
+      "_top_chunk_preview": "Challenge 4: Privacy Concerns. Finally, privacy is often a major concern in federated learning applications. Federated l",
+      "_top_chunk_page": 4
+    },
+    {
+      "id": 72,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many human-written red teaming prompts were collected for the SL-CAI training dataset, and how many additional prompts were generated by few-shot prompting a pretrained model?",
+      "correct_page": 8,
+      "keywords": [
+        "42,496",
+        "human-written prompts",
+        "140,335",
+        "few-shot prompting",
+        "182,831"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        8,
+        8,
+        13,
+        8
+      ],
+      "retrieval_time_s": 0.117,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5541,
+      "cosine_scores": [
+        0.5607,
+        0.5605,
+        0.5583,
+        0.546,
+        0.5451
+      ],
+      "_top_chunk_preview": "We found that RL-CAI models can be over-trained, resulting in Goodharting behavior [Gao et al., 2022] whereby models can",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 73,
+      "document": "Constitutional AI_.pdf",
+      "query": "What learning rate and batch size were used when training the SL-CAI models via supervised finetuning?",
+      "correct_page": 8,
+      "keywords": [
+        "one epoch",
+        "constant learning rate",
+        "0.5",
+        "pre-training learning rate",
+        "batch size 1024"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        8,
+        13,
+        8,
+        17
+      ],
+      "retrieval_time_s": 0.102,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5132,
+      "cosine_scores": [
+        0.5658,
+        0.5109,
+        0.4994,
+        0.4953,
+        0.4946
+      ],
+      "_top_chunk_preview": "We then trained SL-CAI models by finetuning a pre-trained model on the harmlessness revisions and helpfulness samples. W",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 74,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many total helpfulness and harmlessness comparisons were collected for AB testing the RL and SL-CAI model snapshots shown in Figures 2 and 3?",
+      "correct_page": 8,
+      "keywords": [
+        "10,274 helpfulness",
+        "8,135",
+        "AB testing",
+        "24 snapshots",
+        "comparisons"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        8,
+        12,
+        8,
+        13
+      ],
+      "retrieval_time_s": 0.117,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5479,
+      "cosine_scores": [
+        0.5578,
+        0.5492,
+        0.5484,
+        0.5428,
+        0.5412
+      ],
+      "_top_chunk_preview": "In Figure 3, we show Elo scores for the RL-CAI models (with and without CoT) compared to other models. Furthermore, in F",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 75,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many helpfulness HF comparisons and how many constitutionally-generated harmlessness comparisons were used for PM comparison data in the RL-CAI training runs?",
+      "correct_page": 11,
+      "keywords": [
+        "135,296",
+        "HF helpfulness comparisons",
+        "182,831",
+        "constitutionally-generated harmlessness",
+        "PM comparison data"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        12,
+        8,
+        12,
+        13
+      ],
+      "retrieval_time_s": 0.112,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5471,
+      "cosine_scores": [
+        0.5682,
+        0.5479,
+        0.5447,
+        0.5379,
+        0.5369
+      ],
+      "_top_chunk_preview": ". Results are shown in Figure 3, where we compare SL-CAI models and RLHF models. The RLHF models include two types: (1) ",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 76,
+      "document": "Constitutional AI_.pdf",
+      "query": "What clamping range for CoT probabilities did the authors settle on for the main results of the RL-CAI paper, and what did they find about clamping at 40-60 versus 20-80?",
+      "correct_page": 11,
+      "keywords": [
+        "clamping",
+        "40-60 percent",
+        "20-80 percent",
+        "CoT probabilities",
+        "more robust behavior"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        11,
+        24,
+        12,
+        26
+      ],
+      "retrieval_time_s": 0.137,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5063,
+      "cosine_scores": [
+        0.5235,
+        0.5107,
+        0.5004,
+        0.4987,
+        0.4984
+      ],
+      "_top_chunk_preview": ". Instead we found that clamping the probabilities at 20-80 percent slightly improved results, while clamping at 40-60 i",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 77,
+      "document": "Constitutional AI_.pdf",
+      "query": "On what absolute harmfulness scale were red teaming conversations rated in the absolute harmfulness score experiments, and how many model responses per prompt were averaged?",
+      "correct_page": 14,
+      "keywords": [
+        "integral rating scale",
+        "0 to 4",
+        "256 model responses",
+        "64 hand-picked",
+        "absolute harmfulness"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        13,
+        13,
+        13,
+        12
+      ],
+      "retrieval_time_s": 0.109,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.548,
+      "cosine_scores": [
+        0.5675,
+        0.5521,
+        0.545,
+        0.5377,
+        0.5377
+      ],
+      "_top_chunk_preview": "We found that RL-CAI models can be over-trained, resulting in Goodharting behavior [Gao et al., 2022] whereby models can",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 78,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many total additional model-generated prompts for red teaming and helpfulness were used in the RL training runs beyond the SL-CAI prompts?",
+      "correct_page": 11,
+      "keywords": [
+        "491,142",
+        "red team",
+        "474,300",
+        "helpfulness",
+        "model-generated prompts"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        12,
+        8,
+        13,
+        12
+      ],
+      "retrieval_time_s": 0.11,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5647,
+      "cosine_scores": [
+        0.5844,
+        0.5725,
+        0.5625,
+        0.5525,
+        0.5514
+      ],
+      "_top_chunk_preview": ". Results are shown in Figure 3, where we compare SL-CAI models and RLHF models. The RLHF models include two types: (1) ",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 79,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many binary comparison questions were written to evaluate helpfulness, honesty, and harmlessness in the HHH evaluations shown in Figure 4, and how many were newly written for that paper?",
+      "correct_page": 6,
+      "keywords": [
+        "438 binary comparison",
+        "221 binary comparisons",
+        "217 more challenging",
+        "harmlessness",
+        "evasive response"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        21,
+        8,
+        34,
+        21
+      ],
+      "retrieval_time_s": 0.117,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5146,
+      "cosine_scores": [
+        0.5213,
+        0.5183,
+        0.5152,
+        0.5114,
+        0.507
+      ],
+      "_top_chunk_preview": "==> picture [208 x 152] <==\n\n----- Start of picture text -----\nCalibration of RL-CAI Labels on HHH\n1.0\n0.8\n0.6\n0.4\n0.2\n0",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 80,
+      "document": "Constitutional AI_.pdf",
+      "query": "How many total different constitutional principles were written for harmlessness, and how are they sampled during the critique-revision process?",
+      "correct_page": 8,
+      "keywords": [
+        "16 different principles",
+        "randomly sampled",
+        "revision step",
+        "red team prompt",
+        "harmlessness"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        1,
+        9,
+        13,
+        1
+      ],
+      "retrieval_time_s": 0.216,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.556,
+      "cosine_scores": [
+        0.5692,
+        0.5642,
+        0.5566,
+        0.5482,
+        0.5418
+      ],
+      "_top_chunk_preview": "Constitutional AI: Harmlessness from AI Feedback \n\nYuntao Bai[\u2217] , Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jacks",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 81,
+      "document": "Constitutional AI_.pdf",
+      "query": "What platform did the authors use for comparison testing in the current paper, and what platforms were used in prior work for collecting PM data?",
+      "correct_page": 14,
+      "keywords": [
+        "Surge AI",
+        "Upwork",
+        "MTurk",
+        "PM data",
+        "comparison testing"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        23,
+        25,
+        23,
+        23,
+        26
+      ],
+      "retrieval_time_s": 0.158,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.526,
+      "cosine_scores": [
+        0.5301,
+        0.5258,
+        0.5256,
+        0.5255,
+        0.523
+      ],
+      "_top_chunk_preview": "+-----------------------+----------------------------------------------------+\n| RL-CAI CoT Response \u2192 | That is a very ",
+      "_top_chunk_page": 23
+    },
+    {
+      "id": 82,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What are the four fields in each side-table entry used by the in-place Wasm interpreter, and what does each field represent?",
+      "correct_page": 7,
+      "keywords": [
+        "4-tuple",
+        "delta_ip",
+        "delta_stp",
+        "valcnt",
+        "popcnt"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "retrieval_time_s": 0.122,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5751,
+      "cosine_scores": [
+        0.5903,
+        0.5852,
+        0.5684,
+        0.5668,
+        0.5646
+      ],
+      "_top_chunk_preview": "With these new techniques, we have finally achieved an in-place interpreter for Wasm that is on par with state-of-the-ar",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 83,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "How many source lines of code does the fast interpreter's assembly implementation consist of, and how much machine code and dispatch table space does it generate?",
+      "correct_page": 10,
+      "keywords": [
+        "2800 source lines",
+        "14KiB",
+        "machine code",
+        "7KiB",
+        "dispatch tables"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        10,
+        11,
+        3,
+        1
+      ],
+      "retrieval_time_s": 0.489,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.333,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5435,
+      "cosine_scores": [
+        0.5626,
+        0.5475,
+        0.5451,
+        0.5313,
+        0.531
+      ],
+      "_top_chunk_preview": ". This was made easier by the fact that the fast interpreter presented here was implemented not in textual assembly lang",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 84,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What is the fixed size of the wamr-classic branch cache, and what is its associativity structure?",
+      "correct_page": 19,
+      "keywords": [
+        "128-element",
+        "2-way set associative",
+        "cache",
+        "branch address",
+        "wamr-classic"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        19,
+        13,
+        12,
+        9
+      ],
+      "retrieval_time_s": 0.397,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4865,
+      "cosine_scores": [
+        0.4931,
+        0.489,
+        0.4862,
+        0.4823,
+        0.482
+      ],
+      "_top_chunk_preview": "2 WASM DESIGN \n\nWasm provides a low-level programming model consistent with its original goal of a minimal, high-perform",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 85,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What hardware and OS configuration was used for the benchmark evaluation, including CPU model, clock speed, and RAM?",
+      "correct_page": 15,
+      "keywords": [
+        "Linux 4.15",
+        "32GiB",
+        "Intel Core i7-8700K",
+        "3.7GHz",
+        "performance governor"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        18,
+        18,
+        13,
+        13,
+        3
+      ],
+      "retrieval_time_s": 0.092,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4982,
+      "cosine_scores": [
+        0.5096,
+        0.5003,
+        0.4997,
+        0.4909,
+        0.4905
+      ],
+      "_top_chunk_preview": "\u2022 Each of (interpreter, baseline compiler, optimizing compiler) runs some benchmark fastest.\n\n4.4.2 Interpreter showdown",
+      "_top_chunk_page": 18
+    },
+    {
+      "id": 86,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "By what factor is the wizard sidetable generation cheaper in translation time than the cheapest rewriting interpreters, according to the translation time evaluation?",
+      "correct_page": 16,
+      "keywords": [
+        "order of magnitude",
+        "sidetable generation",
+        "wizard",
+        "cheapest rewriting interpreters",
+        "translation time"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        3,
+        2,
+        16,
+        16
+      ],
+      "retrieval_time_s": 0.098,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.508,
+      "cosine_scores": [
+        0.5131,
+        0.5116,
+        0.5081,
+        0.5054,
+        0.5018
+      ],
+      "_top_chunk_preview": ". wizard doesn\u2019t translate , but instead the reported time is the sidetable tracking and construction time, measured as ",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 87,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What approximate percentage of additional space overhead does the wizard sidetable add relative to the original bytecode, and why is it so compact?",
+      "correct_page": 16,
+      "keywords": [
+        "30% additional space",
+        "control-flow",
+        "sidetable",
+        "empty",
+        "original bytecode"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        16,
+        17,
+        2,
+        18,
+        3
+      ],
+      "retrieval_time_s": 0.094,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5058,
+      "cosine_scores": [
+        0.532,
+        0.5007,
+        0.5,
+        0.4986,
+        0.4976
+      ],
+      "_top_chunk_preview": "These measurements show the sidetable in wizard takes far less space, only about 30% additional space compared to the or",
+      "_top_chunk_page": 16
+    },
+    {
+      "id": 88,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "By how much does threaded dispatch improve performance on average and at maximum compared to non-threaded dispatch, as reported in the tuning section?",
+      "correct_page": 13,
+      "keywords": [
+        "threaded dispatch",
+        "14%",
+        "29% faster",
+        "average",
+        "maximum"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        12,
+        18,
+        19,
+        11
+      ],
+      "retrieval_time_s": 0.095,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5041,
+      "cosine_scores": [
+        0.5203,
+        0.5194,
+        0.509,
+        0.4883,
+        0.4835
+      ],
+      "_top_chunk_preview": "A fast in-place interpreter for WebAssembly \n\n1:13 \n\nas much as 10% faster. Unsurprisingly, we found threaded dispatch i",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 89,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "How many total state registers does the in-place interpreter use, and what are the three additional registers beyond IP, EIP, STP, VFP, and VSP?",
+      "correct_page": 9,
+      "keywords": [
+        "9 state registers",
+        "MEM",
+        "FUNCTION",
+        "INSTANCE",
+        "DISPATCH"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        11,
+        2,
+        2,
+        2
+      ],
+      "retrieval_time_s": 0.103,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5635,
+      "cosine_scores": [
+        0.5741,
+        0.5717,
+        0.5582,
+        0.558,
+        0.5555
+      ],
+      "_top_chunk_preview": "(4) Debugging application code is easier, as the interpreter loop can be stopped at any instruction and program state in",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 90,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What benchmark suite and dataset size were used in the evaluation, and how many individual benchmarks and runs were performed?",
+      "correct_page": 15,
+      "keywords": [
+        "PolyBenchC-4.2.1",
+        "MEDIUM dataset",
+        "24 benchmarks",
+        "100 uninstrumented runs",
+        "execution time"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        18,
+        17,
+        15,
+        18
+      ],
+      "retrieval_time_s": 0.094,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.333,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.533,
+      "cosine_scores": [
+        0.5612,
+        0.529,
+        0.5265,
+        0.5247,
+        0.5236
+      ],
+      "_top_chunk_preview": "The above conclusions are supported by a performance evaluation of alternatives that is beyond the scope of this paper. ",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 91,
+      "document": "A fast in-place interpreter for WebAssembly.pdf",
+      "query": "What worst-case slowdown was observed for wamr-classic on an adversarial program with thousands of branches, and why does this pathological behavior occur?",
+      "correct_page": 19,
+      "keywords": [
+        "adversarial program",
+        "slowdowns",
+        "8\u00d7",
+        "cache miss",
+        "rescanned"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        19,
+        19,
+        19,
+        18,
+        18
+      ],
+      "retrieval_time_s": 0.182,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5257,
+      "cosine_scores": [
+        0.5333,
+        0.5326,
+        0.5246,
+        0.5245,
+        0.5134
+      ],
+      "_top_chunk_preview": ". The performance could be pathological for a large program with many branches, a fact obscured by the relatively small ",
+      "_top_chunk_page": 19
+    },
+    {
+      "id": 92,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "In Example 1.1, when the language includes propositions for red, blue, and green and colorful is defined as their disjunction, what probability does maximum entropy assign to colorful?",
+      "correct_page": 2,
+      "keywords": [
+        "red",
+        "blue",
+        "green",
+        "7/8",
+        "maximum entropy dictates"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        3,
+        21,
+        2,
+        2
+      ],
+      "retrieval_time_s": 0.128,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5389,
+      "cosine_scores": [
+        0.5764,
+        0.5388,
+        0.529,
+        0.5266,
+        0.5238
+      ],
+      "_top_chunk_preview": ". This is also the conclusion reached by maximum entropy provided that the language has only the proposition colorful . ",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 93,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "In Example 1.2, what probability does maximum entropy infer for Pr(bird) under each of the two knowledge base representations?",
+      "correct_page": 2,
+      "keywords": [
+        "KBfly",
+        "Pr(bird)",
+        "1/2",
+        "2/3",
+        "flying-bird"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "retrieval_time_s": 0.124,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5554,
+      "cosine_scores": [
+        0.5895,
+        0.5519,
+        0.5501,
+        0.5483,
+        0.5372
+      ],
+      "_top_chunk_preview": ". But if we use an inference method such as maximum entropy, the first representation leads us to infer Pr(bird ) = 1/2,",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 94,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What formal algebraic properties must an (X, FX)-(Y, FY) embedding satisfy, as given in Definition 4.1?",
+      "correct_page": 11,
+      "keywords": [
+        "embedding",
+        "homomorphism",
+        "complementation",
+        "union",
+        "Definition 4.1"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        28,
+        31,
+        11,
+        37,
+        20
+      ],
+      "retrieval_time_s": 0.105,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5487,
+      "cosine_scores": [
+        0.5645,
+        0.5489,
+        0.5477,
+        0.5427,
+        0.5397
+      ],
+      "_top_chunk_preview": "A.3 Proofs for Section 4 \n\nTo prove Lemma 4.6, it is useful to first prove two additional results: \n\nLemma A.2: If f is ",
+      "_top_chunk_page": 28
+    },
+    {
+      "id": 95,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What is the formal definition of a faithful X-Y embedding, and what logical consequence property does Lemma 4.6 say faithfulness guarantees?",
+      "correct_page": 12,
+      "keywords": [
+        "faithful",
+        "S subset T",
+        "f(S) subset f(T)",
+        "KB entails",
+        "Lemma 4.6"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        31,
+        28,
+        20,
+        19,
+        19
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.5313,
+      "cosine_scores": [
+        0.5445,
+        0.5384,
+        0.5352,
+        0.524,
+        0.5146
+      ],
+      "_top_chunk_preview": ". . . , N . It is easy to see that we can find faithful X-Y embeddings f1, . . . , fN such that",
+      "_top_chunk_page": 31
+    },
+    {
+      "id": 96,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What does Theorem 3.4 state about robust X-inference procedures that satisfy domain assumptions DI1, DI2, and DI3?",
+      "correct_page": 11,
+      "keywords": [
+        "robust",
+        "DI1",
+        "DI2",
+        "DI3",
+        "essentially entailment"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        30,
+        14,
+        11,
+        28,
+        11
+      ],
+      "retrieval_time_s": 0.104,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5513,
+      "cosine_scores": [
+        0.59,
+        0.5599,
+        0.557,
+        0.5289,
+        0.5208
+      ],
+      "_top_chunk_preview": "Theorem 4.10: If an X -inference procedure is robust that satisfies DI2, DI4, and DI5, then it is representation indepen",
+      "_top_chunk_page": 30
+    },
+    {
+      "id": 97,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What does Theorem 4.11 establish about representation-independent inference procedures applied to objective knowledge bases?",
+      "correct_page": 14,
+      "keywords": [
+        "representation-independent",
+        "objective knowledge bases",
+        "essentially entailment",
+        "domain",
+        "Theorem 4.11"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        1,
+        1,
+        16,
+        1
+      ],
+      "retrieval_time_s": 0.096,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5346,
+      "cosine_scores": [
+        0.5722,
+        0.5333,
+        0.5315,
+        0.5197,
+        0.5165
+      ],
+      "_top_chunk_preview": "4.2 Representation-independent inference procedures",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 98,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What does Theorem 4.16 prove about inference procedures that enforce minimal default independence and satisfy DI1?",
+      "correct_page": 16,
+      "keywords": [
+        "minimal default independence",
+        "DI1",
+        "not representation independent",
+        "Theorem 4.16",
+        "incompatible"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        33,
+        30,
+        1,
+        16,
+        28
+      ],
+      "retrieval_time_s": 0.098,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.528,
+      "cosine_scores": [
+        0.5391,
+        0.5359,
+        0.5284,
+        0.5259,
+        0.5108
+      ],
+      "_top_chunk_preview": "Theorem 4.16: If {IX : X \u2208X} is an X -inference procedure that enforces minimal default independence and satisfies DI1, ",
+      "_top_chunk_page": 33
+    },
+    {
+      "id": 99,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "How is the relative entropy KLX(mu' || mu) between measures mu' and mu on a finite space X formally defined in Definition 6.6?",
+      "correct_page": 20,
+      "keywords": [
+        "KL-divergence",
+        "relative entropy",
+        "log",
+        "minimal",
+        "Definition 6.6"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        20,
+        20,
+        20,
+        8,
+        20
+      ],
+      "retrieval_time_s": 0.116,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5234,
+      "cosine_scores": [
+        0.529,
+        0.5227,
+        0.5223,
+        0.5217,
+        0.5215
+      ],
+      "_top_chunk_preview": "Halpern & Koller \n\nDefinition 6.6: If \u00b5 and \u00b5[\u2032] are measures on X, the relative entropy between \u00b5[\u2032] and \u00b5, denoted KLX",
+      "_top_chunk_page": 20
+    },
+    {
+      "id": 100,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What does Theorem 6.9 state as the necessary and sufficient condition for the inference procedure IP to be invariant under a faithful X-Y embedding f?",
+      "correct_page": 20,
+      "keywords": [
+        "invariant under f",
+        "prior function",
+        "P(X)",
+        "P(Y)",
+        "correspond under f"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        20,
+        22,
+        20,
+        20,
+        20
+      ],
+      "retrieval_time_s": 0.108,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.5485,
+      "cosine_scores": [
+        0.5953,
+        0.5469,
+        0.5383,
+        0.5319,
+        0.53
+      ],
+      "_top_chunk_preview": "Theorem 6.9: If f is a faithful X-Y embedding, then I[P] is invariant under f iff P(X) and P(Y ) correspond under f . \n\n",
+      "_top_chunk_page": 20
+    },
+    {
+      "id": 101,
+      "document": "Representation Dependence in Probabilistic Inference.pdf",
+      "query": "What two classes of embeddings is the inference procedure I-P-Pi invariant under, according to Theorem 6.11?",
+      "correct_page": 22,
+      "keywords": [
+        "I-P-Pi",
+        "invariant",
+        "faithful product embeddings",
+        "permutation embeddings",
+        "Theorem 6.11"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        20,
+        22,
+        20,
+        36,
+        22
+      ],
+      "retrieval_time_s": 0.103,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5079,
+      "cosine_scores": [
+        0.5318,
+        0.5093,
+        0.5003,
+        0.4999,
+        0.4982
+      ],
+      "_top_chunk_preview": "Theorem 6.9: If f is a faithful X-Y embedding, then I[P] is invariant under f iff P(X) and P(Y ) correspond under f . \n\n",
+      "_top_chunk_page": 20
+    },
+    {
+      "id": 102,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "How many evaluation metrics are contained within the four dimensions of the uniform APR tool evaluation criteria proposed in Section 4?",
+      "correct_page": 4,
+      "keywords": [
+        "12 evaluation metrics",
+        "Approach Design",
+        "Repair Ability",
+        "Repair Quality",
+        "Repair Efficiency"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        4,
+        4,
+        4,
+        4,
+        1
+      ],
+      "retrieval_time_s": 0.154,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5354,
+      "cosine_scores": [
+        0.5756,
+        0.5496,
+        0.523,
+        0.517,
+        0.5119
+      ],
+      "_top_chunk_preview": "4 EVALUATION CRITERIA FOR APR TOOLS",
+      "_top_chunk_page": 4
+    },
+    {
+      "id": 103,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "What does the Patch Acceptability (PA) metric specifically reflect about APR tools?",
+      "correct_page": 5,
+      "keywords": [
+        "maintainability",
+        "understandability",
+        "interpretability",
+        "human writing",
+        "accepted by developers"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        24,
+        34,
+        24,
+        4,
+        4
+      ],
+      "retrieval_time_s": 0.147,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5342,
+      "cosine_scores": [
+        0.56,
+        0.5359,
+        0.5301,
+        0.5244,
+        0.5205
+      ],
+      "_top_chunk_preview": ". Table 4 shows that most APR tools based on PFL were better at patch overfitting (higher percentage of correct patches)",
+      "_top_chunk_page": 24
+    },
+    {
+      "id": 104,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "In 2005, what type of repair strategy did Jobstmann et al. propose, and what does a winning strategy in their framework represent?",
+      "correct_page": 6,
+      "keywords": [
+        "game strategy",
+        "finite state",
+        "LTL specification",
+        "winning",
+        "automaton"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        21,
+        14,
+        34,
+        16
+      ],
+      "retrieval_time_s": 0.159,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5643,
+      "cosine_scores": [
+        0.5736,
+        0.5634,
+        0.5627,
+        0.5614,
+        0.5606
+      ],
+      "_top_chunk_preview": ". Back in 2005, Jobstmann et al. [52] proposed a method for program repair as a game strategy, which consists of a modif",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 105,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "In the GenProg experiments described in the survey, how many C programs were successfully fixed and how many types of defects were addressed?",
+      "correct_page": 7,
+      "keywords": [
+        "16 C programs",
+        "eight types",
+        "fine-grained abstract syntax tree",
+        "AST level",
+        "genetic operators"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        1,
+        24,
+        24,
+        5,
+        24
+      ],
+      "retrieval_time_s": 0.157,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5665,
+      "cosine_scores": [
+        0.5808,
+        0.5743,
+        0.5632,
+        0.5594,
+        0.555
+      ],
+      "_top_chunk_preview": "With the rapid development and large-scale popularity of program software, modern society increasingly relies on softwar",
+      "_top_chunk_page": 1
+    },
+    {
+      "id": 106,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "According to the survey, how much repair time cost savings did CRSearcher achieve compared to not using it?",
+      "correct_page": 9,
+      "keywords": [
+        "token-based",
+        "50%",
+        "repair time cost savings",
+        "code repositories",
+        "code snippets"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        34,
+        27,
+        34,
+        34,
+        34
+      ],
+      "retrieval_time_s": 0.154,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4848,
+      "cosine_scores": [
+        0.4879,
+        0.4876,
+        0.4849,
+        0.4833,
+        0.4803
+      ],
+      "_top_chunk_preview": "We observed that most error repair efforts [9, 40, 41, 70, 153, 154] support multi-error repair and explored this abilit",
+      "_top_chunk_page": 34
+    },
+    {
+      "id": 107,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "What unique contribution did PAR make with respect to repair templates, and how did this compare to GenProg?",
+      "correct_page": 12,
+      "keywords": [
+        "ten repair templates",
+        "open-source projects",
+        "editing scripts",
+        "nonsensical patches",
+        "PAR"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        14,
+        14,
+        27,
+        24
+      ],
+      "retrieval_time_s": 0.154,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.536,
+      "cosine_scores": [
+        0.552,
+        0.5362,
+        0.5315,
+        0.5307,
+        0.5298
+      ],
+      "_top_chunk_preview": ". Template-based methods utilize a predefined program fix template [57] (also known as \"fix pattern\" [75] or \"transforma",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 108,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "What was the repair accuracy achieved by BIFI combined with DrRepair on the DeepFix dataset, and what novel training strategy did BIFI introduce?",
+      "correct_page": 18,
+      "keywords": [
+        "71.7%",
+        "Break-It-Fix-It",
+        "breaker",
+        "realistic bad code",
+        "DeepFix dataset"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        18,
+        24,
+        24,
+        24,
+        24
+      ],
+      "retrieval_time_s": 0.163,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5253,
+      "cosine_scores": [
+        0.5272,
+        0.5253,
+        0.525,
+        0.5249,
+        0.5242
+      ],
+      "_top_chunk_preview": ". They train a breaker by using realistic bad code so that the breaker can generate bad examples close to real-world dat",
+      "_top_chunk_page": 18
+    },
+    {
+      "id": 109,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "According to Table 4, what percentage of correct patches did AlphaRepair achieve when using perfect fault localization (PFL) on Defects4J V1.2.0?",
+      "correct_page": 24,
+      "keywords": [
+        "AlphaRepair",
+        "67.89%",
+        "74/109",
+        "perfect fault localization",
+        "Defects4J V1.2.0"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        24,
+        24,
+        24,
+        4,
+        24
+      ],
+      "retrieval_time_s": 0.167,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5411,
+      "cosine_scores": [
+        0.5706,
+        0.5543,
+        0.5443,
+        0.5185,
+        0.5179
+      ],
+      "_top_chunk_preview": ". Table 4 shows that most APR tools based on PFL were better at patch overfitting (higher percentage of correct patches)",
+      "_top_chunk_page": 24
+    },
+    {
+      "id": 110,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "In the preliminary experiments on Code Abstraction with LLMs, what did the results show about whether Code Abs improved repair performance for most LLMs?",
+      "correct_page": 25,
+      "keywords": [
+        "Code Abs",
+        "BFP_small",
+        "BFP_medium",
+        "LLMs",
+        "does not significantly improve"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        5,
+        37,
+        27,
+        25,
+        5
+      ],
+      "retrieval_time_s": 0.162,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5531,
+      "cosine_scores": [
+        0.5543,
+        0.5534,
+        0.5533,
+        0.5527,
+        0.552
+      ],
+      "_top_chunk_preview": "|                                                    | APR tools difer in their repair ability. Some APR  |\n|           ",
+      "_top_chunk_page": 5
+    },
+    {
+      "id": 111,
+      "document": "A Survey on Automated Program Repair Techniques.pdf",
+      "query": "According to Table 9, how many bugs in Defects4J overlapped with the CodRep training dataset?",
+      "correct_page": 30,
+      "keywords": [
+        "CodRep",
+        "61",
+        "dataset overlap",
+        "Defects4J",
+        "data leakage"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        30,
+        34,
+        30,
+        24,
+        34
+      ],
+      "retrieval_time_s": 0.157,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5539,
+      "cosine_scores": [
+        0.5641,
+        0.5539,
+        0.5539,
+        0.5489,
+        0.5488
+      ],
+      "_top_chunk_preview": "+------------+-----------+---------+------+------+---------+------+-----+-------+------------+----------+-----+------+--",
+      "_top_chunk_page": 30
+    },
+    {
+      "id": 112,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "What three conditions must be simultaneously satisfied when choosing the volume density n and slab thickness \u0394L in the simulation method?",
+      "correct_page": 12,
+      "keywords": [
+        "mean free path",
+        "single scattering approximation",
+        "far field",
+        "volume fraction",
+        "three conditions"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        12,
+        12,
+        19,
+        13
+      ],
+      "retrieval_time_s": 0.093,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4463,
+      "cosine_scores": [
+        0.4668,
+        0.4482,
+        0.4435,
+        0.4378,
+        0.435
+      ],
+      "_top_chunk_preview": ". Since this second condition requires that the slab thickness \u2206 L is small, we identified a third condition \u2206 L/ 2 a > ",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 113,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "What particle volume fraction \u03c6 was used across all simulations, and what wavelength \u03bb was chosen?",
+      "correct_page": 12,
+      "keywords": [
+        "volume fraction",
+        "\u03c6 = 0.01",
+        "\u03bb = 500 nm",
+        "wavelength",
+        "Mie theory"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        12,
+        12,
+        13,
+        12
+      ],
+      "retrieval_time_s": 0.087,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4916,
+      "cosine_scores": [
+        0.5022,
+        0.4921,
+        0.4921,
+        0.4912,
+        0.4806
+      ],
+      "_top_chunk_preview": "Instead of specifying n directly, it was simpler to start with a particle volume fraction \u03c6 and calculate the density vi",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 114,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "How many total modes were included in the set K for the scattering matrix simulations, and what was the resulting size of each scattering matrix?",
+      "correct_page": 12,
+      "keywords": [
+        "101 modes",
+        "404 \u00d7 404",
+        "Cartesian grid",
+        "k space",
+        "block structure"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5032,
+      "cosine_scores": [
+        0.5126,
+        0.5085,
+        0.5012,
+        0.4975,
+        0.4964
+      ],
+      "_top_chunk_preview": ". [45]). It was convenient to specify the matrix A[t/r/r] ( j,i )[\u2032] as a product of rotation matrices and a 2 \u00d7 2 scatt",
+      "_top_chunk_page": 12
+    },
+    {
+      "id": 115,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "What fitting parameter \u03b1 values were found for the mean transmission eigenvalue decay function for size parameters x = 1, 2, and 4 respectively?",
+      "correct_page": 15,
+      "keywords": [
+        "4.02",
+        "13.25",
+        "37.51",
+        "fitting parameter",
+        "transport mean free path"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        21,
+        14,
+        14,
+        14,
+        15
+      ],
+      "retrieval_time_s": 0.097,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": 5,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4506,
+      "cosine_scores": [
+        0.457,
+        0.4528,
+        0.4518,
+        0.4477,
+        0.4439
+      ],
+      "_top_chunk_preview": "3.2.2.1. Transmission and",
+      "_top_chunk_page": 21
+    },
+    {
+      "id": 116,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "For direct backscattering (DB), the intensity enhancement over oblique backscattering was measured to be approximately what factor, and what physical effect does this enhancement indicate?",
+      "correct_page": 16,
+      "keywords": [
+        "1.8 times",
+        "coherent backscattering",
+        "reciprocity",
+        "intensity enhancement",
+        "direct backscattering"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        16,
+        16,
+        21,
+        17,
+        16
+      ],
+      "retrieval_time_s": 0.109,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5071,
+      "cosine_scores": [
+        0.5313,
+        0.5184,
+        0.498,
+        0.4948,
+        0.4931
+      ],
+      "_top_chunk_preview": "in the opposite direction to the incident field (direct backscattering, or DB)",
+      "_top_chunk_page": 16
+    },
+    {
+      "id": 117,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "For size parameters x = 2 and 4 in oblique backscattering, the degree of polarization for circularly polarized light shows non-monotonic behaviour \u2014 at approximately what thicknesses L/l does this DoP minimum occur for x = 2 and x = 4?",
+      "correct_page": 17,
+      "keywords": [
+        "L/l \u223c 0.5",
+        "L/l \u223c 6.5",
+        "non-monotonicity",
+        "circular polarization",
+        "oblique backscattering"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        18,
+        22,
+        17,
+        21,
+        18
+      ],
+      "retrieval_time_s": 0.135,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 0.5,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5124,
+      "cosine_scores": [
+        0.519,
+        0.5164,
+        0.5139,
+        0.5077,
+        0.5048
+      ],
+      "_top_chunk_preview": "As a final remark, we note that in Figure 3(d), which shows similar trends to Figure 3(c), the DoP tends to values close",
+      "_top_chunk_page": 18
+    },
+    {
+      "id": 118,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "What is the limiting probability density function for diattenuation D in forward transmission as L \u2192 \u221e, and what type of random matrix does this distribution correspond to?",
+      "correct_page": 20,
+      "keywords": [
+        "p(D) = 3D\u00b2",
+        "limiting distribution",
+        "complex Gaussian entries",
+        "diattenuation",
+        "decorrelation"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        20,
+        20,
+        19,
+        21,
+        20
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5129,
+      "cosine_scores": [
+        0.5248,
+        0.5185,
+        0.5143,
+        0.5104,
+        0.4966
+      ],
+      "_top_chunk_preview": ". Figures 4(c) and 4(d) show analogous data for retardance in FT. Qualitatively, the behaviour is similar to diattenuati",
+      "_top_chunk_page": 20
+    },
+    {
+      "id": 119,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "For direct backscattering with size parameter x = 4, what is the limiting probability density function for diattenuation D, and why does it differ from the forward transmission case?",
+      "correct_page": 20,
+      "keywords": [
+        "p(D) = 2D",
+        "circular orthogonal ensemble",
+        "reciprocity",
+        "additional correlations",
+        "direct backscattering"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        19,
+        20,
+        21,
+        18,
+        20
+      ],
+      "retrieval_time_s": 0.105,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 0.333,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5228,
+      "cosine_scores": [
+        0.5279,
+        0.5261,
+        0.5242,
+        0.5189,
+        0.5171
+      ],
+      "_top_chunk_preview": "Figure 4. Diattenuation and retardance histograms for size parameter x = 1 in forward transmission. (a) shows a heatmap ",
+      "_top_chunk_page": 19
+    },
+    {
+      "id": 120,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "For chiral spheres of size parameter x = 4 in oblique backscattering, at approximately what thickness L/l do the DoP dips occur for left-handed circularly polarized (LHC) and right-handed circularly polarized (RHC) incident light respectively?",
+      "correct_page": 23,
+      "keywords": [
+        "L/l \u223c 27",
+        "L/l \u223c 3",
+        "LHC",
+        "RHC",
+        "chiral spheres"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        22,
+        18,
+        21,
+        18,
+        22
+      ],
+      "retrieval_time_s": 0.159,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5523,
+      "cosine_scores": [
+        0.5748,
+        0.5563,
+        0.55,
+        0.541,
+        0.5395
+      ],
+      "_top_chunk_preview": "Figure 7. DoP as a function of thickness for incident linearly polarized light (LIN), left handed circularly polarized l",
+      "_top_chunk_page": 22
+    },
+    {
+      "id": 121,
+      "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+      "query": "What is the biggest limitation of the presented random matrix model according to the conclusion, and what practical advantage does the method retain despite this limitation?",
+      "correct_page": 24,
+      "keywords": [
+        "angular resolution",
+        "scattering matrix",
+        "seconds or minutes",
+        "memory",
+        "complement"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        21,
+        13,
+        21,
+        24,
+        12
+      ],
+      "retrieval_time_s": 0.098,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.505,
+      "cosine_scores": [
+        0.5194,
+        0.5065,
+        0.5027,
+        0.5013,
+        0.4953
+      ],
+      "_top_chunk_preview": ". It has been shown, however, that these limiting densities are in fact those predicted for diagonal blocks of a random ",
+      "_top_chunk_page": 21
+    },
+    {
+      "id": 122,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "What was the lookup time in nanoseconds for a B-Tree traversal over 200M web-server log records in the naive learned index experiment?",
+      "correct_page": 6,
+      "keywords": [
+        "Tensorflow",
+        "nanoseconds",
+        "traversal",
+        "binary search",
+        "front-end"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        9,
+        13,
+        13,
+        13
+      ],
+      "retrieval_time_s": 0.107,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5265,
+      "cosine_scores": [
+        0.5354,
+        0.5313,
+        0.5247,
+        0.522,
+        0.5189
+      ],
+      "_top_chunk_preview": "In this setting we achieved \u2248 1250 predictions per second, i.e., it takes \u2248 80 , 000 nano-seconds (ns) to execute the mo",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 123,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "By what maximum percentage did learned models reduce hash map conflicts compared to a MurmurHash3-like hash function on the Map dataset?",
+      "correct_page": 15,
+      "keywords": [
+        "MurmurHash3",
+        "conflicts",
+        "reduction",
+        "Map Data",
+        "empirical CDF"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        27,
+        19,
+        15,
+        27,
+        15
+      ],
+      "retrieval_time_s": 0.1,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5561,
+      "cosine_scores": [
+        0.5641,
+        0.5585,
+        0.555,
+        0.5545,
+        0.5484
+      ],
+      "_top_chunk_preview": ". Obviously, the moment we increase the Hash-map in size to have 25% more slots, the savings are not as large, as the Ha",
+      "_top_chunk_page": 27
+    },
+    {
+      "id": 124,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "What is the memory size of the normal Bloom filter required for a 1% false positive rate in the phishing URL existence index experiment?",
+      "correct_page": 17,
+      "keywords": [
+        "phishing",
+        "false positive",
+        "2.04MB",
+        "GRU",
+        "transparency report"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        10,
+        13,
+        10,
+        15
+      ],
+      "retrieval_time_s": 0.099,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4893,
+      "cosine_scores": [
+        0.493,
+        0.4915,
+        0.4897,
+        0.4884,
+        0.4838
+      ],
+      "_top_chunk_preview": "+---------------+-----------------+---------------+--------------+------------+\n|               | page size:   64 | 6.56",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 125,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "In the recursive model index, how many nanoseconds does the Learning Index Framework (LIF) take to execute simple models after code generation?",
+      "correct_page": 7,
+      "keywords": [
+        "LIF",
+        "30 nano-seconds",
+        "code-generation",
+        "Tensorflow",
+        "C++"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        6,
+        7,
+        6,
+        6
+      ],
+      "retrieval_time_s": 0.104,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5323,
+      "cosine_scores": [
+        0.5689,
+        0.5405,
+        0.5183,
+        0.5176,
+        0.5161
+      ],
+      "_top_chunk_preview": "3.1 The Learning Index Framework (LIF)",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 126,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "What is the total size in MB of the multivariate learned index used in the alternative baselines comparison on the Lognormal dataset?",
+      "correct_page": 12,
+      "keywords": [
+        "Lognormal",
+        "multivariate",
+        "1.5 MB",
+        "interpolation search",
+        "FAST"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        4,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.12,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5446,
+      "cosine_scores": [
+        0.5535,
+        0.5515,
+        0.5489,
+        0.5372,
+        0.5321
+      ],
+      "_top_chunk_preview": "+---------------+-----------------+---------------+--------------+------------+\n|               | Config          | Size",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 127,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "How many unique URLs are in the dataset used to test the learned Bloom filter for blacklisted phishing URLs?",
+      "correct_page": 17,
+      "keywords": [
+        "1.7M",
+        "unique URLs",
+        "whitelisted",
+        "character-level",
+        "transparency report"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        10,
+        13,
+        13,
+        10,
+        13
+      ],
+      "retrieval_time_s": 0.098,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5087,
+      "cosine_scores": [
+        0.5138,
+        0.5125,
+        0.5071,
+        0.5064,
+        0.5038
+      ],
+      "_top_chunk_preview": "|         | 128        | (1.00x)   | (1.00x)    | (50.8%)    | (1.00x)   | (1.00x)  | (50.8%)    | (1.00x)    | (1.00x) ",
+      "_top_chunk_page": 10
+    },
+    {
+      "id": 128,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "What is the average error growth rate in predicted positions for a constant-sized learned range index model as the number of keys N increases?",
+      "correct_page": 26,
+      "keywords": [
+        "empirical CDF",
+        "binomial random variable",
+        "sub-linear",
+        "squared error",
+        "position estimate"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "retrieval_time_s": 0.099,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5869,
+      "cosine_scores": [
+        0.6069,
+        0.5953,
+        0.5861,
+        0.575,
+        0.571
+      ],
+      "_top_chunk_preview": "Range indexes usually implement an upper b ound ( key ) [ lower bound ( key )] interface to find the position of the fir",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 129,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "In the string dataset experiment, what lookup time in nanoseconds did the best performing model (Learned QS with 1 hidden layer) achieve?",
+      "correct_page": 13,
+      "keywords": [
+        "quaternary search",
+        "1155",
+        "hidden layer",
+        "document-ids",
+        "hybrid"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        13,
+        6,
+        12
+      ],
+      "retrieval_time_s": 0.133,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5442,
+      "cosine_scores": [
+        0.5499,
+        0.5483,
+        0.5482,
+        0.5401,
+        0.5344
+      ],
+      "_top_chunk_preview": "Because of the cost of searching, the different search strategies make a bigger difference. For example, the search time",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 130,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "For the in-place chained Hash-map with learned hash functions, what lookup time in nanoseconds was achieved on 20-byte records with the log-normal dataset?",
+      "correct_page": 28,
+      "keywords": [
+        "in-place chained",
+        "35ns",
+        "100%",
+        "log-normal",
+        "utilization"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        27,
+        6,
+        14,
+        13
+      ],
+      "retrieval_time_s": 0.112,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4878,
+      "cosine_scores": [
+        0.5073,
+        0.4937,
+        0.4835,
+        0.4784,
+        0.4763
+      ],
+      "_top_chunk_preview": ". However, as we show in Appendix C, for larger payloads a chained-hashmap with learned hash function can be faster than",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 131,
+      "document": "The Case for Learned Index Structures.pdf",
+      "query": "In the alternative Bloom filter approach using model-hashes, what total memory size was achieved for a desired false positive rate of 1% using m=1000000?",
+      "correct_page": 30,
+      "keywords": [
+        "1.19MB",
+        "41%",
+        "reduction",
+        "FPRm",
+        "bitmap"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        27,
+        4,
+        15,
+        4
+      ],
+      "retrieval_time_s": 0.111,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4924,
+      "cosine_scores": [
+        0.505,
+        0.4944,
+        0.4893,
+        0.4881,
+        0.485
+      ],
+      "_top_chunk_preview": ". If any of the bits at those k positions is 0, the key is not a member of a set. In other words, a Bloom filter does gu",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 132,
+      "document": "Software-Defined Networking.pdf",
+      "query": "According to the SDN survey, how many configuration errors have been observed in BGP routers in today's networks?",
+      "correct_page": 4,
+      "keywords": [
+        "BGP routers",
+        "misconfigured",
+        "forwarding loops",
+        "configuration errors",
+        "packet losses"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        35,
+        15,
+        40,
+        41,
+        41
+      ],
+      "retrieval_time_s": 0.166,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5051,
+      "cosine_scores": [
+        0.5195,
+        0.5042,
+        0.502,
+        0.5009,
+        0.499
+      ],
+      "_top_chunk_preview": "As noted in [475], there is a lack of sufficient research and experience in building and operating fault-tolerant SDNs. ",
+      "_top_chunk_page": 35
+    },
+    {
+      "id": 133,
+      "document": "Software-Defined Networking.pdf",
+      "query": "What are the four pillars that define an SDN architecture as described in the survey?",
+      "correct_page": 4,
+      "keywords": [
+        "four pillars",
+        "decoupled",
+        "flow-based",
+        "NOS",
+        "programmable"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        45,
+        15,
+        2,
+        14
+      ],
+      "retrieval_time_s": 0.161,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5319,
+      "cosine_scores": [
+        0.5552,
+        0.5477,
+        0.5193,
+        0.519,
+        0.5184
+      ],
+      "_top_chunk_preview": "IBM has also recently proposed SDN VE [171], [172], another commercial and enterprise-class network virtualization platf",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 134,
+      "document": "Software-Defined Networking.pdf",
+      "query": "How many virtual networks and virtual machines can IBM SDN VE 1.0 support in a single instantiation?",
+      "correct_page": 15,
+      "keywords": [
+        "SDN VE",
+        "16,000 virtual networks",
+        "128,000 virtual machines",
+        "OpenDaylight",
+        "multi-tenant"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        14,
+        15,
+        14,
+        14
+      ],
+      "retrieval_time_s": 0.168,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.577,
+      "cosine_scores": [
+        0.5947,
+        0.5809,
+        0.5805,
+        0.5724,
+        0.5564
+      ],
+      "_top_chunk_preview": "IBM has also recently proposed SDN VE [171], [172], another commercial and enterprise-class network virtualization platf",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 135,
+      "document": "Software-Defined Networking.pdf",
+      "query": "What throughput in flows per second did the Maple SDN controller achieve, and what hardware configuration enabled it?",
+      "correct_page": 38,
+      "keywords": [
+        "Maple",
+        "20M",
+        "multicore",
+        "algorithmic policies",
+        "flows per second"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        18,
+        15,
+        38,
+        23,
+        42
+      ],
+      "retrieval_time_s": 0.281,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4634,
+      "cosine_scores": [
+        0.465,
+        0.4646,
+        0.4629,
+        0.4625,
+        0.4622
+      ],
+      "_top_chunk_preview": "Another important issue regarding east/westbound interfaces is heterogeneity. For instance, besides communicating with p",
+      "_top_chunk_page": 18
+    },
+    {
+      "id": 136,
+      "document": "Software-Defined Networking.pdf",
+      "query": "What path restoration time in milliseconds was reported using OpenFlow fast-failover group table entries with BFD sessions for link failure detection?",
+      "correct_page": 36,
+      "keywords": [
+        "3.3 ms",
+        "fast-failover",
+        "BFD",
+        "restoration time",
+        "backup paths"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        25,
+        21,
+        23,
+        21,
+        25
+      ],
+      "retrieval_time_s": 0.5,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4904,
+      "cosine_scores": [
+        0.495,
+        0.4926,
+        0.4893,
+        0.4885,
+        0.4868
+      ],
+      "_top_chunk_preview": "|               | Hedera [275]         | scheduling /         | \u2014                 | OpenFlow             |\n|            ",
+      "_top_chunk_page": 25
+    },
+    {
+      "id": 137,
+      "document": "Software-Defined Networking.pdf",
+      "query": "In the SDN security threat analysis, which three threat vectors are identified as specific to SDN and not present in traditional networks?",
+      "correct_page": 40,
+      "keywords": [
+        "specific to SDN",
+        "logically centralized",
+        "Vector 3",
+        "Vector 4",
+        "Vector 5"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        14,
+        15,
+        45,
+        15,
+        15
+      ],
+      "retrieval_time_s": 0.543,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5262,
+      "cosine_scores": [
+        0.5474,
+        0.5369,
+        0.5253,
+        0.5175,
+        0.5039
+      ],
+      "_top_chunk_preview": "With the market demand for network virtualization and the recent research on SDN showing promise as an enabling technolo",
+      "_top_chunk_page": 14
+    },
+    {
+      "id": 138,
+      "document": "Software-Defined Networking.pdf",
+      "query": "How many OpenFlow-enabled forwarding devices can Mininet emulate using a single personal computer?",
+      "correct_page": 31,
+      "keywords": [
+        "Mininet",
+        "hundreds",
+        "dozens of switches",
+        "personal computer",
+        "container"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        48,
+        17,
+        14,
+        40,
+        48
+      ],
+      "retrieval_time_s": 0.444,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.333,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.528,
+      "cosine_scores": [
+        0.5327,
+        0.5303,
+        0.5294,
+        0.5257,
+        0.5218
+      ],
+      "_top_chunk_preview": "[52] ONF, \u201cConformance test specification for OpenFlow switch specification,\u201d Open Networking Foundation, Tech. Rep., Ju",
+      "_top_chunk_page": 48
+    },
+    {
+      "id": 139,
+      "document": "Software-Defined Networking.pdf",
+      "query": "What percentage of network energy can data center operators save using ElasticTree's energy-aware routing under normal traffic conditions?",
+      "correct_page": 24,
+      "keywords": [
+        "ElasticTree",
+        "50%",
+        "energy",
+        "shutting down links",
+        "normal traffic"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        14,
+        15,
+        24,
+        35,
+        23
+      ],
+      "retrieval_time_s": 0.309,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.467,
+      "cosine_scores": [
+        0.4763,
+        0.4689,
+        0.4666,
+        0.463,
+        0.4602
+      ],
+      "_top_chunk_preview": "FlowN [168], [180] is based on a slightly different concept. Whereas FlowVisor can be compared to a full virtualization ",
+      "_top_chunk_page": 14
+    },
+    {
+      "id": 140,
+      "document": "Software-Defined Networking.pdf",
+      "query": "According to the SDN survey, how long does a typical new switch take to be ready for commercialization if built from scratch, and how long can upgrade cycles take?",
+      "correct_page": 12,
+      "keywords": [
+        "two years",
+        "commercialization",
+        "nine months",
+        "upgrade cycles",
+        "southbound APIs"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        15,
+        14,
+        23,
+        45,
+        23
+      ],
+      "retrieval_time_s": 0.205,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4796,
+      "cosine_scores": [
+        0.4897,
+        0.4857,
+        0.4765,
+        0.4737,
+        0.4726
+      ],
+      "_top_chunk_preview": "IBM has also recently proposed SDN VE [171], [172], another commercial and enterprise-class network virtualization platf",
+      "_top_chunk_page": 15
+    },
+    {
+      "id": 141,
+      "document": "Software-Defined Networking.pdf",
+      "query": "What are the four essential building blocks of a Software-Defined Environment (SDE) as described in the survey?",
+      "correct_page": 45,
+      "keywords": [
+        "Software-Defined Storage",
+        "Software-Defined Compute",
+        "Software-Defined Management",
+        "SDE",
+        "building blocks"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        45,
+        15,
+        2,
+        15,
+        15
+      ],
+      "retrieval_time_s": 0.161,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5466,
+      "cosine_scores": [
+        0.5858,
+        0.5649,
+        0.5305,
+        0.5267,
+        0.5252
+      ],
+      "_top_chunk_preview": "The four essential building blocks of an SDE [172], [171], [576] are: \n\n\u2022 Software-Defined Networks (SDN) [577], [578],\n",
+      "_top_chunk_page": 45
+    },
+    {
+      "id": 142,
+      "document": "chain_of_thoughts.pdf",
+      "query": "What solve rate does PaLM 540B achieve on the GSM8K benchmark using chain-of-thought prompting?",
+      "correct_page": 2,
+      "keywords": [
+        "solve rate",
+        "GSM8K",
+        "standard prompting",
+        "finetuned",
+        "state-of-the-art"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        25,
+        22,
+        22,
+        23,
+        23
+      ],
+      "retrieval_time_s": 0.108,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5086,
+      "cosine_scores": [
+        0.5231,
+        0.5061,
+        0.5051,
+        0.5049,
+        0.504
+      ],
+      "_top_chunk_preview": "\u2022 One had the correct math but inverted the semantics (shown in Table 9: \u201ccorrect but inverted semantics\u201d)\n\nTable 8: Exa",
+      "_top_chunk_page": 25
+    },
+    {
+      "id": 143,
+      "document": "chain_of_thoughts.pdf",
+      "query": "What percentage of incorrect chains of thought produced by LaMDA 137B on GSM8K had major errors in semantic understanding or coherence?",
+      "correct_page": 5,
+      "keywords": [
+        "semantic understanding",
+        "coherence",
+        "almost correct",
+        "calculator error",
+        "symbol mapping"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        33,
+        33,
+        28,
+        22,
+        25
+      ],
+      "retrieval_time_s": 0.121,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5295,
+      "cosine_scores": [
+        0.5826,
+        0.5233,
+        0.5145,
+        0.5138,
+        0.5133
+      ],
+      "_top_chunk_preview": "Table 17: Examples of correct and incorrect chains of thought produced by LaMDA 137B on Date Understanding.",
+      "_top_chunk_page": 33
+    },
+    {
+      "id": 144,
+      "document": "chain_of_thoughts.pdf",
+      "query": "In the ablation study, what does the 'variable compute only' variant prompt the model to output, and how does it perform?",
+      "correct_page": 6,
+      "keywords": [
+        "sequence of dots",
+        "variable computation",
+        "chain-of-thought reasoning",
+        "natural language",
+        "intermediate steps"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "retrieval_time_s": 0.114,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.52,
+      "cosine_scores": [
+        0.5305,
+        0.5216,
+        0.5185,
+        0.5163,
+        0.5129
+      ],
+      "_top_chunk_preview": "As our results make use of two sets of large language models that is not publicly available, we take the following actio",
+      "_top_chunk_page": 30
+    },
+    {
+      "id": 145,
+      "document": "chain_of_thoughts.pdf",
+      "query": "What is the accuracy range observed for GPT-3 on SST-2 when the permutation of few-shot exemplars is varied?",
+      "correct_page": 6,
+      "keywords": [
+        "permutation",
+        "few-shot exemplars",
+        "SST-2",
+        "near chance",
+        "near state of the art"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        28,
+        22,
+        29,
+        29,
+        29
+      ],
+      "retrieval_time_s": 0.117,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.4567,
+      "cosine_scores": [
+        0.4643,
+        0.4586,
+        0.4548,
+        0.4532,
+        0.4524
+      ],
+      "_top_chunk_preview": ". As shown in Figure 11, the improvement of chain-of-thought prompting over standard prompting remains robust to varying",
+      "_top_chunk_page": 28
+    },
+    {
+      "id": 146,
+      "document": "chain_of_thoughts.pdf",
+      "query": "On the StrategyQA benchmark, what score does PaLM 540B with chain-of-thought prompting achieve, and what was the prior state-of-the-art?",
+      "correct_page": 7,
+      "keywords": [
+        "StrategyQA",
+        "outperforming",
+        "prior state of the art",
+        "commonsense reasoning",
+        "chain-of-thought"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        28,
+        23,
+        28,
+        22
+      ],
+      "retrieval_time_s": 0.12,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5174,
+      "cosine_scores": [
+        0.54,
+        0.5188,
+        0.5102,
+        0.5095,
+        0.5084
+      ],
+      "_top_chunk_preview": "As for the OOD evaluations, standard prompting fails for both tasks. With chain-of-thought prompting, language models ac",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 147,
+      "document": "chain_of_thoughts.pdf",
+      "query": "In the symbolic reasoning tasks, what two toy tasks are used to evaluate chain-of-thought prompting?",
+      "correct_page": 8,
+      "keywords": [
+        "last letter concatenation",
+        "coin flip",
+        "out-of-domain",
+        "few-shot exemplars",
+        "symbolic reasoning"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        9,
+        3,
+        2,
+        29
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.2,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5215,
+      "cosine_scores": [
+        0.5392,
+        0.522,
+        0.5205,
+        0.5164,
+        0.5093
+      ],
+      "_top_chunk_preview": "We have explored chain-of-thought prompting as a simple and broadly applicable method for enhancing reasoning in languag",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 148,
+      "document": "chain_of_thoughts.pdf",
+      "query": "How many errors made by PaLM 62B on GSM8K were categorized as 'one step missing', and how many of those were fixed by scaling to PaLM 540B?",
+      "correct_page": 16,
+      "keywords": [
+        "one step missing",
+        "semantic understanding",
+        "scaling",
+        "error analysis",
+        "fixed"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        22,
+        22,
+        22,
+        22,
+        22
+      ],
+      "retrieval_time_s": 0.12,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4997,
+      "cosine_scores": [
+        0.5029,
+        0.5006,
+        0.5004,
+        0.4975,
+        0.4973
+      ],
+      "_top_chunk_preview": "|       | 62B  | 6.8 85.0    | 0.0 59.6 | 0.0 13.4 | 91.4     | 96.8      | 43.9 91.0 | 38.3 72.4 |\n+-------+------+----",
+      "_top_chunk_page": 22
+    },
+    {
+      "id": 149,
+      "document": "chain_of_thoughts.pdf",
+      "query": "What coin flip task accuracy does LaMDA 137B achieve with chain-of-thought prompting using Annotator A versus Annotator C?",
+      "correct_page": 18,
+      "keywords": [
+        "coin flip",
+        "Annotator A",
+        "Annotator C",
+        "standard prompting",
+        "variance"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        33,
+        28,
+        23,
+        23,
+        22
+      ],
+      "retrieval_time_s": 0.133,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4902,
+      "cosine_scores": [
+        0.5082,
+        0.4952,
+        0.4874,
+        0.4836,
+        0.4766
+      ],
+      "_top_chunk_preview": "Table 17: Examples of correct and incorrect chains of thought produced by LaMDA 137B on Date Understanding.",
+      "_top_chunk_page": 33
+    },
+    {
+      "id": 150,
+      "document": "chain_of_thoughts.pdf",
+      "query": "According to the error analysis of LaMDA 137B on GSM8K, what percentage of incorrect chains of thought were entirely correct except for a calculator error?",
+      "correct_page": 27,
+      "keywords": [
+        "calculator error",
+        "external calculator",
+        "symbol mapping",
+        "one step missing",
+        "incorrect"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        33,
+        33,
+        27,
+        27,
+        32
+      ],
+      "retrieval_time_s": 0.115,
+      "recall": 1.0,
+      "precision": 1.0,
+      "mrr": 1.0,
+      "rank_of_correct_page": 3,
+      "keyword_hit_count": 5,
+      "avg_cosine_similarity": 0.5517,
+      "cosine_scores": [
+        0.607,
+        0.5603,
+        0.5382,
+        0.527,
+        0.526
+      ],
+      "_top_chunk_preview": "Table 17: Examples of correct and incorrect chains of thought produced by LaMDA 137B on Date Understanding.",
+      "_top_chunk_page": 33
+    },
+    {
+      "id": 151,
+      "document": "chain_of_thoughts.pdf",
+      "query": "What three conditions does the paper identify as making chain-of-thought prompting most helpful for a given task?",
+      "correct_page": 18,
+      "keywords": [
+        "multi-step reasoning",
+        "large language model",
+        "scaling curve",
+        "flat",
+        "conditions"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        29,
+        30,
+        29,
+        29,
+        28
+      ],
+      "retrieval_time_s": 0.105,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5558,
+      "cosine_scores": [
+        0.5763,
+        0.5549,
+        0.5535,
+        0.5482,
+        0.5459
+      ],
+      "_top_chunk_preview": "Figure 11: The improvement of chain of thought prompting over standard prompting appears robust to varying the number of",
+      "_top_chunk_page": 29
+    },
+    {
+      "id": 152,
+      "document": "llama.pdf",
+      "query": "What is the parameter size of the LaMDA model that LLaMA-13B outperforms on both HumanEval and MBPP code generation benchmarks?",
+      "correct_page": 6,
+      "keywords": [
+        "HumanEval",
+        "MBPP",
+        "LaMDA",
+        "pass@1",
+        "code generation"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        6,
+        4,
+        1,
+        3
+      ],
+      "retrieval_time_s": 0.104,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4621,
+      "cosine_scores": [
+        0.4699,
+        0.4652,
+        0.4589,
+        0.4585,
+        0.4579
+      ],
+      "_top_chunk_preview": "As show in Table 8, for a similar number of parameters, LLaMA outperforms other general models such as LaMDA and PaLM, w",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 153,
+      "document": "llama.pdf",
+      "query": "What percentage of the LLaMA pre-training dataset comes from English CommonCrawl, and what date range of dumps was used?",
+      "correct_page": 2,
+      "keywords": [
+        "CommonCrawl",
+        "CCNet pipeline",
+        "language identification",
+        "fastText",
+        "deduplicates"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        2,
+        4,
+        4,
+        2,
+        2
+      ],
+      "retrieval_time_s": 0.107,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.4985,
+      "cosine_scores": [
+        0.5145,
+        0.4982,
+        0.4946,
+        0.4931,
+        0.4919
+      ],
+      "_top_chunk_preview": "English CommonCrawl [67%]. We preprocess five CommonCrawl dumps, ranging from 2017 to 2020, with the CCNet pipeline (Wen",
+      "_top_chunk_page": 2
+    },
+    {
+      "id": 154,
+      "document": "llama.pdf",
+      "query": "What training throughput in tokens per second per GPU does LLaMA achieve when training the 65B-parameter model, and on what hardware?",
+      "correct_page": 4,
+      "keywords": [
+        "380 tokens",
+        "GPU",
+        "2048 A100",
+        "80GB",
+        "21 days"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        3,
+        3
+      ],
+      "retrieval_time_s": 0.101,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5027,
+      "cosine_scores": [
+        0.5059,
+        0.5052,
+        0.5048,
+        0.4992,
+        0.4983
+      ],
+      "_top_chunk_preview": "| LLaMA      | 13B 33B | 45.0 55.8  | 35.8 46.0 | 53.8 66.7 | 53.3 63.4 | 46.9 57.8 |\n+------------+---------+----------",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 155,
+      "document": "llama.pdf",
+      "query": "On the MMLU benchmark, how does LLaMA-65B compare to Chinchilla-70B and PaLM-540B in 5-shot average accuracy?",
+      "correct_page": 7,
+      "keywords": [
+        "MMLU",
+        "five-shot",
+        "Chinchilla",
+        "academic papers",
+        "limited amount"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        7,
+        9
+      ],
+      "retrieval_time_s": 0.105,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.25,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.484,
+      "cosine_scores": [
+        0.4891,
+        0.4875,
+        0.4865,
+        0.479,
+        0.478
+      ],
+      "_top_chunk_preview": "+----------------+------+------+\n| LLaMA          | 65B  | 63.4 |\n+----------------+------+------+\n| OPT-IML-Max    | 30",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 156,
+      "document": "llama.pdf",
+      "query": "What score does LLaMA-I (instruction-finetuned LLaMA-65B) achieve on MMLU, and what is the state-of-the-art score it is compared against?",
+      "correct_page": 7,
+      "keywords": [
+        "instruction finetuning",
+        "LLaMA-I",
+        "68.9",
+        "code-davinci-002",
+        "77.4"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        7,
+        7,
+        7,
+        7,
+        5
+      ],
+      "retrieval_time_s": 0.111,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5171,
+      "cosine_scores": [
+        0.5248,
+        0.5238,
+        0.5217,
+        0.514,
+        0.5011
+      ],
+      "_top_chunk_preview": "+----------------+------+------+\n| LLaMA-I        | 65B  | 68.9 |\n+----------------+------+------+",
+      "_top_chunk_page": 7
+    },
+    {
+      "id": 157,
+      "document": "llama.pdf",
+      "query": "What toxicity score does LLaMA-65B produce on the RealToxicityPrompts benchmark for 'basic' versus 'respectful' prompt categories?",
+      "correct_page": 8,
+      "keywords": [
+        "RealToxicityPrompts",
+        "basic",
+        "respectful",
+        "greedy decoder",
+        "PerspectiveAPI"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        9,
+        9,
+        9,
+        5
+      ],
+      "retrieval_time_s": 0.106,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4829,
+      "cosine_scores": [
+        0.4946,
+        0.4939,
+        0.4871,
+        0.4717,
+        0.4674
+      ],
+      "_top_chunk_preview": "+-------+---------+-------------+-------------+\n|       | 65B     | 0.128       | 0.141       |\n+-------+---------+-----",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 158,
+      "document": "llama.pdf",
+      "query": "What carbon emissions in tCO2eq does training LLaMA-65B produce, and how does this compare to BLOOM-175B under the same assumptions?",
+      "correct_page": 11,
+      "keywords": [
+        "tCO2eq",
+        "carbon emitted",
+        "A100-80GB",
+        "power consumption",
+        "BLOOM"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        7,
+        5,
+        7,
+        7
+      ],
+      "retrieval_time_s": 0.103,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4908,
+      "cosine_scores": [
+        0.4974,
+        0.4924,
+        0.4918,
+        0.4867,
+        0.4856
+      ],
+      "_top_chunk_preview": "| Race/Color           | 57.0  | 64.7 | 68.6 |\n+----------------------+-------+------+------+\n| Sexual orientation   | 8",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 159,
+      "document": "llama.pdf",
+      "query": "On GSM8K with majority voting (maj1@k), what score does LLaMA-65B achieve and how does it compare to Minerva-62B?",
+      "correct_page": 6,
+      "keywords": [
+        "majority voting",
+        "maj1@k",
+        "Minerva",
+        "fine-tuned",
+        "mathematical data"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        6,
+        6,
+        9,
+        6,
+        7
+      ],
+      "retrieval_time_s": 0.105,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.4866,
+      "cosine_scores": [
+        0.4974,
+        0.4919,
+        0.4839,
+        0.4803,
+        0.4795
+      ],
+      "_top_chunk_preview": "|         | 7B 2.9          | 6.9      | 11.0      | 18.1      |\n+---------+-----------------+----------+-----------+---",
+      "_top_chunk_page": 6
+    },
+    {
+      "id": 160,
+      "document": "llama.pdf",
+      "query": "What three architectural modifications does LLaMA make relative to the original transformer, and what models inspired each change?",
+      "correct_page": 3,
+      "keywords": [
+        "pre-normalization",
+        "SwiGLU",
+        "rotary embeddings",
+        "RMSNorm",
+        "RoPE"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        3,
+        4,
+        10,
+        10,
+        9
+      ],
+      "retrieval_time_s": 0.1,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.4694,
+      "cosine_scores": [
+        0.4979,
+        0.4687,
+        0.4652,
+        0.4596,
+        0.4556
+      ],
+      "_top_chunk_preview": "Following recent work on large language models, our network is based on the transformer architecture (Vaswani et al., 20",
+      "_top_chunk_page": 3
+    },
+    {
+      "id": 161,
+      "document": "llama.pdf",
+      "query": "On the WinoGender benchmark, what co-reference resolution accuracy does LLaMA-65B achieve overall, and what accuracy does it achieve specifically on 'gotcha' examples for his/him/he pronouns?",
+      "correct_page": 10,
+      "keywords": [
+        "gotcha",
+        "co-reference",
+        "his/him/he",
+        "societal biases",
+        "occupation"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        9,
+        6,
+        9,
+        9,
+        5
+      ],
+      "retrieval_time_s": 0.154,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5069,
+      "cosine_scores": [
+        0.5263,
+        0.507,
+        0.5023,
+        0.5019,
+        0.4971
+      ],
+      "_top_chunk_preview": "5.3 WinoGender \n\nTo further investigate the biases of our model on the gender category, we look at the WinoGender benchm",
+      "_top_chunk_page": 9
+    },
+    {
+      "id": 162,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What accuracy did GPT-3 achieve on the LAMBADA dataset in the few-shot setting?",
+      "correct_page": 12,
+      "keywords": [
+        "LAMBADA",
+        "few-shot",
+        "fill-in-the-blank",
+        "cloze-test",
+        "accuracy"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        30,
+        13,
+        26,
+        12,
+        12
+      ],
+      "retrieval_time_s": 0.14,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": 4,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5825,
+      "cosine_scores": [
+        0.5933,
+        0.592,
+        0.58,
+        0.5795,
+        0.5675
+      ],
+      "_top_chunk_preview": "Figure 3.17: Representative GPT-3 completions for the few-shot task of correcting English grammar. Boldface is GPT-3\u2019s c",
+      "_top_chunk_page": 30
+    },
+    {
+      "id": 163,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "How many participants were recruited in total across all experiments measuring human ability to distinguish GPT-3-generated news articles from real ones?",
+      "correct_page": 46,
+      "keywords": [
+        "718",
+        "participants",
+        "621",
+        "excluded",
+        "Positly"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        26,
+        26,
+        26,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.147,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.653,
+      "cosine_scores": [
+        0.6771,
+        0.6549,
+        0.6458,
+        0.6456,
+        0.6417
+      ],
+      "_top_chunk_preview": "Examples of synthetic articles from GPT-3 are given in Figures 3.14 and 3.15.[7] Much of the text is\u2014as indicated by the",
+      "_top_chunk_page": 26
+    },
+    {
+      "id": 164,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What percentage of the 388 occupations tested were more likely to be followed by a male gender identifier in GPT-3's outputs?",
+      "correct_page": 36,
+      "keywords": [
+        "83%",
+        "388",
+        "occupations",
+        "male",
+        "female identifier"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        26,
+        36,
+        36,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.146,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 0.5,
+      "rank_of_correct_page": 2,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5685,
+      "cosine_scores": [
+        0.5855,
+        0.5712,
+        0.5669,
+        0.5618,
+        0.5573
+      ],
+      "_top_chunk_preview": "Examples of synthetic articles from GPT-3 are given in Figures 3.14 and 3.15.[7] Much of the text is\u2014as indicated by the",
+      "_top_chunk_page": 26
+    },
+    {
+      "id": 165,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What was GPT-3's zero-shot perplexity score on the Penn Treebank language modeling dataset, and how did it compare to the prior state of the art?",
+      "correct_page": 11,
+      "keywords": [
+        "Penn Tree Bank",
+        "perplexity",
+        "20.50",
+        "SOTA",
+        "zero-shot"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        26,
+        26,
+        26,
+        26,
+        13
+      ],
+      "retrieval_time_s": 0.156,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5707,
+      "cosine_scores": [
+        0.576,
+        0.5739,
+        0.5706,
+        0.5672,
+        0.5657
+      ],
+      "_top_chunk_preview": "+-------------------+---------------+--------------------+-------------------+----------------+",
+      "_top_chunk_page": 26
+    },
+    {
+      "id": 166,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What were the five datasets used to train GPT-3 and what fraction of the training mix did Common Crawl represent?",
+      "correct_page": 9,
+      "keywords": [
+        "Common Crawl",
+        "WebText2",
+        "Wikipedia",
+        "training mix",
+        "410 billion"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        26,
+        8,
+        31,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.144,
+      "recall": 0.0,
+      "precision": 0.0,
+      "mrr": 0.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 0,
+      "avg_cosine_similarity": 0.5363,
+      "cosine_scores": [
+        0.5452,
+        0.5373,
+        0.5369,
+        0.5326,
+        0.5294
+      ],
+      "_top_chunk_preview": "Examples of synthetic articles from GPT-3 are given in Figures 3.14 and 3.15.[7] Much of the text is\u2014as indicated by the",
+      "_top_chunk_page": 26
+    },
+    {
+      "id": 167,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "On the TriviaQA benchmark, what was GPT-3's few-shot accuracy and how did it compare to the fine-tuned open-domain SOTA?",
+      "correct_page": 13,
+      "keywords": [
+        "TriviaQA",
+        "71.2%",
+        "closed-book",
+        "RAG",
+        "few-shot"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        13,
+        13,
+        30,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.151,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.5859,
+      "cosine_scores": [
+        0.6121,
+        0.5908,
+        0.5835,
+        0.5722,
+        0.5707
+      ],
+      "_top_chunk_preview": "Table 3.3: Results on three Open-Domain QA tasks. GPT-3 is shown in the few-, one-, and zero-shot settings, as compared ",
+      "_top_chunk_page": 13
+    },
+    {
+      "id": 168,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What was GPT-3's few-shot performance on 2-digit addition and 3-digit subtraction arithmetic tasks?",
+      "correct_page": 22,
+      "keywords": [
+        "100%",
+        "2 digit addition",
+        "94.2%",
+        "3-digit subtraction",
+        "few-shot"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        30,
+        23,
+        23,
+        23,
+        23
+      ],
+      "retrieval_time_s": 0.149,
+      "recall": 1.0,
+      "precision": 0.8,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 4,
+      "avg_cosine_similarity": 0.5938,
+      "cosine_scores": [
+        0.6218,
+        0.593,
+        0.5886,
+        0.5836,
+        0.582
+      ],
+      "_top_chunk_preview": "Figure 3.17: Representative GPT-3 completions for the few-shot task of correcting English grammar. Boldface is GPT-3\u2019s c",
+      "_top_chunk_page": 30
+    },
+    {
+      "id": 169,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What was the mean human accuracy at detecting news articles produced by the GPT-3 175B model in the approximately 200-word article experiment?",
+      "correct_page": 26,
+      "keywords": [
+        "52%",
+        "175B",
+        "chance",
+        "86%",
+        "control model"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        26,
+        26,
+        26,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.191,
+      "recall": 1.0,
+      "precision": 0.6,
+      "mrr": 0.5,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 3,
+      "avg_cosine_similarity": 0.6396,
+      "cosine_scores": [
+        0.6543,
+        0.6453,
+        0.643,
+        0.6307,
+        0.6245
+      ],
+      "_top_chunk_preview": "Examples of synthetic articles from GPT-3 are given in Figures 3.14 and 3.15.[7] Much of the text is\u2014as indicated by the",
+      "_top_chunk_page": 26
+    },
+    {
+      "id": 170,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "How many parameters does the largest GPT-3 model have, how many layers does it use, and what context window size do all models share?",
+      "correct_page": 8,
+      "keywords": [
+        "175.0B",
+        "96",
+        "layers",
+        "2048",
+        "context window"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        8,
+        8,
+        8,
+        26,
+        26
+      ],
+      "retrieval_time_s": 0.149,
+      "recall": 1.0,
+      "precision": 0.4,
+      "mrr": 1.0,
+      "rank_of_correct_page": 1,
+      "keyword_hit_count": 2,
+      "avg_cosine_similarity": 0.5675,
+      "cosine_scores": [
+        0.5921,
+        0.5747,
+        0.5696,
+        0.5533,
+        0.548
+      ],
+      "_top_chunk_preview": ". All models use a context window of n ctx = 2048 tokens. We partition the model across GPUs along both the depth and wi",
+      "_top_chunk_page": 8
+    },
+    {
+      "id": 171,
+      "document": "Language_models_are_few_shot_learners.pdf",
+      "query": "What word-scrambling task did no GPT-3 model manage to perform, regardless of model size?",
+      "correct_page": 24,
+      "keywords": [
+        "reverse",
+        "letters",
+        "word",
+        "none",
+        "reversed words"
+      ],
+      "chunks_retrieved": 5,
+      "retrieved_pages": [
+        23,
+        26,
+        46,
+        13,
+        47
+      ],
+      "retrieval_time_s": 0.141,
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0,
+      "rank_of_correct_page": null,
+      "keyword_hit_count": 1,
+      "avg_cosine_similarity": 0.5456,
+      "cosine_scores": [
+        0.5503,
+        0.5476,
+        0.5443,
+        0.5429,
+        0.5427
+      ],
+      "_top_chunk_preview": "3.9.2 Word Scrambling and Manipulation Tasks \n\nTo test GPT-3\u2019s ability to learn novel symbolic manipulations from a few ",
+      "_top_chunk_page": 23
+    }
+  ]
+}

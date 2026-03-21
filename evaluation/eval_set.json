@@ -1,0 +1,2396 @@
+[
+  {
+    "id": 1,
+    "document": "Edge Computing.pdf",
+    "question": "By what amount was response time reduced when moving face recognition computation from cloud to the edge in the proof-of-concept platform described in the paper?",
+    "ground_truth_answer": "Response time was reduced from 900 ms to 169 ms by moving face recognition computation from the cloud to the edge.",
+    "correct_page": 3,
+    "keywords": [
+      "proof-of-concept",
+      "face recognition",
+      "response time",
+      "169 ms",
+      "cloud to the edge"
+    ]
+  },
+  {
+    "id": 2,
+    "document": "Edge Computing.pdf",
+    "question": "What percentage of IoT-created data was predicted to be stored, processed, analyzed, and acted upon close to or at the edge of the network by 2019?",
+    "ground_truth_answer": "By 2019, 45% of IoT-created data was predicted to be stored, processed, analyzed, and acted upon close to or at the edge of the network.",
+    "correct_page": 1,
+    "keywords": [
+      "45%",
+      "IoT-created data",
+      "stored",
+      "processed",
+      "edge of the network"
+    ]
+  },
+  {
+    "id": 3,
+    "document": "Anomaly Detection in Power Grids via Context-Agnostic Learning.pdf",
+    "question": "What real-world power grid test case is used extensively in the numerical simulations, and how many buses and lines does it contain?",
+    "ground_truth_answer": "The Polish power grid test case (case2383wp) is used extensively, containing 2383 buses and 2896 lines.",
+    "correct_page": 4,
+    "keywords": [
+      "Polish power grid",
+      "case2383wp",
+      "2383",
+      "buses",
+      "2896 lines"
+    ]
+  },
+  {
+    "id": 4,
+    "document": "Anomaly Detection in Power Grids via Context-Agnostic Learning.pdf",
+    "question": "What two real datasets were used to estimate load patterns when generating the synthetic load profiles for the numerical analysis?",
+    "ground_truth_answer": "The two real datasets used were a 24-hour AC state estimation output dataset from a real utility in the Eastern Interconnect of the U.S. and Carnegie Mellon University campus load data recorded for 20 days from July 29 to August 17, 2016.",
+    "correct_page": 4,
+    "keywords": [
+      "Eastern Interconnect",
+      "Carnegie Mellon University",
+      "CMU campus load",
+      "20 days",
+      "synthetic load profiles"
+    ]
+  },
+  {
+    "id": 5,
+    "document": "Time-dependent_resonant_magneto-optical_rotation.pdf",
+    "question": "At what cell temperature were experimental data obtained, and what was the corresponding concentration of rubidium-87 atoms per cubic centimeter?",
+    "ground_truth_answer": "Data were obtained at a cell temperature of 73.2°C, corresponding to a concentration of 2×10¹¹ rubidium-87 atoms per cm³.",
+    "correct_page": 4,
+    "keywords": [
+      "cell temperature",
+      "73.2",
+      "concentration",
+      "87Rb atoms",
+      "cm3"
+    ]
+  },
+  {
+    "id": 6,
+    "document": "Time-dependent_resonant_magneto-optical_rotation.pdf",
+    "question": "How long was the light pulse applied during each measurement cycle, and what was the sample period used for recording detector waveforms?",
+    "ground_truth_answer": "Each light pulse lasted 80 microseconds and detector waveforms were recorded with a sample period of 20 nanoseconds.",
+    "correct_page": 4,
+    "keywords": [
+      "80 µs",
+      "sample period",
+      "20 ns",
+      "waveforms",
+      "measurement cycle"
+    ]
+  },
+  {
+    "id": 7,
+    "document": "GAN.pdf",
+    "question": "What is the global minimum value of the virtual training criterion C(G) in the GAN framework, and under what condition is it achieved?",
+    "ground_truth_answer": "The global minimum of C(G) is −log 4, achieved if and only if the generator's distribution pg equals the data distribution pdata.",
+    "correct_page": 5,
+    "keywords": [
+      "global minimum",
+      "virtual training criterion",
+      "log 4",
+      "pg equals pdata",
+      "Jensen-Shannon divergence"
+    ]
+  },
+  {
+    "id": 8,
+    "document": "GAN.pdf",
+    "question": "What log-likelihood score did Adversarial nets achieve on the MNIST dataset in the Parzen window evaluation, and how did it compare to Deep GSN?",
+    "ground_truth_answer": "Adversarial nets achieved a log-likelihood of 225 ± 2 on MNIST, which was higher than Deep GSN's score of 214 ± 1.1.",
+    "correct_page": 6,
+    "keywords": [
+      "Parzen window",
+      "log-likelihood",
+      "MNIST",
+      "225",
+      "Deep GSN"
+    ]
+  },
+  {
+    "id": 9,
+    "document": "Yolo.pdf",
+    "question": "What mAP score did YOLO achieve on the PASCAL VOC 2012 test set, and on which specific object categories did it score 8–10% lower than R-CNN or Feature Edit?",
+    "ground_truth_answer": "YOLO scored 57.9% mAP on the VOC 2012 test set and underperformed R-CNN or Feature Edit by 8–10% on categories including bottle, sheep, and tv/monitor.",
+    "correct_page": 7,
+    "keywords": [
+      "VOC 2012",
+      "57.9% mAP",
+      "bottle",
+      "sheep",
+      "tv/monitor"
+    ]
+  },
+  {
+    "id": 10,
+    "document": "Yolo.pdf",
+    "question": "What values were set for the two loss weighting parameters λcoord and λnoobj in YOLO's training, and what problem do they address?",
+    "ground_truth_answer": "λcoord was set to 5 and λnoobj was set to 0.5 to address the imbalance caused by many grid cells containing no objects, which would otherwise push confidence scores toward zero and destabilize training.",
+    "correct_page": 3,
+    "keywords": [
+      "lambda coord",
+      "lambda noobj",
+      "confidence scores",
+      "grid cells",
+      "bounding box coordinate predictions"
+    ]
+  },
+  {
+    "id": 11,
+    "document": "LoRA.pdf",
+    "question": "What is the reduction in checkpoint size when applying LoRA with rank 4 to only the query and value projection matrices on GPT-3 175B?",
+    "ground_truth_answer": "With r=4 and only the query and value projection matrices adapted, the checkpoint size is reduced by roughly 10,000 times, from 350GB down to 35MB.",
+    "correct_page": 5,
+    "keywords": [
+      "checkpoint size",
+      "query",
+      "value projection",
+      "350GB",
+      "35MB"
+    ]
+  },
+  {
+    "id": 12,
+    "document": "LoRA.pdf",
+    "question": "According to the inference latency study in Table 1, by what percentage does AdapterH increase latency over LoRA when the batch size is 1 and sequence length is 128?",
+    "ground_truth_answer": "AdapterH increases inference latency by 20.7% over the Fine-Tune/LoRA baseline when the batch size is 1 and sequence length is 128.",
+    "correct_page": 4,
+    "keywords": [
+      "AdapterH",
+      "inference latency",
+      "batch size",
+      "sequence length",
+      "milliseconds"
+    ]
+  },
+  {
+    "id": 13,
+    "document": "LoRA.pdf",
+    "question": "When adapting GPT-3 175B with a fixed parameter budget of 18M, which combination of attention weight matrices yields the best overall performance on WikiSQL and MultiNLI?",
+    "ground_truth_answer": "Adapting both Wq and Wv with rank r=4 gives the best overall performance, achieving 73.7% on WikiSQL and 91.3% on MultiNLI.",
+    "correct_page": 10,
+    "keywords": [
+      "parameter budget",
+      "18M",
+      "WikiSQL",
+      "MultiNLI",
+      "attention weights"
+    ]
+  },
+  {
+    "id": 14,
+    "document": "LoRA.pdf",
+    "question": "What does the analysis of the Frobenius norm in Table 7 reveal about the relationship between the adaptation matrix ΔW and the pre-trained weight matrix W in GPT-3's 48th layer?",
+    "ground_truth_answer": "The analysis shows that ΔW amplifies directions that are not emphasized in W rather than repeating its top singular directions, with an amplification factor of approximately 21.5 for r=4.",
+    "correct_page": 12,
+    "keywords": [
+      "Frobenius norm",
+      "amplification factor",
+      "singular directions",
+      "48th layer",
+      "pre-trained"
+    ]
+  },
+  {
+    "id": 15,
+    "document": "Deep_residual_learning_for_image_recognition.pdf",
+    "question": "What top-5 error rate did the ensemble of residual nets achieve on the ImageNet test set, and what competition did this result win?",
+    "ground_truth_answer": "The ensemble of residual nets achieved 3.57% top-5 error on the ImageNet test set, winning 1st place in the ILSVRC 2015 classification task.",
+    "correct_page": 2,
+    "keywords": [
+      "ensemble",
+      "3.57%",
+      "top-5 error",
+      "ILSVRC 2015",
+      "classification"
+    ]
+  },
+  {
+    "id": 16,
+    "document": "Deep_residual_learning_for_image_recognition.pdf",
+    "question": "What are the three layer types used in the bottleneck building block introduced for ResNet-50/101/152, and what is the role of the 1×1 convolution layers?",
+    "ground_truth_answer": "The bottleneck block uses 1×1, 3×3, and 1×1 convolution layers, where the 1×1 layers are responsible for reducing and then restoring dimensions, leaving the 3×3 layer a bottleneck with smaller input and output dimensions.",
+    "correct_page": 6,
+    "keywords": [
+      "bottleneck",
+      "1x1",
+      "3x3",
+      "reducing",
+      "restoring dimensions"
+    ]
+  },
+  {
+    "id": 17,
+    "document": "Deep_residual_learning_for_image_recognition.pdf",
+    "question": "What training error did the 1202-layer ResNet achieve on CIFAR-10, and why did the authors argue its test error was worse than the 110-layer network despite similar training error?",
+    "ground_truth_answer": "The 1202-layer ResNet achieved training error below 0.1% on CIFAR-10, but its test error of 7.93% was worse than the 110-layer network, which the authors attributed to overfitting given that the 1202-layer model with 19.4M parameters is unnecessarily large for this small dataset.",
+    "correct_page": 8,
+    "keywords": [
+      "1202-layer",
+      "overfitting",
+      "19.4M",
+      "training error",
+      "CIFAR-10"
+    ]
+  },
+  {
+    "id": 18,
+    "document": "Deep_residual_learning_for_image_recognition.pdf",
+    "question": "What improvement did ResNet-101 achieve over VGG-16 on the COCO validation set using baseline Faster R-CNN, and what metric was used?",
+    "ground_truth_answer": "ResNet-101 achieved a 6.0% absolute increase in mAP@[.5, .95] over VGG-16 on the COCO validation set, representing a 28% relative improvement solely due to the better learned features.",
+    "correct_page": 8,
+    "keywords": [
+      "ResNet-101",
+      "VGG-16",
+      "COCO",
+      "mAP",
+      "28% relative improvement"
+    ]
+  },
+  {
+    "id": 19,
+    "document": "Bert.pdf",
+    "question": "What are the exact architectural specifications (number of layers, hidden size, and attention heads) for BERTBASE and BERTLARGE as reported in the paper?",
+    "ground_truth_answer": "BERTBASE has L=12 layers, hidden size H=768, and A=12 attention heads with 110M total parameters, while BERTLARGE has L=24 layers, H=1024, and A=16 attention heads with 340M total parameters.",
+    "correct_page": 3,
+    "keywords": [
+      "BERTBASE",
+      "BERTLARGE",
+      "hidden size",
+      "attention heads",
+      "parameters"
+    ]
+  },
+  {
+    "id": 20,
+    "document": "Bert.pdf",
+    "question": "What two corpora were used to pre-train BERT, and what are their respective sizes in terms of word count?",
+    "ground_truth_answer": "BERT was pre-trained on the BooksCorpus containing 800 million words and English Wikipedia containing 2,500 million words.",
+    "correct_page": 5,
+    "keywords": [
+      "BooksCorpus",
+      "Wikipedia",
+      "800M",
+      "2500M",
+      "pre-training corpus"
+    ]
+  },
+  {
+    "id": 21,
+    "document": "Bert.pdf",
+    "question": "In the ablation study on pre-training tasks (Table 5), what is the SQuAD F1 score drop when switching from the full BERTBASE model to the LTR and No NSP configuration?",
+    "ground_truth_answer": "Switching from the full BERTBASE model (F1 of 88.5) to the LTR and No NSP configuration drops the SQuAD F1 score to 77.8, a drop of 10.7 points.",
+    "correct_page": 8,
+    "keywords": [
+      "LTR",
+      "No NSP",
+      "SQuAD",
+      "ablation",
+      "pre-training tasks"
+    ]
+  },
+  {
+    "id": 22,
+    "document": "Bert.pdf",
+    "question": "What is the best performing feature-based approach configuration for BERT on the CoNLL-2003 NER task, and what Dev F1 score does it achieve?",
+    "ground_truth_answer": "The best feature-based approach concatenates the token representations from the top four hidden layers of the pre-trained Transformer, achieving a Dev F1 of 96.1, only 0.3 F1 behind the fine-tuning approach.",
+    "correct_page": 9,
+    "keywords": [
+      "feature-based",
+      "CoNLL-2003",
+      "top four hidden layers",
+      "concatenate",
+      "NER"
+    ]
+  },
+  {
+    "id": 23,
+    "document": "attention_is_all_you_need.pdf",
+    "question": "What are the exact dimensions used for keys, values, and queries in each of the 8 attention heads of the base Transformer model?",
+    "ground_truth_answer": "In the base Transformer model, each of the 8 attention heads uses dk = dv = dmodel/h = 64 dimensions for both keys and values.",
+    "correct_page": 5,
+    "keywords": [
+      "attention heads",
+      "dk",
+      "dv",
+      "dmodel",
+      "64"
+    ]
+  },
+  {
+    "id": 24,
+    "document": "attention_is_all_you_need.pdf",
+    "question": "How many sentence pairs were in the WMT 2014 English-German training dataset, and what vocabulary size was used for encoding?",
+    "ground_truth_answer": "The WMT 2014 English-German dataset consisted of about 4.5 million sentence pairs, encoded using byte-pair encoding with a shared source-target vocabulary of approximately 37,000 tokens.",
+    "correct_page": 7,
+    "keywords": [
+      "WMT 2014",
+      "English-German",
+      "4.5 million",
+      "byte-pair encoding",
+      "37000 tokens"
+    ]
+  },
+  {
+    "id": 25,
+    "document": "attention_is_all_you_need.pdf",
+    "question": "What BLEU score did the big Transformer model achieve on the WMT 2014 English-to-German translation task, and how much did it improve over the previous best results?",
+    "ground_truth_answer": "The big Transformer model achieved a BLEU score of 28.4 on the WMT 2014 English-to-German task, outperforming the previous best results including ensembles by more than 2.0 BLEU.",
+    "correct_page": 8,
+    "keywords": [
+      "big model",
+      "28.4 BLEU",
+      "English-to-German",
+      "state-of-the-art",
+      "ensembles"
+    ]
+  },
+  {
+    "id": 26,
+    "document": "attention_is_all_you_need.pdf",
+    "question": "In the model variations table (Table 3), what effect did reducing the attention key size dk to 16 (row A) have on the development set BLEU score compared to the base model?",
+    "ground_truth_answer": "Reducing dk to 16 with 32 attention heads caused the development BLEU score to drop to 25.4 from the base model's 25.8, suggesting that determining compatibility is not easy and that a more sophisticated function than dot product may be beneficial.",
+    "correct_page": 9,
+    "keywords": [
+      "attention key size",
+      "dk",
+      "model variations",
+      "newstest2013",
+      "BLEU"
+    ]
+  },
+  {
+    "id": 27,
+    "document": "MPNet.pdf",
+    "question": "On the GLUE development set, by how many points does MPNet outperform BERT, XLNet, and RoBERTa respectively under the BERT-base setting?",
+    "ground_truth_answer": "MPNet outperforms BERT, XLNet, and RoBERTa by 4.8, 3.4, and 1.5 points respectively on the GLUE development set under the BERT-base setting.",
+    "correct_page": 7,
+    "keywords": [
+      "outperforms",
+      "BERT",
+      "XLNet",
+      "RoBERTa",
+      "dev set"
+    ]
+  },
+  {
+    "id": 28,
+    "document": "MPNet.pdf",
+    "question": "In the ablation study of MPNet, what happens to performance when position compensation is removed?",
+    "ground_truth_answer": "When position compensation is removed, MPNet degenerates to PLM and its accuracy drops by 0.6 to 2.3 points on downstream tasks.",
+    "correct_page": 8,
+    "keywords": [
+      "position compensation",
+      "degenerates",
+      "PLM",
+      "accuracy drops",
+      "ablation"
+    ]
+  },
+  {
+    "id": 29,
+    "document": "MPNet.pdf",
+    "question": "What percentage of input tokens and positions does MPNet leverage when predicting masked tokens, assuming 15% of tokens are predicted?",
+    "ground_truth_answer": "MPNet leverages 92.5% of input tokens and 100% of positions when predicting masked tokens, assuming 15% are predicted.",
+    "correct_page": 6,
+    "keywords": [
+      "92.5%",
+      "100%",
+      "positions",
+      "tokens",
+      "conditional information"
+    ]
+  },
+  {
+    "id": 30,
+    "document": "MPNet.pdf",
+    "question": "How many NVIDIA Tesla V100 GPUs were used to pre-train MPNet, and how long did the total training procedure take?",
+    "ground_truth_answer": "MPNet was pre-trained using 32 NVIDIA Tesla 32GB V100 GPUs, and the total training procedure took 35 days.",
+    "correct_page": 6,
+    "keywords": [
+      "NVIDIA Tesla",
+      "V100",
+      "35 days",
+      "FP16",
+      "pre-train"
+    ]
+  },
+  {
+    "id": 31,
+    "document": "MPNet.pdf",
+    "question": "In the training efficiency comparison, how many training FLOPs does MPNet-500K use, and what average GLUE score does it achieve?",
+    "ground_truth_answer": "MPNet-500K uses 1.2×10²¹ training FLOPs and achieves an average GLUE score of 87.9.",
+    "correct_page": 13,
+    "keywords": [
+      "Train FLOPS",
+      "MPNet-500K",
+      "GLUE",
+      "training efficiency",
+      "computations"
+    ]
+  },
+  {
+    "id": 32,
+    "document": "An_Image_is_worth_16x16_words.pdf",
+    "question": "What accuracy does the best Vision Transformer model achieve on ImageNet, and which model variant is it?",
+    "ground_truth_answer": "The best Vision Transformer model, ViT-H/14, achieves an accuracy of 88.55% on ImageNet when pre-trained on the JFT-300M dataset.",
+    "correct_page": 2,
+    "keywords": [
+      "88.55",
+      "ImageNet",
+      "CIFAR-100",
+      "VTAB",
+      "pre-trained"
+    ]
+  },
+  {
+    "id": 33,
+    "document": "An_Image_is_worth_16x16_words.pdf",
+    "question": "How many parameters does the ViT-Huge model have, and what are its depth, hidden size, and number of attention heads?",
+    "ground_truth_answer": "The ViT-Huge model has 632 million parameters, 32 layers, a hidden size of 1280, and 16 attention heads.",
+    "correct_page": 5,
+    "keywords": [
+      "ViT-Huge",
+      "632M",
+      "1280",
+      "MLP size",
+      "Heads"
+    ]
+  },
+  {
+    "id": 34,
+    "document": "An_Image_is_worth_16x16_words.pdf",
+    "question": "What accuracy does the self-supervised ViT-B/16 model achieve on ImageNet, and how does it compare to training from scratch?",
+    "ground_truth_answer": "The self-supervised ViT-B/16 model achieves 79.9% accuracy on ImageNet, which is a significant improvement of 2% over training from scratch but still 4% behind supervised pre-training.",
+    "correct_page": 9,
+    "keywords": [
+      "masked patch prediction",
+      "79.9%",
+      "training from scratch",
+      "self-supervised",
+      "supervised pre-training"
+    ]
+  },
+  {
+    "id": 35,
+    "document": "An_Image_is_worth_16x16_words.pdf",
+    "question": "In the positional embedding ablation study, what is the ImageNet 5-shot linear accuracy difference between having no positional embedding versus using 1D positional embeddings?",
+    "ground_truth_answer": "Using no positional embedding yields an accuracy of 0.61382, while 1D positional embeddings yield 0.64206, representing a gap of approximately 0.028 in ImageNet 5-shot linear accuracy.",
+    "correct_page": 17,
+    "keywords": [
+      "No Pos. Emb.",
+      "1-D Pos. Emb.",
+      "0.61382",
+      "0.64206",
+      "ablation study"
+    ]
+  },
+  {
+    "id": 36,
+    "document": "An_Image_is_worth_16x16_words.pdf",
+    "question": "According to the scaling study, by approximately how much less compute does ViT require compared to ResNets to achieve the same transfer performance?",
+    "ground_truth_answer": "Vision Transformers use approximately 2 to 4 times less compute than ResNets to attain the same transfer performance, averaged over 5 datasets.",
+    "correct_page": 8,
+    "keywords": [
+      "performance/compute trade-off",
+      "2 − 4×",
+      "ResNets",
+      "saturate",
+      "scaling"
+    ]
+  },
+  {
+    "id": 37,
+    "document": "Hurtful_words.pdf",
+    "question": "What MIMIC-III dataset statistics are reported for the in-hospital mortality cohort regarding gender, language, race, and insurance?",
+    "ground_truth_answer": "The in-hospital mortality cohort of 15,892 records is 55.3% male, 83.3% English speakers, 80.9% white, and 58.4% using Medicare.",
+    "correct_page": 3,
+    "keywords": [
+      "15,892",
+      "55.3%",
+      "English speakers",
+      "Medicare",
+      "in-hospital mortality"
+    ]
+  },
+  {
+    "id": 38,
+    "document": "Hurtful_words.pdf",
+    "question": "How many of the 57 downstream clinical tasks show a statistically significant recall gap between Medicare and non-Medicare patients, and what percentage of those favor Medicare?",
+    "ground_truth_answer": "33 out of 57 downstream clinical tasks show a statistically significant recall gap for Medicare versus other insurance groups, and 85% of those significant tasks favor Medicare patients.",
+    "correct_page": 8,
+    "keywords": [
+      "Medicare",
+      "Recall Gap",
+      "85%",
+      "significant difference",
+      "insurance"
+    ]
+  },
+  {
+    "id": 39,
+    "document": "Hurtful_words.pdf",
+    "question": "In the log probability bias score results, how many of the eight medical context categories show a statistically significant gender difference in the baseline clinical BERT model?",
+    "ground_truth_answer": "Seven out of eight medical context categories show a statistically significant gender difference in the baseline clinical BERT model.",
+    "correct_page": 7,
+    "keywords": [
+      "7/8",
+      "significant difference",
+      "clinical BERT",
+      "log probability",
+      "gender"
+    ]
+  },
+  {
+    "id": 40,
+    "document": "Hurtful_words.pdf",
+    "question": "What correlation in AUPRC does the debiased clinical BERT model retain compared to the baseline clinical BERT model?",
+    "ground_truth_answer": "The debiased clinical BERT model retains a correlation of 0.996 in AUPRC with the baseline clinical BERT model.",
+    "correct_page": 7,
+    "keywords": [
+      "0.996",
+      "AUPRC",
+      "debiased",
+      "baseline",
+      "correlation"
+    ]
+  },
+  {
+    "id": 41,
+    "document": "Hurtful_words.pdf",
+    "question": "In the adversarial debiasing comparison for gender, how does the number of significant recall gaps change between the baseline and debiased models?",
+    "ground_truth_answer": "The baseline clinical BERT has 13 significant recall gaps between males and females, while the debiased model reduces this slightly to 9, showing that debiasing does not greatly reduce the number of statistically significant gaps.",
+    "correct_page": 9,
+    "keywords": [
+      "Baseline",
+      "Debiased",
+      "Recall Gap",
+      "significant gaps",
+      "gender-debiased"
+    ]
+  },
+  {
+    "id": 42,
+    "document": "Unseen Object Segmentation in Videos.pdf",
+    "question": "What average IoU does the proposed method with ResNet-101 architecture achieve on the DAVIS 2016 dataset with unseen object categories, and how does it compare to FSEG?",
+    "ground_truth_answer": "The proposed method with ResNet-101 achieves an average IoU of 85.9% on the DAVIS 2016 dataset with unseen categories, outperforming FSEG which achieves 84.1%.",
+    "correct_page": 11,
+    "keywords": [
+      "ResNet",
+      "85.9",
+      "FSEG",
+      "Avg.",
+      "DAVIS"
+    ]
+  },
+  {
+    "id": 43,
+    "document": "Unseen Object Segmentation in Videos.pdf",
+    "question": "What are the two stopping conditions used in the greedy algorithm for optimizing the segment mining submodular function?",
+    "ground_truth_answer": "The greedy algorithm stops when either the number of selected proposals exceeds a threshold (|A| > NA), or the ratio of the energy gain between two rounds falls below a threshold (D(Ai) < β · D(Ai−1)).",
+    "correct_page": 9,
+    "keywords": [
+      "threshold",
+      "energy gain",
+      "selected proposals",
+      "converged",
+      "stopping"
+    ]
+  },
+  {
+    "id": 44,
+    "document": "Unseen Object Segmentation in Videos.pdf",
+    "question": "On the YouTube-Objects dataset, what average IoU does the proposed method with VGG-16 architecture achieve, and by how much does it improve over the baseline FCN model?",
+    "ground_truth_answer": "The proposed method with VGG-16 achieves an average IoU of 65.9% on the YouTube-Objects dataset, representing a performance gain of approximately 9% over the baseline FCN model which achieves 56.9%.",
+    "correct_page": 13,
+    "keywords": [
+      "YouTube-Objects",
+      "65.9",
+      "FCN",
+      "performance gain",
+      "weakly-supervised"
+    ]
+  },
+  {
+    "id": 45,
+    "document": "Unseen Object Segmentation in Videos.pdf",
+    "question": "How is the weight initialization of the transferable layer computed for each source category?",
+    "ground_truth_answer": "The initialized weight for each source category is computed by averaging the largest inner-product similarity scores between the feature vector of each target frame and the feature vectors of source images from that category.",
+    "correct_page": 8,
+    "keywords": [
+      "initialized weight",
+      "inner product",
+      "global average pooling",
+      "fc7",
+      "similarity score"
+    ]
+  },
+  {
+    "id": 46,
+    "document": "Unseen Object Segmentation in Videos.pdf",
+    "question": "What parameter values are used for the submodular function's facility location cost and the two unary term weights in all experiments?",
+    "ground_truth_answer": "In all experiments, the facility location cost is fixed at α = 1, and the unary term weights are set to λo = 20 for the objectness score and λm = 35 for the motion score.",
+    "correct_page": 10,
+    "keywords": [
+      "alpha",
+      "lambda",
+      "objectness",
+      "motion",
+      "submodular"
+    ]
+  },
+  {
+    "id": 47,
+    "document": "Spectre Attacks.pdf",
+    "question": "Which specific Intel processor architectures were empirically verified to be vulnerable to Spectre attacks in the conditional branch misprediction experiments?",
+    "ground_truth_answer": "The experiments confirmed Spectre vulnerability on Intel Ivy Bridge (i7-3630QM), Intel Haswell (i7-4650U), Intel Skylake (an unspecified Xeon on Google Cloud), and AMD Ryzen processors.",
+    "correct_page": 6,
+    "keywords": [
+      "Ivy Bridge",
+      "Haswell",
+      "Skylake",
+      "AMD Ryzen",
+      "empirically"
+    ]
+  },
+  {
+    "id": 48,
+    "document": "Spectre Attacks.pdf",
+    "question": "What read speed in KB/second does the unoptimized Spectre demonstration code achieve on an i7 Surface Pro 3?",
+    "ground_truth_answer": "The unoptimized demonstration code in Appendix A reads approximately 10 KB/second on an i7 Surface Pro 3 (i7-4650U).",
+    "correct_page": 6,
+    "keywords": [
+      "unoptimized",
+      "10KB/second",
+      "Surface Pro 3",
+      "flush+probe",
+      "cache line"
+    ]
+  },
+  {
+    "id": 49,
+    "document": "Spectre Attacks.pdf",
+    "question": "What byte sequence found in ntdll.dll was chosen as the gadget in the Windows proof-of-concept implementation of the indirect branch poisoning attack?",
+    "ground_truth_answer": "The byte sequence 13 BC 13 BD 13 BE 13 / 12 17, found in ntdll.dll in both Windows 8 and Windows 10, was chosen as the gadget, corresponding to two ADC instructions.",
+    "correct_page": 9,
+    "keywords": [
+      "ntdll.dll",
+      "byte sequence",
+      "adc",
+      "Windows 8",
+      "Windows 10"
+    ]
+  },
+  {
+    "id": 50,
+    "document": "Spectre Attacks.pdf",
+    "question": "What does the paper identify as the CVE identifiers assigned to the Spectre family of attacks?",
+    "ground_truth_answer": "The Spectre family of attacks is documented under CVE-2017-5753 and CVE-2017-5715.",
+    "correct_page": 3,
+    "keywords": [
+      "CVE-2017-5753",
+      "CVE-2017-5715",
+      "responsible disclosure",
+      "Qualcomm",
+      "current status"
+    ]
+  },
+  {
+    "id": 51,
+    "document": "Spectre Attacks.pdf",
+    "question": "What does the paper say about the KAISER patch as a countermeasure against Spectre attacks?",
+    "ground_truth_answer": "The paper states that the KAISER patch, which has been widely applied as a mitigation to the Meltdown attack, does not protect against Spectre.",
+    "correct_page": 3,
+    "keywords": [
+      "KAISER patch",
+      "Meltdown",
+      "does not protect",
+      "non-Intel processors",
+      "AMD and ARM"
+    ]
+  },
+  {
+    "id": 52,
+    "document": "PrivGAN_ .pdf",
+    "question": "What are the two specific training tricks described for initializing and stabilizing the privacy discriminator Dp during privGAN training?",
+    "ground_truth_answer": "The first trick is to pre-train a neural network to distinguish the data partitions for a small number of epochs (ni = 50) and use it to initialize Dp; the second trick is to fix Dp for the first nd = 100 epochs while only allowing the generator-discriminator pairs to train.",
+    "correct_page": 7,
+    "keywords": [
+      "initial weights",
+      "privacy discriminator",
+      "convergence",
+      "ni",
+      "nd"
+    ]
+  },
+  {
+    "id": 53,
+    "document": "PrivGAN_ .pdf",
+    "question": "What white-box attack accuracy does a non-private GAN achieve on the LFW dataset, and what does privGAN with λ=10 reduce it to?",
+    "ground_truth_answer": "A non-private GAN achieves a white-box attack accuracy of 0.724 on the LFW dataset, while privGAN with λ=10 reduces this to 0.086.",
+    "correct_page": 13,
+    "keywords": [
+      "LFW",
+      "white-box attack accuracy",
+      "lambda",
+      "Table 1",
+      "max attack"
+    ]
+  },
+  {
+    "id": 54,
+    "document": "PrivGAN_ .pdf",
+    "question": "What is the size of the LFW dataset used in the privGAN experiments, and what version of it is used?",
+    "ground_truth_answer": "The LFW dataset used has a size of 13,223 images comprising faces of individuals, and the grayscale version made available through scikit-learn is used.",
+    "correct_page": 11,
+    "keywords": [
+      "LFW",
+      "13,223",
+      "grayscale",
+      "scikit-learn",
+      "faces"
+    ]
+  },
+  {
+    "id": 55,
+    "document": "PrivGAN_ .pdf",
+    "question": "In the Monte-Carlo set membership attack, what distance metric and dimensionality reduction technique does the paper identify as most effective?",
+    "ground_truth_answer": "The most effective distance metric is a PCA-based one, where the top 40 principal components of the vectorized images in a held-out set are first computed and then Euclidean distance is calculated between the reduced-dimension vectors.",
+    "correct_page": 10,
+    "keywords": [
+      "PCA",
+      "40 principal components",
+      "Euclidean distance",
+      "median heuristic",
+      "vectorized images"
+    ]
+  },
+  {
+    "id": 56,
+    "document": "PrivGAN_ .pdf",
+    "question": "What optimizer, learning rate, and beta value are used when training all GAN models while evaluating adversarial attacks in the privGAN experiments?",
+    "ground_truth_answer": "All GAN models are trained with an Adam optimizer with a learning rate of 0.0002 and β = 0.5 for 500 epochs when evaluating adversarial attacks.",
+    "correct_page": 11,
+    "keywords": [
+      "Adam",
+      "learning rate",
+      "0.0002",
+      "500 epochs",
+      "beta"
+    ]
+  },
+  {
+    "id": 57,
+    "document": "Gradient Centralization.pdf",
+    "question": "How much extra training time per epoch does GC add when training ResNet50 on CIFAR100, according to the paper?",
+    "ground_truth_answer": "GC adds only 0.6 seconds of extra training time per epoch on CIFAR100 with the ResNet50 model, compared to a total of 71 seconds per epoch without GC.",
+    "correct_page": 6,
+    "keywords": [
+      "0.6 sec",
+      "extra training time",
+      "CIFAR100",
+      "ResNet50",
+      "negligible"
+    ]
+  },
+  {
+    "id": 58,
+    "document": "Gradient Centralization.pdf",
+    "question": "What Top-1 error rate does ResNet50 with Batch Normalization achieve on ImageNet without GC, and what does it achieve with GC?",
+    "ground_truth_answer": "ResNet50 with Batch Normalization achieves a Top-1 error rate of 23.71% on ImageNet without GC, and this is reduced to 23.21% with GC.",
+    "correct_page": 13,
+    "keywords": [
+      "Top-1 error",
+      "R50BN",
+      "ImageNet",
+      "Table 5",
+      "R50GN"
+    ]
+  },
+  {
+    "id": 59,
+    "document": "Gradient Centralization.pdf",
+    "question": "What are the four fine-grained image classification datasets used to evaluate GC on pre-trained models, and what backbone network is used?",
+    "ground_truth_answer": "The four fine-grained datasets are FGVC Aircraft, Stanford Cars, Stanford Dogs, and CUB-200-2011, and the official pre-trained ResNet50 provided by PyTorch is used as the backbone.",
+    "correct_page": 13,
+    "keywords": [
+      "FGVC Aircraft",
+      "Stanford Cars",
+      "Stanford Dogs",
+      "CUB-200-2011",
+      "pre-trained ResNet50"
+    ]
+  },
+  {
+    "id": 60,
+    "document": "Gradient Centralization.pdf",
+    "question": "On the CIFAR100 dataset, by how much does GC improve the testing accuracy of the SGDM optimizer with ResNet50, according to Table 2?",
+    "ground_truth_answer": "On CIFAR100 with ResNet50, GC improves SGDM testing accuracy from 78.23±0.42% to 79.14±0.33%, an improvement of approximately 0.91 percentage points.",
+    "correct_page": 11,
+    "keywords": [
+      "SGDM",
+      "CIFAR100",
+      "Table 2",
+      "AdamW",
+      "testing accuracies"
+    ]
+  },
+  {
+    "id": 61,
+    "document": "Gradient Centralization.pdf",
+    "question": "What detection framework and training dataset are used in the GC object detection and segmentation experiments?",
+    "ground_truth_answer": "The MMDetection toolbox is used as the detection framework, and models are trained on the COCO train2017 dataset containing 118K images and evaluated on the COCO val2017 dataset containing 40K images.",
+    "correct_page": 14,
+    "keywords": [
+      "MMDetection",
+      "COCO train2017",
+      "118K images",
+      "val2017",
+      "Faster R-CNN"
+    ]
+  },
+  {
+    "id": 62,
+    "document": "Reduction for asynchronous Boolean networks.pdf",
+    "question": "What is the precise definition of an attractor in the asynchronous state transition graph as given in the paper?",
+    "ground_truth_answer": "A trap set is a subset T of the state space such that for any state x in T and any transition x→y in the asynchronous dynamics, y is also in T; the minimal trap sets are called the attractors.",
+    "correct_page": 3,
+    "keywords": [
+      "trap set",
+      "minimal",
+      "attractors",
+      "fixed points",
+      "cyclic attractors"
+    ]
+  },
+  {
+    "id": 63,
+    "document": "Reduction for asynchronous Boolean networks.pdf",
+    "question": "According to Corollary 3.4, what is the relationship between the number of fixed points of the original network f and the reduced network f-tilde after eliminating component v?",
+    "ground_truth_answer": "According to Corollary 3.4(i), the number of fixed points satisfies S(f-tilde) = S(f) + A(f, v), where A(f, v) is the number of cyclic attractors consisting of two states differing in component v, so S(f) ≤ S(f-tilde).",
+    "correct_page": 7,
+    "keywords": [
+      "Corollary 3.4",
+      "fixed points",
+      "cyclic attractors",
+      "elimination",
+      "inequalities"
+    ]
+  },
+  {
+    "id": 64,
+    "document": "Reduction for asynchronous Boolean networks.pdf",
+    "question": "What specific counterexample does the paper give to show that the claim in Saadatpour et al. (2013) about mediator node removal is incorrect?",
+    "ground_truth_answer": "The paper presents the map f(xu, xv, xw) = (x̄u, xu, (xu∧xw)∨(x̄v∧xw)∨(xu∧x̄v)), which has only one attractor (the full space), whereas eliminating the mediator variable v yields a reduced network with two cyclic attractors, contradicting the claim.",
+    "correct_page": 10,
+    "keywords": [
+      "mediator",
+      "Saadatpour",
+      "cyclic attractor",
+      "interaction graph",
+      "Example 4.2"
+    ]
+  },
+  {
+    "id": 65,
+    "document": "Reduction for asynchronous Boolean networks.pdf",
+    "question": "What upper bound on the number of attractors of an asynchronous Boolean network is proven in Theorem 3.13, and in terms of what graph-theoretic quantity?",
+    "ground_truth_answer": "Theorem 3.13 (attributed to Richard 2009) states that if I is a positive feedback vertex set of the interaction graph G(f), then the asynchronous dynamics AD(f) has at most 2^|I| attractors.",
+    "correct_page": 9,
+    "keywords": [
+      "positive feedback vertex set",
+      "attractors",
+      "Richard",
+      "2009",
+      "Theorem 3.13"
+    ]
+  },
+  {
+    "id": 66,
+    "document": "Reduction for asynchronous Boolean networks.pdf",
+    "question": "What journal and volume is this paper on reduction of asynchronous Boolean networks published in, and in what year was it accepted?",
+    "ground_truth_answer": "The paper is published in Discrete Mathematics and Theoretical Computer Science, volume 25:2, issue #27, and was accepted on 28th November 2023.",
+    "correct_page": 1,
+    "keywords": [
+      "Discrete Mathematics and Theoretical Computer Science",
+      "vol. 25:2",
+      "accepted",
+      "November 2023",
+      "arXiv"
+    ]
+  },
+  {
+    "id": 67,
+    "document": "Federated Learning.pdf",
+    "question": "What is Federated Averaging (FedAvg) and what is its key limitation when data is heterogeneous across devices?",
+    "ground_truth_answer": "FedAvg is the most commonly used method for federated learning, based on averaging local stochastic gradient descent updates for the primal problem; however, it comes without convergence guarantees and can diverge in practical settings when data are heterogeneous.",
+    "correct_page": 5,
+    "keywords": [
+      "FedAvg",
+      "Federated Averaging",
+      "local updating",
+      "convergence guarantees",
+      "heterogeneous"
+    ]
+  },
+  {
+    "id": 68,
+    "document": "Federated Learning.pdf",
+    "question": "What specific limitation makes error compensation techniques from classical distributed learning unsuitable for federated compression schemes?",
+    "ground_truth_answer": "The commonly-used error compensation techniques cannot be directly extended to federated settings because the errors accumulated locally may become stale if the devices are not frequently sampled.",
+    "correct_page": 6,
+    "keywords": [
+      "error compensation",
+      "stale",
+      "non-identically distributed",
+      "low participation",
+      "compression"
+    ]
+  },
+  {
+    "id": 69,
+    "document": "Federated Learning.pdf",
+    "question": "Why are classical bounded-delay assumptions used in asynchronous communication schemes considered unrealistic in federated settings?",
+    "ground_truth_answer": "Classical bounded-delay assumptions are unrealistic in federated settings because the delay between a device pulling from the central server and pushing results may be on the order of hours to days, or may be completely unbounded.",
+    "correct_page": 7,
+    "keywords": [
+      "bounded-delay",
+      "asynchronous",
+      "staleness",
+      "hours to days",
+      "unbounded"
+    ]
+  },
+  {
+    "id": 70,
+    "document": "Federated Learning.pdf",
+    "question": "What is the q-FFL objective proposed by Li et al. and what fairness problem does it aim to address in federated learning?",
+    "ground_truth_answer": "The q-FFL objective assigns devices with higher loss a higher relative weight during training, with the goal of encouraging less variance in the final accuracy distribution across devices and thereby reducing the unfairness that arises when a global model becomes biased toward devices with more data.",
+    "correct_page": 9,
+    "keywords": [
+      "q-FFL",
+      "higher loss",
+      "higher relative weight",
+      "variance",
+      "accuracy distribution"
+    ]
+  },
+  {
+    "id": 71,
+    "document": "Federated Learning.pdf",
+    "question": "What are the two categories of privacy definitions in federated learning, and how do they differ from each other?",
+    "ground_truth_answer": "The two categories are global privacy and local privacy: global privacy requires that model updates at each round are private to all untrusted third parties other than the central server, while local privacy further requires that the updates are also private to the server itself.",
+    "correct_page": 11,
+    "keywords": [
+      "global privacy",
+      "local privacy",
+      "trusted server",
+      "model updates",
+      "untrusted third parties"
+    ]
+  },
+  {
+    "id": 72,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many human-written red teaming prompts were collected for the SL-CAI training dataset, and how many additional prompts were generated by few-shot prompting a pretrained model?",
+    "ground_truth_answer": "The dataset included 42,496 human-written red teaming prompts and an additional 140,335 prompts generated by few-shot prompting a pretrained model, for a total of 182,831 prompts.",
+    "correct_page": 8,
+    "keywords": [
+      "42,496",
+      "human-written prompts",
+      "140,335",
+      "few-shot prompting",
+      "182,831"
+    ]
+  },
+  {
+    "id": 73,
+    "document": "Constitutional AI_.pdf",
+    "question": "What learning rate and batch size were used when training the SL-CAI models via supervised finetuning?",
+    "ground_truth_answer": "The SL-CAI models were trained for one epoch using a constant learning rate of 0.5 relative to the pre-training learning rate and a batch size of 1024 sequences.",
+    "correct_page": 8,
+    "keywords": [
+      "one epoch",
+      "constant learning rate",
+      "0.5",
+      "pre-training learning rate",
+      "batch size 1024"
+    ]
+  },
+  {
+    "id": 74,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many total helpfulness and harmlessness comparisons were collected for AB testing the RL and SL-CAI model snapshots shown in Figures 2 and 3?",
+    "ground_truth_answer": "A total of 10,274 helpfulness comparisons and 8,135 harmlessness comparisons were collected for AB testing the 24 snapshots shown collectively in Figures 2 and 3.",
+    "correct_page": 8,
+    "keywords": [
+      "10,274 helpfulness",
+      "8,135",
+      "AB testing",
+      "24 snapshots",
+      "comparisons"
+    ]
+  },
+  {
+    "id": 75,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many helpfulness HF comparisons and how many constitutionally-generated harmlessness comparisons were used for PM comparison data in the RL-CAI training runs?",
+    "ground_truth_answer": "The RL-CAI training used 135,296 helpfulness HF comparisons and 182,831 constitutionally-generated harmlessness comparisons for preference model training.",
+    "correct_page": 11,
+    "keywords": [
+      "135,296",
+      "HF helpfulness comparisons",
+      "182,831",
+      "constitutionally-generated harmlessness",
+      "PM comparison data"
+    ]
+  },
+  {
+    "id": 76,
+    "document": "Constitutional AI_.pdf",
+    "question": "What clamping range for CoT probabilities did the authors settle on for the main results of the RL-CAI paper, and what did they find about clamping at 40-60 versus 20-80?",
+    "ground_truth_answer": "The authors settled on clamping CoT probabilities at 40–60 percent for the main results, finding that clamping at 40–60 improved results further compared to clamping at 20–80 percent.",
+    "correct_page": 11,
+    "keywords": [
+      "clamping",
+      "40-60 percent",
+      "20-80 percent",
+      "CoT probabilities",
+      "more robust behavior"
+    ]
+  },
+  {
+    "id": 77,
+    "document": "Constitutional AI_.pdf",
+    "question": "On what absolute harmfulness scale were red teaming conversations rated in the absolute harmfulness score experiments, and how many model responses per prompt were averaged?",
+    "ground_truth_answer": "Workers rated their degree of success on an integral scale from 0 to 4 (inclusive), and absolute harmfulness scores were averaged over 256 model responses per prompt.",
+    "correct_page": 14,
+    "keywords": [
+      "integral rating scale",
+      "0 to 4",
+      "256 model responses",
+      "64 hand-picked",
+      "absolute harmfulness"
+    ]
+  },
+  {
+    "id": 78,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many total additional model-generated prompts for red teaming and helpfulness were used in the RL training runs beyond the SL-CAI prompts?",
+    "ground_truth_answer": "The RL training runs used 491,142 additional model-generated red teaming prompts and 474,300 additional model-generated helpfulness prompts beyond the SL-CAI prompt set.",
+    "correct_page": 11,
+    "keywords": [
+      "491,142",
+      "red team",
+      "474,300",
+      "helpfulness",
+      "model-generated prompts"
+    ]
+  },
+  {
+    "id": 79,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many binary comparison questions were written to evaluate helpfulness, honesty, and harmlessness in the HHH evaluations shown in Figure 4, and how many were newly written for that paper?",
+    "ground_truth_answer": "Figure 4 shows performance on 438 binary comparison questions in total; 221 binary comparisons came from prior work and 217 more challenging new comparisons were written for this paper, primarily focusing on more subtle tests of harmlessness.",
+    "correct_page": 6,
+    "keywords": [
+      "438 binary comparison",
+      "221 binary comparisons",
+      "217 more challenging",
+      "harmlessness",
+      "evasive response"
+    ]
+  },
+  {
+    "id": 80,
+    "document": "Constitutional AI_.pdf",
+    "question": "How many total different constitutional principles were written for harmlessness, and how are they sampled during the critique-revision process?",
+    "ground_truth_answer": "A total of 16 different principles related to harmlessness were written, and they are randomly sampled at each revision step of each red team prompt.",
+    "correct_page": 8,
+    "keywords": [
+      "16 different principles",
+      "randomly sampled",
+      "revision step",
+      "red team prompt",
+      "harmlessness"
+    ]
+  },
+  {
+    "id": 81,
+    "document": "Constitutional AI_.pdf",
+    "question": "What platform did the authors use for comparison testing in the current paper, and what platforms were used in prior work for collecting PM data?",
+    "ground_truth_answer": "The current comparison tests were performed with Surge AI workers, while prior PM data collection used Upwork and MTurk.",
+    "correct_page": 14,
+    "keywords": [
+      "Surge AI",
+      "Upwork",
+      "MTurk",
+      "PM data",
+      "comparison testing"
+    ]
+  },
+  {
+    "id": 82,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What are the four fields in each side-table entry used by the in-place Wasm interpreter, and what does each field represent?",
+    "ground_truth_answer": "Each side-table entry is a 4-tuple of the form ⟨Δip, Δstp, valcnt, popcnt⟩, where Δip adjusts the instruction pointer when a branch is taken, Δstp adjusts the side-table pointer, valcnt is the number of values to be copied, and popcnt is the number of values to be popped.",
+    "correct_page": 7,
+    "keywords": [
+      "4-tuple",
+      "delta_ip",
+      "delta_stp",
+      "valcnt",
+      "popcnt"
+    ]
+  },
+  {
+    "id": 83,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "How many source lines of code does the fast interpreter's assembly implementation consist of, and how much machine code and dispatch table space does it generate?",
+    "ground_truth_answer": "The interpreter consists of 2,800 source lines of code that generate approximately 14 KiB of machine code and 7 KiB of dispatch tables.",
+    "correct_page": 10,
+    "keywords": [
+      "2800 source lines",
+      "14KiB",
+      "machine code",
+      "7KiB",
+      "dispatch tables"
+    ]
+  },
+  {
+    "id": 84,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What is the fixed size of the wamr-classic branch cache, and what is its associativity structure?",
+    "ground_truth_answer": "The wamr-classic branch cache is a fixed-size, 128-element, 2-way set associative cache indexed by branch address.",
+    "correct_page": 19,
+    "keywords": [
+      "128-element",
+      "2-way set associative",
+      "cache",
+      "branch address",
+      "wamr-classic"
+    ]
+  },
+  {
+    "id": 85,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What hardware and OS configuration was used for the benchmark evaluation, including CPU model, clock speed, and RAM?",
+    "ground_truth_answer": "All benchmark tests were performed on a Linux 4.15 kernel on a machine with 32 GiB of RAM and one Intel Core i7-8700K CPU running at 3.7 GHz with the CPU governor set to performance.",
+    "correct_page": 15,
+    "keywords": [
+      "Linux 4.15",
+      "32GiB",
+      "Intel Core i7-8700K",
+      "3.7GHz",
+      "performance governor"
+    ]
+  },
+  {
+    "id": 86,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "By what factor is the wizard sidetable generation cheaper in translation time than the cheapest rewriting interpreters, according to the translation time evaluation?",
+    "ground_truth_answer": "The sidetable generation in wizard is a full order of magnitude cheaper in translation time than the cheapest rewriting interpreters.",
+    "correct_page": 16,
+    "keywords": [
+      "order of magnitude",
+      "sidetable generation",
+      "wizard",
+      "cheapest rewriting interpreters",
+      "translation time"
+    ]
+  },
+  {
+    "id": 87,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What approximate percentage of additional space overhead does the wizard sidetable add relative to the original bytecode, and why is it so compact?",
+    "ground_truth_answer": "The wizard sidetable adds only about 30% additional space compared to the original bytecode because it only requires entries for control-flow instructions, and most Wasm functions have no control flow and therefore no side-table at all.",
+    "correct_page": 16,
+    "keywords": [
+      "30% additional space",
+      "control-flow",
+      "sidetable",
+      "empty",
+      "original bytecode"
+    ]
+  },
+  {
+    "id": 88,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "By how much does threaded dispatch improve performance on average and at maximum compared to non-threaded dispatch, as reported in the tuning section?",
+    "ground_truth_answer": "Threaded dispatch is on average 14% faster and at maximum 29% faster than non-threaded dispatch.",
+    "correct_page": 13,
+    "keywords": [
+      "threaded dispatch",
+      "14%",
+      "29% faster",
+      "average",
+      "maximum"
+    ]
+  },
+  {
+    "id": 89,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "How many total state registers does the in-place interpreter use, and what are the three additional registers beyond IP, EIP, STP, VFP, and VSP?",
+    "ground_truth_answer": "The interpreter uses 9 state registers in total; beyond the control and data stack registers, the three additional registers are MEM (pointer to the start of Wasm memory), FUNCTION (reference to the current function), INSTANCE (reference to the current instance), and DISPATCH (for dynamically enabling per-instruction probing).",
+    "correct_page": 9,
+    "keywords": [
+      "9 state registers",
+      "MEM",
+      "FUNCTION",
+      "INSTANCE",
+      "DISPATCH"
+    ]
+  },
+  {
+    "id": 90,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What benchmark suite and dataset size were used in the evaluation, and how many individual benchmarks and runs were performed?",
+    "ground_truth_answer": "The PolyBenchC-4.2.1 suite with the MEDIUM dataset was used, covering 24 benchmarks, with 100 uninstrumented runs per engine configuration to gather execution time data.",
+    "correct_page": 15,
+    "keywords": [
+      "PolyBenchC-4.2.1",
+      "MEDIUM dataset",
+      "24 benchmarks",
+      "100 uninstrumented runs",
+      "execution time"
+    ]
+  },
+  {
+    "id": 91,
+    "document": "A fast in-place interpreter for WebAssembly.pdf",
+    "question": "What worst-case slowdown was observed for wamr-classic on an adversarial program with thousands of branches, and why does this pathological behavior occur?",
+    "ground_truth_answer": "Slowdowns of as much as 8× were observed on adversarial programs with thousands of branches, because a cache miss causes the entire function to be rescanned to repopulate the 128-element cache, making performance pathological for large programs with many branches.",
+    "correct_page": 19,
+    "keywords": [
+      "adversarial program",
+      "slowdowns",
+      "8×",
+      "cache miss",
+      "rescanned"
+    ]
+  },
+  {
+    "id": 92,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "In Example 1.1, when the language includes propositions for red, blue, and green and colorful is defined as their disjunction, what probability does maximum entropy assign to colorful?",
+    "ground_truth_answer": "When the language includes red, blue, and green and colorful means red or blue or green, maximum entropy dictates that the probability of colorful is 7/8.",
+    "correct_page": 2,
+    "keywords": [
+      "red",
+      "blue",
+      "green",
+      "7/8",
+      "maximum entropy dictates"
+    ]
+  },
+  {
+    "id": 93,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "In Example 1.2, what probability does maximum entropy infer for Pr(bird) under each of the two knowledge base representations?",
+    "ground_truth_answer": "Under the first representation using KB1 with propositions bird and fly, maximum entropy infers Pr(bird) = 1/2, while under the second representation using KB2 with propositions bird and flying-bird, it infers Pr(bird) = 2/3.",
+    "correct_page": 2,
+    "keywords": [
+      "KBfly",
+      "Pr(bird)",
+      "1/2",
+      "2/3",
+      "flying-bird"
+    ]
+  },
+  {
+    "id": 94,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What formal algebraic properties must an (X, FX)-(Y, FY) embedding satisfy, as given in Definition 4.1?",
+    "ground_truth_answer": "An embedding f is a function from FX to FY such that f(S union T) = f(S) union f(T) and f(S-complement) = f(S)-complement for all S, T in FX, making it a homomorphism with respect to union and complementation.",
+    "correct_page": 11,
+    "keywords": [
+      "embedding",
+      "homomorphism",
+      "complementation",
+      "union",
+      "Definition 4.1"
+    ]
+  },
+  {
+    "id": 95,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What is the formal definition of a faithful X-Y embedding, and what logical consequence property does Lemma 4.6 say faithfulness guarantees?",
+    "ground_truth_answer": "An X-Y embedding f is faithful if for all S, T in FX, S is a subset of T if and only if f(S) is a subset of f(T); Lemma 4.6 establishes that this is equivalent to the property that KB entails theta if and only if f*(KB) entails f*(theta) for all constraints KB and theta.",
+    "correct_page": 12,
+    "keywords": [
+      "faithful",
+      "S subset T",
+      "f(S) subset f(T)",
+      "KB entails",
+      "Lemma 4.6"
+    ]
+  },
+  {
+    "id": 96,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What does Theorem 3.4 state about robust X-inference procedures that satisfy domain assumptions DI1, DI2, and DI3?",
+    "ground_truth_answer": "Theorem 3.4 states that if an X-inference procedure is robust and satisfies DI1, DI2, and DI3, then it is essentially entailment for all X in the family X.",
+    "correct_page": 11,
+    "keywords": [
+      "robust",
+      "DI1",
+      "DI2",
+      "DI3",
+      "essentially entailment"
+    ]
+  },
+  {
+    "id": 97,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What does Theorem 4.11 establish about representation-independent inference procedures applied to objective knowledge bases?",
+    "ground_truth_answer": "Theorem 4.11 states that if an X-inference procedure is representation independent, then for all X in X, the inference procedure is essentially entailment for all objective knowledge bases in its domain.",
+    "correct_page": 14,
+    "keywords": [
+      "representation-independent",
+      "objective knowledge bases",
+      "essentially entailment",
+      "domain",
+      "Theorem 4.11"
+    ]
+  },
+  {
+    "id": 98,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What does Theorem 4.16 prove about inference procedures that enforce minimal default independence and satisfy DI1?",
+    "ground_truth_answer": "Theorem 4.16 proves that if an X-inference procedure enforces minimal default independence and satisfies DI1, then it cannot be representation independent, showing that representation independence is incompatible with a default assumption of independence.",
+    "correct_page": 16,
+    "keywords": [
+      "minimal default independence",
+      "DI1",
+      "not representation independent",
+      "Theorem 4.16",
+      "incompatible"
+    ]
+  },
+  {
+    "id": 99,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "How is the relative entropy KLX(mu' || mu) between measures mu' and mu on a finite space X formally defined in Definition 6.6?",
+    "ground_truth_answer": "The relative entropy KLX(mu' || mu) is defined as the sum over all x in X of mu'(x) log(mu'(x) / mu(x)), and mu|theta denotes the set of measures mu' satisfying theta for which this KL-divergence from mu is minimal.",
+    "correct_page": 20,
+    "keywords": [
+      "KL-divergence",
+      "relative entropy",
+      "log",
+      "minimal",
+      "Definition 6.6"
+    ]
+  },
+  {
+    "id": 100,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What does Theorem 6.9 state as the necessary and sufficient condition for the inference procedure IP to be invariant under a faithful X-Y embedding f?",
+    "ground_truth_answer": "Theorem 6.9 states that if f is a faithful X-Y embedding, then the inference procedure IP is invariant under f if and only if the prior sets P(X) and P(Y) correspond under f.",
+    "correct_page": 20,
+    "keywords": [
+      "invariant under f",
+      "prior function",
+      "P(X)",
+      "P(Y)",
+      "correspond under f"
+    ]
+  },
+  {
+    "id": 101,
+    "document": "Representation Dependence in Probabilistic Inference.pdf",
+    "question": "What two classes of embeddings is the inference procedure I-P-Pi invariant under, according to Theorem 6.11?",
+    "ground_truth_answer": "According to Theorem 6.11, the inference procedure I-P-Pi is invariant under faithful product embeddings and under permutation embeddings.",
+    "correct_page": 22,
+    "keywords": [
+      "I-P-Pi",
+      "invariant",
+      "faithful product embeddings",
+      "permutation embeddings",
+      "Theorem 6.11"
+    ]
+  },
+  {
+    "id": 102,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "How many evaluation metrics are contained within the four dimensions of the uniform APR tool evaluation criteria proposed in Section 4?",
+    "ground_truth_answer": "The four dimensions of the evaluation criteria contain a total of 12 evaluation metrics, which reflect the similarities and differences between APR tools from different perspectives.",
+    "correct_page": 4,
+    "keywords": [
+      "12 evaluation metrics",
+      "Approach Design",
+      "Repair Ability",
+      "Repair Quality",
+      "Repair Efficiency"
+    ]
+  },
+  {
+    "id": 103,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "What does the Patch Acceptability (PA) metric specifically reflect about APR tools?",
+    "ground_truth_answer": "The Patch Acceptability metric reflects the degree to which patches generated by the APR tool are accepted by developers, including whether the generated patches are closer to the quality of human-written code and are easily accepted by developers.",
+    "correct_page": 5,
+    "keywords": [
+      "maintainability",
+      "understandability",
+      "interpretability",
+      "human writing",
+      "accepted by developers"
+    ]
+  },
+  {
+    "id": 104,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "In 2005, what type of repair strategy did Jobstmann et al. propose, and what does a winning strategy in their framework represent?",
+    "ground_truth_answer": "Jobstmann et al. proposed a method for program repair as a game strategy, where each winning finite state strategy of the game corresponds to a successful repair.",
+    "correct_page": 6,
+    "keywords": [
+      "game strategy",
+      "finite state",
+      "LTL specification",
+      "winning",
+      "automaton"
+    ]
+  },
+  {
+    "id": 105,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "In the GenProg experiments described in the survey, how many C programs were successfully fixed and how many types of defects were addressed?",
+    "ground_truth_answer": "In its final experiments, GenProg achieved successful fixes on 16 C programs and addressed eight types of defects.",
+    "correct_page": 7,
+    "keywords": [
+      "16 C programs",
+      "eight types",
+      "fine-grained abstract syntax tree",
+      "AST level",
+      "genetic operators"
+    ]
+  },
+  {
+    "id": 106,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "According to the survey, how much repair time cost savings did CRSearcher achieve compared to not using it?",
+    "ground_truth_answer": "The experimental results showed that CRSearcher helped reduce repair time by approximately 50% of the repair time cost.",
+    "correct_page": 9,
+    "keywords": [
+      "token-based",
+      "50%",
+      "repair time cost savings",
+      "code repositories",
+      "code snippets"
+    ]
+  },
+  {
+    "id": 107,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "What unique contribution did PAR make with respect to repair templates, and how did this compare to GenProg?",
+    "ground_truth_answer": "PAR created ten repair templates from human-written patches in open-source projects and demonstrated that it could generate more acceptable patches than GenProg, alleviating the problem that GP solutions may generate nonsensical patches.",
+    "correct_page": 12,
+    "keywords": [
+      "ten repair templates",
+      "open-source projects",
+      "editing scripts",
+      "nonsensical patches",
+      "PAR"
+    ]
+  },
+  {
+    "id": 108,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "What was the repair accuracy achieved by BIFI combined with DrRepair on the DeepFix dataset, and what novel training strategy did BIFI introduce?",
+    "ground_truth_answer": "The combination of BIFI with DrRepair achieved a repair accuracy of 71.7% on the DeepFix dataset, and BIFI introduced the Break-It-Fix-It unsupervised learning strategy by training a breaker on realistic bad code to generate examples close to real-world data.",
+    "correct_page": 18,
+    "keywords": [
+      "71.7%",
+      "Break-It-Fix-It",
+      "breaker",
+      "realistic bad code",
+      "DeepFix dataset"
+    ]
+  },
+  {
+    "id": 109,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "According to Table 4, what percentage of correct patches did AlphaRepair achieve when using perfect fault localization (PFL) on Defects4J V1.2.0?",
+    "ground_truth_answer": "AlphaRepair achieved a correct patch percentage of 67.89% when using perfect fault localization on Defects4J V1.2.0, with 74 correct patches out of 109 plausible patches.",
+    "correct_page": 24,
+    "keywords": [
+      "AlphaRepair",
+      "67.89%",
+      "74/109",
+      "perfect fault localization",
+      "Defects4J V1.2.0"
+    ]
+  },
+  {
+    "id": 110,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "In the preliminary experiments on Code Abstraction with LLMs, what did the results show about whether Code Abs improved repair performance for most LLMs?",
+    "ground_truth_answer": "The preliminary experiments showed that Code Abstraction does not significantly improve the repair performance of most LLMs, with results from CodeBERT, GraphCodeBERT, PLBART, and CodeT5 on both BFP_small and BFP_medium datasets supporting this finding.",
+    "correct_page": 25,
+    "keywords": [
+      "Code Abs",
+      "BFP_small",
+      "BFP_medium",
+      "LLMs",
+      "does not significantly improve"
+    ]
+  },
+  {
+    "id": 111,
+    "document": "A Survey on Automated Program Repair Techniques.pdf",
+    "question": "According to Table 9, how many bugs in Defects4J overlapped with the CodRep training dataset?",
+    "ground_truth_answer": "The CodRep training dataset overlapped with 61 bugs in Defects4J, with overlaps found in the Closure, Lang, Math, Time, Cli, Codec, and Collections subsets.",
+    "correct_page": 30,
+    "keywords": [
+      "CodRep",
+      "61",
+      "dataset overlap",
+      "Defects4J",
+      "data leakage"
+    ]
+  },
+  {
+    "id": 112,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "What three conditions must be simultaneously satisfied when choosing the volume density n and slab thickness ΔL in the simulation method?",
+    "ground_truth_answer": "The three conditions are: kd ≫ 1 (ensuring particles are in each other's far field), l/ΔL ≫ 1 (ensuring the single scattering approximation holds), and ΔL/2a > 1 (ensuring the slab is thick enough to contain the particles).",
+    "correct_page": 12,
+    "keywords": [
+      "mean free path",
+      "single scattering approximation",
+      "far field",
+      "volume fraction",
+      "three conditions"
+    ]
+  },
+  {
+    "id": 113,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "What particle volume fraction φ was used across all simulations, and what wavelength λ was chosen?",
+    "ground_truth_answer": "All simulations used a particle volume fraction of φ = 0.01 and a wavelength of λ = 500 nm.",
+    "correct_page": 12,
+    "keywords": [
+      "volume fraction",
+      "φ = 0.01",
+      "λ = 500 nm",
+      "wavelength",
+      "Mie theory"
+    ]
+  },
+  {
+    "id": 114,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "How many total modes were included in the set K for the scattering matrix simulations, and what was the resulting size of each scattering matrix?",
+    "ground_truth_answer": "The set K contained a total of 101 modes, which, given the 2×2 block structure of the scattering matrix, resulted in scattering matrices of size 404 × 404.",
+    "correct_page": 12,
+    "keywords": [
+      "101 modes",
+      "404 × 404",
+      "Cartesian grid",
+      "k space",
+      "block structure"
+    ]
+  },
+  {
+    "id": 115,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "What fitting parameter α values were found for the mean transmission eigenvalue decay function for size parameters x = 1, 2, and 4 respectively?",
+    "ground_truth_answer": "The fitting parameter α values were 4.02, 13.25, and 37.51 for size parameters x = 1, 2, and 4 respectively, where αl represents a length scale over which the random medium scatters isotropically.",
+    "correct_page": 15,
+    "keywords": [
+      "4.02",
+      "13.25",
+      "37.51",
+      "fitting parameter",
+      "transport mean free path"
+    ]
+  },
+  {
+    "id": 116,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "For direct backscattering (DB), the intensity enhancement over oblique backscattering was measured to be approximately what factor, and what physical effect does this enhancement indicate?",
+    "ground_truth_answer": "The intensity values in direct backscattering were approximately 1.8 times larger than in oblique backscattering, and this enhancement is a signature of the coherent backscattering effect, which emerges naturally from enforcement of reciprocity in the scattering matrices.",
+    "correct_page": 16,
+    "keywords": [
+      "1.8 times",
+      "coherent backscattering",
+      "reciprocity",
+      "intensity enhancement",
+      "direct backscattering"
+    ]
+  },
+  {
+    "id": 117,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "For size parameters x = 2 and 4 in oblique backscattering, the degree of polarization for circularly polarized light shows non-monotonic behaviour — at approximately what thicknesses L/l does this DoP minimum occur for x = 2 and x = 4?",
+    "ground_truth_answer": "The DoP dips to a minimum at L/l ≈ 0.5 for size parameter x = 2 and at L/l ≈ 6.5 for size parameter x = 4 in oblique backscattering for circularly polarized incident light.",
+    "correct_page": 17,
+    "keywords": [
+      "L/l ∼ 0.5",
+      "L/l ∼ 6.5",
+      "non-monotonicity",
+      "circular polarization",
+      "oblique backscattering"
+    ]
+  },
+  {
+    "id": 118,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "What is the limiting probability density function for diattenuation D in forward transmission as L → ∞, and what type of random matrix does this distribution correspond to?",
+    "ground_truth_answer": "The limiting distribution for diattenuation in forward transmission as L → ∞ is p(D) = 3D², which is precisely that predicted by a random 2×2 matrix of uncorrelated, complex Gaussian entries.",
+    "correct_page": 20,
+    "keywords": [
+      "p(D) = 3D²",
+      "limiting distribution",
+      "complex Gaussian entries",
+      "diattenuation",
+      "decorrelation"
+    ]
+  },
+  {
+    "id": 119,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "For direct backscattering with size parameter x = 4, what is the limiting probability density function for diattenuation D, and why does it differ from the forward transmission case?",
+    "ground_truth_answer": "In direct backscattering for x = 4 the limiting diattenuation distribution is p(D) = 2D, which differs from the forward transmission result because reciprocity introduces additional correlations between elements of the 2×2 block in the direct backscattering direction, so the statistics correspond to diagonal blocks of a random matrix from the circular orthogonal ensemble rather than uncorrelated Gaussian entries.",
+    "correct_page": 20,
+    "keywords": [
+      "p(D) = 2D",
+      "circular orthogonal ensemble",
+      "reciprocity",
+      "additional correlations",
+      "direct backscattering"
+    ]
+  },
+  {
+    "id": 120,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "For chiral spheres of size parameter x = 4 in oblique backscattering, at approximately what thickness L/l do the DoP dips occur for left-handed circularly polarized (LHC) and right-handed circularly polarized (RHC) incident light respectively?",
+    "ground_truth_answer": "For chiral spheres with x = 4 in oblique backscattering, the DoP dip occurs at approximately L/l ≈ 27 for left-handed circularly polarized (LHC) incident light and at approximately L/l ≈ 3 for right-handed circularly polarized (RHC) incident light.",
+    "correct_page": 23,
+    "keywords": [
+      "L/l ∼ 27",
+      "L/l ∼ 3",
+      "LHC",
+      "RHC",
+      "chiral spheres"
+    ]
+  },
+  {
+    "id": 121,
+    "document": "Random matrix theory of polarized light scattering in disordered.pdf",
+    "question": "What is the biggest limitation of the presented random matrix model according to the conclusion, and what practical advantage does the method retain despite this limitation?",
+    "ground_truth_answer": "The biggest limitation is the currently achievable angular resolution of the scattered field, which directly influences the scattering matrix size and requires significant memory and computation when many samples are needed; however, generation of individual scattering matrices remains very fast, taking only seconds or minutes depending on medium thickness and number of modes.",
+    "correct_page": 24,
+    "keywords": [
+      "angular resolution",
+      "scattering matrix",
+      "seconds or minutes",
+      "memory",
+      "complement"
+    ]
+  },
+  {
+    "id": 122,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "What was the lookup time in nanoseconds for a B-Tree traversal over 200M web-server log records in the naive learned index experiment?",
+    "ground_truth_answer": "A B-Tree traversal over the same data takes approximately 300 nanoseconds, while binary search over the entire data takes roughly 900 nanoseconds.",
+    "correct_page": 6,
+    "keywords": [
+      "Tensorflow",
+      "nanoseconds",
+      "traversal",
+      "binary search",
+      "front-end"
+    ]
+  },
+  {
+    "id": 123,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "By what maximum percentage did learned models reduce hash map conflicts compared to a MurmurHash3-like hash function on the Map dataset?",
+    "ground_truth_answer": "On the Map dataset, the learned models reduced the number of conflicts by 77.5% compared to a standard MurmurHash3-like hash function.",
+    "correct_page": 15,
+    "keywords": [
+      "MurmurHash3",
+      "conflicts",
+      "reduction",
+      "Map Data",
+      "empirical CDF"
+    ]
+  },
+  {
+    "id": 124,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "What is the memory size of the normal Bloom filter required for a 1% false positive rate in the phishing URL existence index experiment?",
+    "ground_truth_answer": "A normal Bloom filter with a desired 1% false positive rate requires 2.04MB of memory for the 1.7 million unique phishing URLs dataset.",
+    "correct_page": 17,
+    "keywords": [
+      "phishing",
+      "false positive",
+      "2.04MB",
+      "GRU",
+      "transparency report"
+    ]
+  },
+  {
+    "id": 125,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "In the recursive model index, how many nanoseconds does the Learning Index Framework (LIF) take to execute simple models after code generation?",
+    "ground_truth_answer": "After LIF generates efficient C++ index structures from trained models, it is able to execute simple models on the order of 30 nanoseconds.",
+    "correct_page": 7,
+    "keywords": [
+      "LIF",
+      "30 nano-seconds",
+      "code-generation",
+      "Tensorflow",
+      "C++"
+    ]
+  },
+  {
+    "id": 126,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "What is the total size in MB of the multivariate learned index used in the alternative baselines comparison on the Lognormal dataset?",
+    "ground_truth_answer": "The multivariate learned index used in the alternative baselines comparison has a size of 1.5 MB, equal to the fixed-size B-Tree with interpolation search.",
+    "correct_page": 12,
+    "keywords": [
+      "Lognormal",
+      "multivariate",
+      "1.5 MB",
+      "interpolation search",
+      "FAST"
+    ]
+  },
+  {
+    "id": 127,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "How many unique URLs are in the dataset used to test the learned Bloom filter for blacklisted phishing URLs?",
+    "ground_truth_answer": "The dataset used to test the learned Bloom filter consists of 1.7 million unique URLs from Google's transparency report.",
+    "correct_page": 17,
+    "keywords": [
+      "1.7M",
+      "unique URLs",
+      "whitelisted",
+      "character-level",
+      "transparency report"
+    ]
+  },
+  {
+    "id": 128,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "What is the average error growth rate in predicted positions for a constant-sized learned range index model as the number of keys N increases?",
+    "ground_truth_answer": "The average error in predicted positions for a constant-sized learned range index model grows at a rate of O(√N), which is a sub-linear improvement over a constant-sized B-Tree.",
+    "correct_page": 26,
+    "keywords": [
+      "empirical CDF",
+      "binomial random variable",
+      "sub-linear",
+      "squared error",
+      "position estimate"
+    ]
+  },
+  {
+    "id": 129,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "In the string dataset experiment, what lookup time in nanoseconds did the best performing model (Learned QS with 1 hidden layer) achieve?",
+    "ground_truth_answer": "The best performing model, a non-hybrid RMI index with quaternary search and 1 hidden layer (Learned QS), achieved a lookup time of 1155 nanoseconds on the string dataset.",
+    "correct_page": 13,
+    "keywords": [
+      "quaternary search",
+      "1155",
+      "hidden layer",
+      "document-ids",
+      "hybrid"
+    ]
+  },
+  {
+    "id": 130,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "For the in-place chained Hash-map with learned hash functions, what lookup time in nanoseconds was achieved on 20-byte records with the log-normal dataset?",
+    "ground_truth_answer": "The in-place chained Hash-map with learned hash functions achieved a lookup time of 35 nanoseconds on 20-byte records with 100% utilization on the log-normal dataset.",
+    "correct_page": 28,
+    "keywords": [
+      "in-place chained",
+      "35ns",
+      "100%",
+      "log-normal",
+      "utilization"
+    ]
+  },
+  {
+    "id": 131,
+    "document": "The Case for Learned Index Structures.pdf",
+    "question": "In the alternative Bloom filter approach using model-hashes, what total memory size was achieved for a desired false positive rate of 1% using m=1000000?",
+    "ground_truth_answer": "Using the model-hash approach with m=1,000,000 and a desired total false positive rate of 1%, the total size achieved was 1.19MB, a 41% reduction compared to a standard Bloom filter.",
+    "correct_page": 30,
+    "keywords": [
+      "1.19MB",
+      "41%",
+      "reduction",
+      "FPRm",
+      "bitmap"
+    ]
+  },
+  {
+    "id": 132,
+    "document": "Software-Defined Networking.pdf",
+    "question": "According to the SDN survey, how many configuration errors have been observed in BGP routers in today's networks?",
+    "ground_truth_answer": "More than 1000 configuration errors have been observed in BGP routers in today's networks, and a single misconfigured device can result in very undesired network behavior.",
+    "correct_page": 4,
+    "keywords": [
+      "BGP routers",
+      "misconfigured",
+      "forwarding loops",
+      "configuration errors",
+      "packet losses"
+    ]
+  },
+  {
+    "id": 133,
+    "document": "Software-Defined Networking.pdf",
+    "question": "What are the four pillars that define an SDN architecture as described in the survey?",
+    "ground_truth_answer": "The four pillars of an SDN architecture are: (1) decoupled control and data planes, (2) flow-based forwarding decisions, (3) control logic moved to an external SDN controller or NOS, and (4) the network is programmable through software applications running on top of the NOS.",
+    "correct_page": 4,
+    "keywords": [
+      "four pillars",
+      "decoupled",
+      "flow-based",
+      "NOS",
+      "programmable"
+    ]
+  },
+  {
+    "id": 134,
+    "document": "Software-Defined Networking.pdf",
+    "question": "How many virtual networks and virtual machines can IBM SDN VE 1.0 support in a single instantiation?",
+    "ground_truth_answer": "IBM SDN VE 1.0 is capable of supporting up to 16,000 virtual networks and 128,000 virtual machines in a single instantiation.",
+    "correct_page": 15,
+    "keywords": [
+      "SDN VE",
+      "16,000 virtual networks",
+      "128,000 virtual machines",
+      "OpenDaylight",
+      "multi-tenant"
+    ]
+  },
+  {
+    "id": 135,
+    "document": "Software-Defined Networking.pdf",
+    "question": "What throughput in flows per second did the Maple SDN controller achieve, and what hardware configuration enabled it?",
+    "ground_truth_answer": "The Maple SDN controller achieved 20 million flows per second by using algorithmic policies and user- and OS-level threads on multicore systems with 40 or more cores.",
+    "correct_page": 38,
+    "keywords": [
+      "Maple",
+      "20M",
+      "multicore",
+      "algorithmic policies",
+      "flows per second"
+    ]
+  },
+  {
+    "id": 136,
+    "document": "Software-Defined Networking.pdf",
+    "question": "What path restoration time in milliseconds was reported using OpenFlow fast-failover group table entries with BFD sessions for link failure detection?",
+    "ground_truth_answer": "A path restoration time of 3.3 milliseconds was reported using primary and secondary path pairs programmed as OpenFlow fast-failover group table entries with BFD sessions to quickly detect link failures.",
+    "correct_page": 36,
+    "keywords": [
+      "3.3 ms",
+      "fast-failover",
+      "BFD",
+      "restoration time",
+      "backup paths"
+    ]
+  },
+  {
+    "id": 137,
+    "document": "Software-Defined Networking.pdf",
+    "question": "In the SDN security threat analysis, which three threat vectors are identified as specific to SDN and not present in traditional networks?",
+    "ground_truth_answer": "The three threat vectors specific to SDN are: Vector 3 (exploiting logically centralized controllers), Vector 4 (a compromised controller may compromise the entire network), and Vector 5 (development and deployment of malicious applications on controllers).",
+    "correct_page": 40,
+    "keywords": [
+      "specific to SDN",
+      "logically centralized",
+      "Vector 3",
+      "Vector 4",
+      "Vector 5"
+    ]
+  },
+  {
+    "id": 138,
+    "document": "Software-Defined Networking.pdf",
+    "question": "How many OpenFlow-enabled forwarding devices can Mininet emulate using a single personal computer?",
+    "ground_truth_answer": "Using Mininet, users can easily emulate an OpenFlow network with hundreds of nodes and dozens of switches using a single personal computer.",
+    "correct_page": 31,
+    "keywords": [
+      "Mininet",
+      "hundreds",
+      "dozens of switches",
+      "personal computer",
+      "container"
+    ]
+  },
+  {
+    "id": 139,
+    "document": "Software-Defined Networking.pdf",
+    "question": "What percentage of network energy can data center operators save using ElasticTree's energy-aware routing under normal traffic conditions?",
+    "ground_truth_answer": "Data center operators can save up to 50% of network energy under normal traffic conditions by using ElasticTree's technique of intelligently shutting down links and devices in response to traffic load dynamics.",
+    "correct_page": 24,
+    "keywords": [
+      "ElasticTree",
+      "50%",
+      "energy",
+      "shutting down links",
+      "normal traffic"
+    ]
+  },
+  {
+    "id": 140,
+    "document": "Software-Defined Networking.pdf",
+    "question": "According to the SDN survey, how long does a typical new switch take to be ready for commercialization if built from scratch, and how long can upgrade cycles take?",
+    "ground_truth_answer": "A new switch can take two years to be ready for commercialization if built from scratch, with upgrade cycles that can take up to nine months and software development taking six months to one year.",
+    "correct_page": 12,
+    "keywords": [
+      "two years",
+      "commercialization",
+      "nine months",
+      "upgrade cycles",
+      "southbound APIs"
+    ]
+  },
+  {
+    "id": 141,
+    "document": "Software-Defined Networking.pdf",
+    "question": "What are the four essential building blocks of a Software-Defined Environment (SDE) as described in the survey?",
+    "ground_truth_answer": "The four essential building blocks of a Software-Defined Environment are: Software-Defined Networks (SDN), Software-Defined Storage (SDS), Software-Defined Compute (SDC), and Software-Defined Management (SDM).",
+    "correct_page": 45,
+    "keywords": [
+      "Software-Defined Storage",
+      "Software-Defined Compute",
+      "Software-Defined Management",
+      "SDE",
+      "building blocks"
+    ]
+  },
+  {
+    "id": 142,
+    "document": "chain_of_thoughts.pdf",
+    "question": "What solve rate does PaLM 540B achieve on the GSM8K benchmark using chain-of-thought prompting?",
+    "ground_truth_answer": "PaLM 540B achieves a 57% solve rate on the GSM8K benchmark using chain-of-thought prompting, compared to 18% with standard prompting.",
+    "correct_page": 2,
+    "keywords": [
+      "solve rate",
+      "GSM8K",
+      "standard prompting",
+      "finetuned",
+      "state-of-the-art"
+    ]
+  },
+  {
+    "id": 143,
+    "document": "chain_of_thoughts.pdf",
+    "question": "What percentage of incorrect chains of thought produced by LaMDA 137B on GSM8K had major errors in semantic understanding or coherence?",
+    "ground_truth_answer": "54% of the incorrect chains of thought had major errors in semantic understanding or coherence, while the remaining 46% were almost correct, containing only minor mistakes.",
+    "correct_page": 5,
+    "keywords": [
+      "semantic understanding",
+      "coherence",
+      "almost correct",
+      "calculator error",
+      "symbol mapping"
+    ]
+  },
+  {
+    "id": 144,
+    "document": "chain_of_thoughts.pdf",
+    "question": "In the ablation study, what does the 'variable compute only' variant prompt the model to output, and how does it perform?",
+    "ground_truth_answer": "The 'variable compute only' variant prompts the model to output a sequence of dots equal to the number of characters in the equation needed to solve the problem, and it performs about the same as the standard prompting baseline.",
+    "correct_page": 6,
+    "keywords": [
+      "sequence of dots",
+      "variable computation",
+      "chain-of-thought reasoning",
+      "natural language",
+      "intermediate steps"
+    ]
+  },
+  {
+    "id": 145,
+    "document": "chain_of_thoughts.pdf",
+    "question": "What is the accuracy range observed for GPT-3 on SST-2 when the permutation of few-shot exemplars is varied?",
+    "ground_truth_answer": "Varying the permutation of few-shot exemplars causes GPT-3's accuracy on SST-2 to range from near chance at 54.3% to near state-of-the-art at 93.4%.",
+    "correct_page": 6,
+    "keywords": [
+      "permutation",
+      "few-shot exemplars",
+      "SST-2",
+      "near chance",
+      "near state of the art"
+    ]
+  },
+  {
+    "id": 146,
+    "document": "chain_of_thoughts.pdf",
+    "question": "On the StrategyQA benchmark, what score does PaLM 540B with chain-of-thought prompting achieve, and what was the prior state-of-the-art?",
+    "ground_truth_answer": "PaLM 540B with chain-of-thought prompting achieves 75.6% on StrategyQA, surpassing the prior state-of-the-art of 69.4%.",
+    "correct_page": 7,
+    "keywords": [
+      "StrategyQA",
+      "outperforming",
+      "prior state of the art",
+      "commonsense reasoning",
+      "chain-of-thought"
+    ]
+  },
+  {
+    "id": 147,
+    "document": "chain_of_thoughts.pdf",
+    "question": "In the symbolic reasoning tasks, what two toy tasks are used to evaluate chain-of-thought prompting?",
+    "ground_truth_answer": "The two toy tasks used are last letter concatenation, which asks the model to concatenate the last letters of words in a name, and coin flip, which asks whether a coin is still heads up after a series of flips or non-flips.",
+    "correct_page": 8,
+    "keywords": [
+      "last letter concatenation",
+      "coin flip",
+      "out-of-domain",
+      "few-shot exemplars",
+      "symbolic reasoning"
+    ]
+  },
+  {
+    "id": 148,
+    "document": "chain_of_thoughts.pdf",
+    "question": "How many errors made by PaLM 62B on GSM8K were categorized as 'one step missing', and how many of those were fixed by scaling to PaLM 540B?",
+    "ground_truth_answer": "PaLM 62B made 18 one-step-missing errors, and scaling to PaLM 540B fixed 12 of them.",
+    "correct_page": 16,
+    "keywords": [
+      "one step missing",
+      "semantic understanding",
+      "scaling",
+      "error analysis",
+      "fixed"
+    ]
+  },
+  {
+    "id": 149,
+    "document": "chain_of_thoughts.pdf",
+    "question": "What coin flip task accuracy does LaMDA 137B achieve with chain-of-thought prompting using Annotator A versus Annotator C?",
+    "ground_truth_answer": "LaMDA 137B achieves 99.6% accuracy on the coin flip task with Annotator A's chain-of-thought prompt, compared to 71.4% with Annotator C's prompt, though both exceed the standard prompting baseline of 50.0%.",
+    "correct_page": 18,
+    "keywords": [
+      "coin flip",
+      "Annotator A",
+      "Annotator C",
+      "standard prompting",
+      "variance"
+    ]
+  },
+  {
+    "id": 150,
+    "document": "chain_of_thoughts.pdf",
+    "question": "According to the error analysis of LaMDA 137B on GSM8K, what percentage of incorrect chains of thought were entirely correct except for a calculator error?",
+    "ground_truth_answer": "8% of the incorrect chains of thought were entirely correct except for a calculator error, meaning an external calculator applied to the equations would have made the chain of thought correct.",
+    "correct_page": 27,
+    "keywords": [
+      "calculator error",
+      "external calculator",
+      "symbol mapping",
+      "one step missing",
+      "incorrect"
+    ]
+  },
+  {
+    "id": 151,
+    "document": "chain_of_thoughts.pdf",
+    "question": "What three conditions does the paper identify as making chain-of-thought prompting most helpful for a given task?",
+    "ground_truth_answer": "Chain-of-thought prompting is most helpful when: (1) the task is challenging and requires multi-step reasoning, (2) a large language model is used, and (3) the scaling curve is relatively flat.",
+    "correct_page": 18,
+    "keywords": [
+      "multi-step reasoning",
+      "large language model",
+      "scaling curve",
+      "flat",
+      "conditions"
+    ]
+  },
+  {
+    "id": 152,
+    "document": "llama.pdf",
+    "question": "What is the parameter size of the LaMDA model that LLaMA-13B outperforms on both HumanEval and MBPP code generation benchmarks?",
+    "ground_truth_answer": "LLaMA-13B outperforms LaMDA 137B on both HumanEval and MBPP, despite LaMDA 137B having significantly more parameters.",
+    "correct_page": 6,
+    "keywords": [
+      "HumanEval",
+      "MBPP",
+      "LaMDA",
+      "pass@1",
+      "code generation"
+    ]
+  },
+  {
+    "id": 153,
+    "document": "llama.pdf",
+    "question": "What percentage of the LLaMA pre-training dataset comes from English CommonCrawl, and what date range of dumps was used?",
+    "ground_truth_answer": "English CommonCrawl makes up 67% of the LLaMA pre-training dataset, using five dumps ranging from 2017 to 2020.",
+    "correct_page": 2,
+    "keywords": [
+      "CommonCrawl",
+      "CCNet pipeline",
+      "language identification",
+      "fastText",
+      "deduplicates"
+    ]
+  },
+  {
+    "id": 154,
+    "document": "llama.pdf",
+    "question": "What training throughput in tokens per second per GPU does LLaMA achieve when training the 65B-parameter model, and on what hardware?",
+    "ground_truth_answer": "When training the 65B-parameter model, LLaMA processes around 380 tokens per second per GPU on 2048 A100 GPUs with 80GB of RAM.",
+    "correct_page": 4,
+    "keywords": [
+      "380 tokens",
+      "GPU",
+      "2048 A100",
+      "80GB",
+      "21 days"
+    ]
+  },
+  {
+    "id": 155,
+    "document": "llama.pdf",
+    "question": "On the MMLU benchmark, how does LLaMA-65B compare to Chinchilla-70B and PaLM-540B in 5-shot average accuracy?",
+    "ground_truth_answer": "LLaMA-65B achieves 63.4% average accuracy on MMLU, which is behind both Chinchilla-70B at 67.5% and PaLM-540B at 69.3% by a few percentage points.",
+    "correct_page": 7,
+    "keywords": [
+      "MMLU",
+      "five-shot",
+      "Chinchilla",
+      "academic papers",
+      "limited amount"
+    ]
+  },
+  {
+    "id": 156,
+    "document": "llama.pdf",
+    "question": "What score does LLaMA-I (instruction-finetuned LLaMA-65B) achieve on MMLU, and what is the state-of-the-art score it is compared against?",
+    "ground_truth_answer": "LLaMA-I achieves 68.9% on MMLU, which is still below the state-of-the-art of 77.4% achieved by GPT code-davinci-002.",
+    "correct_page": 7,
+    "keywords": [
+      "instruction finetuning",
+      "LLaMA-I",
+      "68.9",
+      "code-davinci-002",
+      "77.4"
+    ]
+  },
+  {
+    "id": 157,
+    "document": "llama.pdf",
+    "question": "What toxicity score does LLaMA-65B produce on the RealToxicityPrompts benchmark for 'basic' versus 'respectful' prompt categories?",
+    "ground_truth_answer": "LLaMA-65B produces a toxicity score of 0.128 for basic prompts and 0.141 for respectful prompts on the RealToxicityPrompts benchmark.",
+    "correct_page": 8,
+    "keywords": [
+      "RealToxicityPrompts",
+      "basic",
+      "respectful",
+      "greedy decoder",
+      "PerspectiveAPI"
+    ]
+  },
+  {
+    "id": 158,
+    "document": "llama.pdf",
+    "question": "What carbon emissions in tCO2eq does training LLaMA-65B produce, and how does this compare to BLOOM-175B under the same assumptions?",
+    "ground_truth_answer": "Training LLaMA-65B produces an estimated 173 tCO2eq, which is less than BLOOM-175B's 183 tCO2eq, both calculated using the US national average carbon intensity factor.",
+    "correct_page": 11,
+    "keywords": [
+      "tCO2eq",
+      "carbon emitted",
+      "A100-80GB",
+      "power consumption",
+      "BLOOM"
+    ]
+  },
+  {
+    "id": 159,
+    "document": "llama.pdf",
+    "question": "On GSM8K with majority voting (maj1@k), what score does LLaMA-65B achieve and how does it compare to Minerva-62B?",
+    "ground_truth_answer": "LLaMA-65B achieves 69.7% on GSM8K with majority voting, outperforming Minerva-62B which scores 68.5%, despite LLaMA not being fine-tuned on mathematical data.",
+    "correct_page": 6,
+    "keywords": [
+      "majority voting",
+      "maj1@k",
+      "Minerva",
+      "fine-tuned",
+      "mathematical data"
+    ]
+  },
+  {
+    "id": 160,
+    "document": "llama.pdf",
+    "question": "What three architectural modifications does LLaMA make relative to the original transformer, and what models inspired each change?",
+    "ground_truth_answer": "LLaMA uses pre-normalization with RMSNorm (inspired by GPT-3), the SwiGLU activation function (inspired by PaLM), and rotary positional embeddings or RoPE (inspired by GPTNeo).",
+    "correct_page": 3,
+    "keywords": [
+      "pre-normalization",
+      "SwiGLU",
+      "rotary embeddings",
+      "RMSNorm",
+      "RoPE"
+    ]
+  },
+  {
+    "id": 161,
+    "document": "llama.pdf",
+    "question": "On the WinoGender benchmark, what co-reference resolution accuracy does LLaMA-65B achieve overall, and what accuracy does it achieve specifically on 'gotcha' examples for his/him/he pronouns?",
+    "ground_truth_answer": "LLaMA-65B achieves 77.5% overall co-reference resolution accuracy on WinoGender, but drops to 63.3% on gotcha examples for his/him/he pronouns, indicating gender bias.",
+    "correct_page": 10,
+    "keywords": [
+      "gotcha",
+      "co-reference",
+      "his/him/he",
+      "societal biases",
+      "occupation"
+    ]
+  },
+  {
+    "id": 162,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What accuracy did GPT-3 achieve on the LAMBADA dataset in the few-shot setting?",
+    "ground_truth_answer": "GPT-3 achieved 86.4% accuracy on the LAMBADA dataset in the few-shot setting, an increase of over 18% from the previous state-of-the-art.",
+    "correct_page": 12,
+    "keywords": [
+      "LAMBADA",
+      "few-shot",
+      "fill-in-the-blank",
+      "cloze-test",
+      "accuracy"
+    ]
+  },
+  {
+    "id": 163,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "How many participants were recruited in total across all experiments measuring human ability to distinguish GPT-3-generated news articles from real ones?",
+    "ground_truth_answer": "A total of 718 unique participants were recruited across 6 experiments, with 97 excluded for failing an internet check question, leaving 621 participants.",
+    "correct_page": 46,
+    "keywords": [
+      "718",
+      "participants",
+      "621",
+      "excluded",
+      "Positly"
+    ]
+  },
+  {
+    "id": 164,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What percentage of the 388 occupations tested were more likely to be followed by a male gender identifier in GPT-3's outputs?",
+    "ground_truth_answer": "83% of the 388 occupations tested were more likely to be followed by a male gender identifier than a female one when GPT-3 was given a neutral context such as 'The {occupation} was a'.",
+    "correct_page": 36,
+    "keywords": [
+      "83%",
+      "388",
+      "occupations",
+      "male",
+      "female identifier"
+    ]
+  },
+  {
+    "id": 165,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What was GPT-3's zero-shot perplexity score on the Penn Treebank language modeling dataset, and how did it compare to the prior state of the art?",
+    "ground_truth_answer": "GPT-3 achieved a zero-shot perplexity of 20.50 on the Penn Treebank dataset, setting a new state of the art by a substantial margin of 15 points over the previous best of 35.8.",
+    "correct_page": 11,
+    "keywords": [
+      "Penn Tree Bank",
+      "perplexity",
+      "20.50",
+      "SOTA",
+      "zero-shot"
+    ]
+  },
+  {
+    "id": 166,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What were the five datasets used to train GPT-3 and what fraction of the training mix did Common Crawl represent?",
+    "ground_truth_answer": "The five datasets were Common Crawl (filtered), WebText2, Books1, Books2, and Wikipedia; Common Crawl represented 60% of the training mix despite being sampled less than once during training.",
+    "correct_page": 9,
+    "keywords": [
+      "Common Crawl",
+      "WebText2",
+      "Wikipedia",
+      "training mix",
+      "410 billion"
+    ]
+  },
+  {
+    "id": 167,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "On the TriviaQA benchmark, what was GPT-3's few-shot accuracy and how did it compare to the fine-tuned open-domain SOTA?",
+    "ground_truth_answer": "GPT-3 achieved 71.2% accuracy on TriviaQA in the few-shot setting, which exceeded the performance of the fine-tuned open-domain SOTA system RAG and represented state-of-the-art in the closed-book setting.",
+    "correct_page": 13,
+    "keywords": [
+      "TriviaQA",
+      "71.2%",
+      "closed-book",
+      "RAG",
+      "few-shot"
+    ]
+  },
+  {
+    "id": 168,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What was GPT-3's few-shot performance on 2-digit addition and 3-digit subtraction arithmetic tasks?",
+    "ground_truth_answer": "GPT-3 achieved 100% accuracy on 2-digit addition and 94.2% accuracy on 3-digit subtraction in the few-shot setting.",
+    "correct_page": 22,
+    "keywords": [
+      "100%",
+      "2 digit addition",
+      "94.2%",
+      "3-digit subtraction",
+      "few-shot"
+    ]
+  },
+  {
+    "id": 169,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What was the mean human accuracy at detecting news articles produced by the GPT-3 175B model in the approximately 200-word article experiment?",
+    "ground_truth_answer": "Mean human accuracy at detecting articles produced by the GPT-3 175B model was barely above chance at approximately 52%, compared to 86% accuracy for the deliberately bad control model.",
+    "correct_page": 26,
+    "keywords": [
+      "52%",
+      "175B",
+      "chance",
+      "86%",
+      "control model"
+    ]
+  },
+  {
+    "id": 170,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "How many parameters does the largest GPT-3 model have, how many layers does it use, and what context window size do all models share?",
+    "ground_truth_answer": "The largest GPT-3 model has 175 billion parameters and 96 layers; all models in the GPT-3 family share a context window of 2048 tokens.",
+    "correct_page": 8,
+    "keywords": [
+      "175.0B",
+      "96",
+      "layers",
+      "2048",
+      "context window"
+    ]
+  },
+  {
+    "id": 171,
+    "document": "Language_models_are_few_shot_learners.pdf",
+    "question": "What word-scrambling task did no GPT-3 model manage to perform, regardless of model size?",
+    "ground_truth_answer": "None of the GPT-3 models, regardless of size, were able to reverse the letters in a word, which was the reversed words task in the word scrambling battery.",
+    "correct_page": 24,
+    "keywords": [
+      "reverse",
+      "letters",
+      "word",
+      "none",
+      "reversed words"
+    ]
+  }
+]

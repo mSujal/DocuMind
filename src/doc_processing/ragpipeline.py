@@ -140,5 +140,4 @@ class RAGPipeline():
             model=config.LLM_MODEL,
             messages=[{"role": "user", "content": prompt}]
         )
-        print(response)
         return response.choices[0].message.content
