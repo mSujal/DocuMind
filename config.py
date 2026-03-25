@@ -11,6 +11,7 @@ DEVICE = "cpu"
 PERSIST_DIR = './chroma_db/'
 
 LLM_MODEL = 'llama-3.1-8b-instant'
+LOCAL_MODEL = 'llama3'  # replace with whatever ollama list shows
 ####################################################
 #    PANEL PARAMETERS
 ####################################################
@@ -88,3 +89,4 @@ CENTER_BG= 'white' # placeholder, need to change
 # STATE MANAGEMENT
 ####################################################
 CURRENT_PDF = None # holds the currently loaded pdf 
+LOCAL_MODEL = 'llama3'
