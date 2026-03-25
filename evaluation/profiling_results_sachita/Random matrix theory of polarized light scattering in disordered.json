@@ -1,0 +1,18 @@
+{
+  "pdf": "Random matrix theory of polarized light scattering in disordered.pdf",
+  "pdf_path": "test_docs/large/Random matrix theory of polarized light scattering in disordered.pdf",
+  "profiled_at": "2026-03-21T04:51:21.436519",
+  "mode": "fresh",
+  "page_count": 30,
+  "chunk_count": 371,
+  "token_count": 22825,
+  "window_count": 4,
+  "time_extraction_s": 7.688,
+  "time_chunking_s": 0.004,
+  "time_tokenize_s": 0.186,
+  "time_embedding_s": 166.252,
+  "time_store_s": 0.571,
+  "time_cache_load_s": null,
+  "time_total_s": 174.707,
+  "error": null
+}

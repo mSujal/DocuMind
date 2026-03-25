@@ -1,0 +1,18 @@
+{
+  "pdf": "Constitutional AI_.pdf",
+  "pdf_path": "test_docs/large/Constitutional AI_.pdf",
+  "profiled_at": "2026-03-21T04:26:02.368056",
+  "mode": "fresh",
+  "page_count": 34,
+  "chunk_count": 607,
+  "token_count": 52952,
+  "window_count": 8,
+  "time_extraction_s": 12.173,
+  "time_chunking_s": 0.004,
+  "time_tokenize_s": 0.253,
+  "time_embedding_s": 309.706,
+  "time_store_s": 1.217,
+  "time_cache_load_s": null,
+  "time_total_s": 323.363,
+  "error": null
+}

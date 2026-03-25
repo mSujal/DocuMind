@@ -1,0 +1,18 @@
+{
+  "pdf": "Edge Computing.pdf",
+  "pdf_path": "test_docs/short/Edge Computing.pdf",
+  "profiled_at": "2026-03-21T06:05:28.988763",
+  "mode": "fresh",
+  "page_count": 10,
+  "chunk_count": 237,
+  "token_count": 13205,
+  "window_count": 2,
+  "time_extraction_s": 3.489,
+  "time_chunking_s": 0.001,
+  "time_tokenize_s": 0.108,
+  "time_embedding_s": 73.259,
+  "time_store_s": 0.475,
+  "time_cache_load_s": null,
+  "time_total_s": 77.338,
+  "error": null
+}

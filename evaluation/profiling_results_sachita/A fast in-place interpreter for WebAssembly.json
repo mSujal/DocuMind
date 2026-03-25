@@ -1,0 +1,18 @@
+{
+  "pdf": "A fast in-place interpreter for WebAssembly.pdf",
+  "pdf_path": "test_docs/large/A fast in-place interpreter for WebAssembly.pdf",
+  "profiled_at": "2026-03-21T04:23:25.648415",
+  "mode": "fresh",
+  "page_count": 25,
+  "chunk_count": 339,
+  "token_count": 21079,
+  "window_count": 3,
+  "time_extraction_s": 6.231,
+  "time_chunking_s": 0.003,
+  "time_tokenize_s": 0.119,
+  "time_embedding_s": 134.954,
+  "time_store_s": 0.64,
+  "time_cache_load_s": null,
+  "time_total_s": 141.954,
+  "error": null
+}

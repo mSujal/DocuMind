@@ -1,0 +1,18 @@
+{
+  "pdf": "llama.pdf",
+  "pdf_path": "test_docs/large/llama.pdf",
+  "profiled_at": "2026-03-21T05:26:24.830887",
+  "mode": "fresh",
+  "page_count": 27,
+  "chunk_count": 419,
+  "token_count": 35812,
+  "window_count": 5,
+  "time_extraction_s": 15.637,
+  "time_chunking_s": 0.004,
+  "time_tokenize_s": 0.226,
+  "time_embedding_s": 194.153,
+  "time_store_s": 1.005,
+  "time_cache_load_s": null,
+  "time_total_s": 211.045,
+  "error": null
+}

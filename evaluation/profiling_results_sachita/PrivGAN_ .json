@@ -1,0 +1,18 @@
+{
+  "pdf": "PrivGAN_ .pdf",
+  "pdf_path": "test_docs/medium/PrivGAN_ .pdf",
+  "profiled_at": "2026-03-21T05:52:22.123636",
+  "mode": "fresh",
+  "page_count": 21,
+  "chunk_count": 329,
+  "token_count": 23844,
+  "window_count": 4,
+  "time_extraction_s": 7.268,
+  "time_chunking_s": 0.002,
+  "time_tokenize_s": 0.116,
+  "time_embedding_s": 148.431,
+  "time_store_s": 0.45,
+  "time_cache_load_s": null,
+  "time_total_s": 156.274,
+  "error": null
+}

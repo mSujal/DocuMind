@@ -1,0 +1,18 @@
+{
+  "pdf": "A Survey on Automated Program Repair Techniques.pdf",
+  "pdf_path": "test_docs/large/A Survey on Automated Program Repair Techniques.pdf",
+  "profiled_at": "2026-03-21T04:23:25.405527",
+  "mode": "cached",
+  "page_count": null,
+  "chunk_count": 1636,
+  "token_count": null,
+  "window_count": null,
+  "time_extraction_s": null,
+  "time_chunking_s": null,
+  "time_tokenize_s": null,
+  "time_embedding_s": null,
+  "time_store_s": null,
+  "time_cache_load_s": 0.2,
+  "time_total_s": 0.242,
+  "error": null
+}

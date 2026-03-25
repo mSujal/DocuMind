@@ -1,0 +1,18 @@
+{
+  "pdf": "full_EU_AI_act.pdf",
+  "pdf_path": "test_docs/very_large/full_EU_AI_act.pdf",
+  "profiled_at": "2026-03-21T06:10:07.449791",
+  "mode": "fresh",
+  "page_count": 144,
+  "chunk_count": 2550,
+  "token_count": 117787,
+  "window_count": 17,
+  "time_extraction_s": 31.026,
+  "time_chunking_s": 0.021,
+  "time_tokenize_s": 0.724,
+  "time_embedding_s": 666.969,
+  "time_store_s": 5.338,
+  "time_cache_load_s": null,
+  "time_total_s": 704.092,
+  "error": null
+}

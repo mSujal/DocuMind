@@ -1,0 +1,18 @@
+{
+  "pdf": "Spectre Attacks.pdf",
+  "pdf_path": "test_docs/medium/Spectre Attacks.pdf",
+  "profiled_at": "2026-03-21T05:57:23.070028",
+  "mode": "fresh",
+  "page_count": 16,
+  "chunk_count": 294,
+  "token_count": 17833,
+  "window_count": 3,
+  "time_extraction_s": 4.635,
+  "time_chunking_s": 0.002,
+  "time_tokenize_s": 0.093,
+  "time_embedding_s": 111.687,
+  "time_store_s": 0.459,
+  "time_cache_load_s": null,
+  "time_total_s": 116.881,
+  "error": null
+}

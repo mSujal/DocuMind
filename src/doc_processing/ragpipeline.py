@@ -33,6 +33,22 @@ class RAGPipeline():
             self.chunk_embeddings = self.lc.run(pages)
             self.vector_store.store(pdf_path, self.lc.chunks, self.chunk_embeddings, self.lc.chunk_pages)
     
+    if api_key:
+            try:
+                self.client = Groq(api_key=api_key)
+                # test key..
+                self.client.chat.completions.create(
+                    model=config.LLM_MODEL,
+                    message=[{"role":"user", "content":"hi"}],
+                    max_token=1
+                )
+            except  Exception:
+                print("[RAG] Groq API key invalid, falling back to local model")
+                self.use_local = True
+
+        else:
+            print("[RAG] No API key provoded, falling back to local model")
+            self.use_local = True
 
     def _embed_query(self, query):
         """
@@ -86,6 +102,21 @@ class RAGPipeline():
 
         return retrieved
 
+
+        def _query_llm(self, prompt):
+        if self.use_local:
+            response = ollama.chat(
+                model=config.LOCAL_MODEL,
+                message=[{"role":"user", "content":prompt}]
+            )
+            return response["message"]["content"]
+        else:
+            response = self.client.chat.completions.create(
+                model.config.LLM_MODEL,
+                message=[{"role": "user", "content": prompt}]
+            )
+            return response.choices[0].message.content
+
     def query_qna(self, question):
         """
         Q&A prompt: answer the question strictly from retrieved context.
@@ -102,6 +133,13 @@ class RAGPipeline():
         Question: {question}
         Answer:
         """
+
+         # response = self.client.chat.completions.create(
+        #     model=config.LLM_MODEL,
+        #     messages=[{"role": "user", "content": prompt}]
+        # )
+        # return response.choices[0].message.content
+        return response.choices[0].message.content
 
         response = self.client.chat.completions.create(
             model=config.LLM_MODEL,
@@ -136,8 +174,16 @@ class RAGPipeline():
         Explanation: [Easy/Medium/Hard] <brief explanation based on context>
         """
 
+<<<<<<< HEAD
         response = self.client.chat.completions.create(
             model=config.LLM_MODEL,
             messages=[{"role": "user", "content": prompt}]
         )
+=======
+      #  response = self.client.chat.completions.create(
+      #      model=config.LLM_MODEL,
+       #     messages=[{"role": "user", "content": prompt}]
+        # print(response)
+        #return response.choices[0].message.content 
+>>>>>>> b65ebb2 (update ragpipeline)
         return response.choices[0].message.content

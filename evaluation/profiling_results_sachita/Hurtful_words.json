@@ -1,0 +1,18 @@
+{
+  "pdf": "Hurtful_words.pdf",
+  "pdf_path": "test_docs/medium/Hurtful_words.pdf",
+  "profiled_at": "2026-03-21T05:41:02.073114",
+  "mode": "fresh",
+  "page_count": 16,
+  "chunk_count": 452,
+  "token_count": 31214,
+  "window_count": 5,
+  "time_extraction_s": 9.909,
+  "time_chunking_s": 0.003,
+  "time_tokenize_s": 0.288,
+  "time_embedding_s": 205.504,
+  "time_store_s": 0.598,
+  "time_cache_load_s": null,
+  "time_total_s": 216.309,
+  "error": null
+}

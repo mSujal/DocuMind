@@ -1,0 +1,18 @@
+{
+  "pdf": "GAN.pdf",
+  "pdf_path": "test_docs/short/GAN.pdf",
+  "profiled_at": "2026-03-21T06:06:55.201031",
+  "mode": "fresh",
+  "page_count": 9,
+  "chunk_count": 123,
+  "token_count": 8631,
+  "window_count": 2,
+  "time_extraction_s": 2.626,
+  "time_chunking_s": 0.001,
+  "time_tokenize_s": 0.059,
+  "time_embedding_s": 74.679,
+  "time_store_s": 0.261,
+  "time_cache_load_s": null,
+  "time_total_s": 77.631,
+  "error": null
+}

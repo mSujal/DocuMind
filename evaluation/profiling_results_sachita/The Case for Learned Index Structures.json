@@ -1,0 +1,18 @@
+{
+  "pdf": "The Case for Learned Index Structures.pdf",
+  "pdf_path": "test_docs/large/The Case for Learned Index Structures.pdf",
+  "profiled_at": "2026-03-21T05:13:34.967790",
+  "mode": "fresh",
+  "page_count": 30,
+  "chunk_count": 436,
+  "token_count": 30073,
+  "window_count": 5,
+  "time_extraction_s": 7.571,
+  "time_chunking_s": 0.015,
+  "time_tokenize_s": 0.183,
+  "time_embedding_s": 185.5,
+  "time_store_s": 0.625,
+  "time_cache_load_s": null,
+  "time_total_s": 193.909,
+  "error": null
+}
