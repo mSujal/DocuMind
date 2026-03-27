@@ -10,18 +10,22 @@ from src.doc_processing.text_extraction import Extraction
 class IndexingWorker(QThread):
     """
     Worker thread that runs:
-        1. Extraction.extract_text()   — PDF -> cleaned corpus
-        2. rag_pipeline.index()        — corpus -> chunk embeddings
+        1. (optional) Extraction.extract_text()  — PDF -> cleaned corpus
+           Skipped entirely if the document is already in the vector store.
+        2. rag_pipeline.index()                  — corpus -> chunk embeddings
+           Loads from DB if already indexed, otherwise embeds and stores.
 
     Signals:
         started_extraction  : extraction phase has begun
         started_indexing    : embedding/indexing phase has begun
-        finished            : indexing complete
-        error (str)         : fault in process 
+        already_indexed     : document was found in DB; extraction was skipped
+        finished            : indexing / loading complete
+        error (str)         : fault in process
     """
 
     started_extraction = pyqtSignal()
     started_indexing = pyqtSignal()
+    already_indexed = pyqtSignal()
     finished = pyqtSignal()
     error = pyqtSignal(str)
 
@@ -32,15 +36,23 @@ class IndexingWorker(QThread):
 
     def run(self):
         """
-        Entry point 
+        Entry point
         Called automatically by QThread.start().
         """
         try:
-            # Phase 1: text extraction
+            # skip extraction if already embedded in the DB
+            if self.rag_pipeline.vector_store.is_indexed(self.pdf_path):
+                print(f"[IndexingWorker] '{self.pdf_path}' already indexed — loading from DB.")
+                self.already_indexed.emit()
+                self.rag_pipeline.index(pages=None, pdf_path=self.pdf_path)
+                self.finished.emit()
+                return
+
+            # Phase 1: text extraction (only reached when not yet indexed)
             self.started_extraction.emit()
             corpus = Extraction.extract_text(self.pdf_path)
 
-            # Phase 2: chunking + embedding 
+            # Phase 2: chunking + embedding
             self.started_indexing.emit()
             self.rag_pipeline.index(corpus, pdf_path=self.pdf_path)
 

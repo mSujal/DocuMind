@@ -38,11 +38,28 @@ class RAGPipeline():
             self.use_local = True
 
     def index(self, pages, pdf_path):
+        """
+        Index a document into the vector store.
+
+        Args:
+            pages   : list of (page_num, text) tuples from Extraction.extract_text().
+                      Pass None if the document is already known to be indexed
+                      (the worker pre-checks this before calling index()).
+            pdf_path: path to the source PDF, used as the collection key.
+        """
         self.pdf_path = pdf_path
 
         if self.vector_store.is_indexed(pdf_path):
+            # Document already in DB — load embeddings/chunks without re-computing.
+            print(f"[RAGPipeline] '{pdf_path}' already indexed — loading from DB.")
             self.lc.chunks, self.chunk_embeddings, self.lc.chunk_pages = self.vector_store.load(pdf_path)
         else:
+            # Fresh document — run late-chunking + embedding, then persist.
+            if pages is None:
+                raise ValueError(
+                    f"pages=None but '{pdf_path}' is not in the vector store. "
+                    "Pass the extracted page list to index a new document."
+                )
             self.chunk_embeddings = self.lc.run(pages)
             self.vector_store.store(pdf_path, self.lc.chunks, self.chunk_embeddings, self.lc.chunk_pages)
 
