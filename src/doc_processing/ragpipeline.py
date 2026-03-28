@@ -119,7 +119,7 @@ class RAGPipeline():
 
         prompt = f"""
         You are a helpful assistant. Answer the question based strictly on the context provided below.
-        Each context chunk is prefixed with its page number like [Page N].
+        Each context chunk is prefixed with its page number like [N]where is N is the page number.
         Always cite the page number(s) you used at the end of your answer like: 
         (Source Page: [5]) and in case of multi page (Source Page: [4][5]  ...)
         Context: {context}
@@ -133,8 +133,8 @@ class RAGPipeline():
         context = '\n\n'.join(f"[Page {page}] {chunk}" for chunk, page in retrieved_chunks)
 
         prompt = f"""
-        You are a helpful assistant. Based only on the context provided below, generate 5 multiple choice questions, each with exactly 4 options (A, B, C, D) and never should options be more than 4 and in explanation also mention difficulty with star icon.
-        Each context chunk is prefixed with its page number like [Page N].
+        You are a helpful assistant. Based only on the context provided below, generate 5 multiple choice questions, each with EXACTLY 4 options labeled A), B), C), D) — no more, no less. Never use any other format and never should options be more than 4 and in explanation also mention difficulty.
+        Each context chunk is prefixed with its page number like [N] where N is the page number.
         At the end of each explanation cite the page like: 
         (Source Page: [5]) and in case of multi page (Source Page: [4][5]  ...)
 

@@ -95,14 +95,14 @@
      <x>150</x>
      <y>193</y>
      <width>300</width>
-     <height>26</height>
+     <height>20</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
     color: rgba(148, 163, 184, 0.6);
     font-family: "Courier New";
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 1px;
     background: transparent;
 }</string>
@@ -128,7 +128,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel {
-    color: rgba(99, 102, 241, 0.75);
+    color: rgba(99, 102, 241, 0.4);
     font-family: "Courier New";
     font-size: 10px;
     background: transparent;

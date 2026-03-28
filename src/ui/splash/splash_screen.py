@@ -5,7 +5,6 @@ import os
 from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5.QtCore import Qt
 from PyQt5.uic import loadUi
-
 from src.ui.splash.load_worker import LoadWorker 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -33,6 +32,8 @@ class SplashScreen(QWidget):
     def _on_status(self, message):
         self.taglineLabel.setText(message)
 
-    def _on_finished(self, app_instance):
+    def _on_finished(self, late_chunking, vector_store, rag_pipeline):
+        from src.app import App
+        self.app_instance = App(late_chunking, vector_store, rag_pipeline)
         self.close()
-        app_instance.show()
+        self.app_instance.show()

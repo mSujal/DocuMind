@@ -29,24 +29,15 @@ class App(QMainWindow):
         current_pdf (str): path to currently opned pdf
     """
 
-    def __init__(self):
+    def __init__(self, late_chunking, vector_store, rag_pipeline):
         """Initalization of applicaition main window and load the model"""
         super().__init__()
         self.current_pdf = None
         self._worker = None
         
-        self.late_chunking = LateChunking(
-            model_name=config.MODEL,
-            tokenizer_name=config.TOKENIZER
-        )
-
-        self.vector_store = VectorStore(persist_dir=str(DB_PATH))
-
-        self.rag_pipeline = RAGPipeline(
-            late_chunking=self.late_chunking,
-            api_key=api_key,
-            vector_store=self.vector_store
-        )
+        self.late_chunking = late_chunking
+        self.vector_store = vector_store
+        self.rag_pipeline = rag_pipeline
 
         self.main_window = MainWindow()
         self.setCentralWidget(self.main_window)

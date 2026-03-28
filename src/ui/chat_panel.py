@@ -167,7 +167,7 @@ def parse_mcq_response(text):
         explanation    = ""
 
         for line in lines:
-            if re.match(r'^[A-D]\)', line):
+            if re.match(r'^[(\[]?[A-D][)\].][\s)]', line):
                 option_lines.append(line)
             elif re.match(r'^Correct Answer:\s*', line, re.IGNORECASE):
                 rest = re.sub(r'^Correct Answer:\s*', '', line, flags=re.IGNORECASE).strip()
@@ -251,7 +251,7 @@ class MCQCard(QFrame):
         opts_layout.setContentsMargins(0, 0, 0, 0)
         opts_layout.setSpacing(6)
  
-        for i, opt_text in enumerate(data['options']):
+        for i, opt_text in enumerate(data['options'][:4]):
             letter = OPTION_LETTERS[i]
             btn = QPushButton(f"  {letter}.  {opt_text}")
             btn.setCheckable(True)
