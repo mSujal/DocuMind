@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "run_at": "2026-03-28T23:37:19.976114",
+    "eval_set": "evaluation/eval_set.json",
+    "pdf_dir": "test_docs/medium",
+    "top_k": 5,
+    "n_total": 10,
+    "n_run": 0
+  },
+  "aggregate": {
+    "n_queries": 0,
+    "top_k": 5,
+    "late_chunking": {
+      "recall_pct": 0,
+      "precision_pct": 0,
+      "mrr": null,
+      "avg_cosine_sim": null,
+      "avg_retrieval_time": null,
+      "correct_page_found_pct": 0
+    },
+    "naive_chunking": {
+      "recall_pct": 0,
+      "precision_pct": 0,
+      "mrr": null,
+      "avg_cosine_sim": null,
+      "avg_retrieval_time": null,
+      "correct_page_found_pct": 0
+    },
+    "wins_by_recall": {
+      "late": 0,
+      "naive": 0,
+      "ties": 0
+    },
+    "wins_by_mrr": {
+      "late": 0,
+      "naive": 0,
+      "ties": 0
+    }
+  },
+  "results": []
+}
