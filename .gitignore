@@ -9,6 +9,7 @@ test/
 # temporary test files
 test.*
 **/test.*
+.todo
 
 # env file 
 .env
