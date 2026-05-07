@@ -77,77 +77,6 @@ class TypingIndicator(QFrame):
         self._timer.stop()
 
 
-#-----------------------------------------------------------
-# Mcq parser
-#-----------------------------------------------------------
-
-# def parse_mcq_response(text):
-#     questions = []
-
-#     # split mcq markers
-#     blocks = re.split(r'\*{0,2}MCQ\s*\d+[:.]\*{0,2}\s*', text, flags=re.IGNORECASE)
-#     blocks = [b.strip() for b in blocks if b.strip()]
-
-#     for block in blocks:
-#         lines = [l.strip() for l in block.splitlines() if l.strip()]
-#         if not lines:
-#             continue
-
-#         question_lines = []
-#         option_lines = []
-#         answer_lines = []
-#         in_option = False
-#         in_answer = False
-
-#         for line in lines:
-#             if re.match(r'^[A-D][(.]', line):
-#                 in_option = True
-#                 in_answer = False
-#                 option_lines.append(line)
-#             elif re.match(r'^\*{0,2}Answer\*{0,2}[:.]\s*', line, re.IGNORECASE):
-#                 in_option = False
-#                 in_answer = True
-#                 # strip Answer prefic
-#                 answer = re.sub(r'^\*{0,2}Answer\*{0,2}[:.]\s*', '', line, flags=re.IGNORECASE).strip()
-#                 if answer:
-#                     answer_lines.append(answer)
-#                 elif in_answer:
-#                     answer_lines.append(line)
-#                 elif in_option:
-#                     option_lines.append(line)
-#                 else:
-#                     question_lines.append(line)
-
-#         question_text = ' '.join(question_lines).strip()
-#         # clean markdow bold (sometimes visible)
-#         question_text = re.sub(r'\*+', '', question_text).strip()
-
-#         options = []
-#         for option_line in option_lines:
-#             cleaned = re.sub(r'^[A-D][).]\s*', '', option_line).strip()
-#             options.append(cleaned)
-
-#         #determine answer letter
-#         answer_text = ' '.join(answer_lines).strip()
-#         answer_text = re.sub(r'\*+', '', answer_text).strip()
-#         answer_letter = None
-#         m = re.match(r'^([A-D])[).:]?\s*(.*)', answer_text, re.DOTALL)
-
-#         if m:
-#             answer_letter = m.group(1)
-#             explanation = m.group(2).strip()
-#         else:
-#             explanation = answer_text
-
-#         if question_text and len(options) >=2 :
-#             questions.append({
-#                 'question':      question_text,
-#                 'options':       options,
-#                 'answer_letter': answer_letter,   # 'A','B','C','D' or None
-#                 'explanation':   explanation,
-#             })
-
-#     return questions
 
 def parse_mcq_response(text):
     questions = []
@@ -222,7 +151,6 @@ class MCQCard(QFrame):
         root.setContentsMargins(16, 14, 16, 14)
         root.setSpacing(10)
  
-        # ── header: "Q 1 / 5" ────────────────────────────────────────
         header = QLabel(f"Question {q_index} of {total}")
         header.setStyleSheet(f"""
             color: {config.TEXT_ACCENT};
@@ -232,7 +160,6 @@ class MCQCard(QFrame):
         """)
         root.addWidget(header)
  
-        # ── question text ─────────────────────────────────────────────
         q_label = QLabel(data['question'])
         q_label.setWordWrap(True)
         q_label.setStyleSheet(f"""
@@ -244,7 +171,6 @@ class MCQCard(QFrame):
         """)
         root.addWidget(q_label)
  
-        # ── options ───────────────────────────────────────────────────
         opts_frame = QFrame()
         opts_frame.setStyleSheet("background: transparent;")
         opts_layout = QVBoxLayout(opts_frame)
@@ -263,7 +189,6 @@ class MCQCard(QFrame):
  
         root.addWidget(opts_frame)
  
-        # ── reveal button ─────────────────────────────────────────────
         self._reveal_btn = QPushButton("Reveal Answer")
         self._reveal_btn.setEnabled(False)
         self._reveal_btn.setCursor(Qt.PointingHandCursor)
@@ -271,7 +196,6 @@ class MCQCard(QFrame):
         self._reveal_btn.clicked.connect(self._reveal_answer)
         root.addWidget(self._reveal_btn)
  
-        # ── answer + explanation (hidden) ─────────────────────────────
         self._answer_frame = QFrame()
         self._answer_frame.setVisible(False)
         self._answer_frame.setStyleSheet(f"""
@@ -308,7 +232,6 @@ class MCQCard(QFrame):
  
         root.addWidget(self._answer_frame)
  
-    # ── styles ────────────────────────────────────────────────────────
  
     def _option_style_default(self):
         return f"""
@@ -408,7 +331,6 @@ class MCQCard(QFrame):
                 }}
             """
  
-    # ── interaction ───────────────────────────────────────────────────
  
     def _on_option_clicked(self, letter: str):
         if self._revealed:

@@ -1,12 +1,5 @@
 """
 Explorer panel — left sidebar showing opened PDF files.
-
-For now holds the currently opened PDF.
-Built to be extended later with:
-  - multiple files / collections
-  - folder grouping
-  - right-click context menu (chunk single / chunk collection)
-  - drag-and-drop adding
 """
 
 import os
@@ -136,7 +129,6 @@ class ExplorerPanel(QWidget):
         root_layout.setContentsMargins(0, 0, 0, 0)
         root_layout.setSpacing(0)
 
-        # ── Header ───────────────────────────────────────────────────── #
         header = QWidget()
         header.setFixedHeight(40)
         header.setStyleSheet(f"""
@@ -189,7 +181,6 @@ class ExplorerPanel(QWidget):
         header_layout.addWidget(btn_refresh)
         header.setLayout(header_layout)
 
-        # ── Search bar ───────────────────────────────────────────────── #
         search_container = QWidget()
         search_container.setStyleSheet("background: transparent; border: none;")
         search_layout = QHBoxLayout()
@@ -223,7 +214,6 @@ class ExplorerPanel(QWidget):
         search_layout.addWidget(self.search_input)
         search_container.setLayout(search_layout)
 
-        # ── Scroll area for file list ─────────────────────────────────── #
         self.scroll_area = QScrollArea()
         self.scroll_area.setWidgetResizable(True)
         self.scroll_area.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -265,7 +255,6 @@ class ExplorerPanel(QWidget):
         self.file_list_widget.setLayout(self.file_list_layout)
         self.scroll_area.setWidget(self.file_list_widget)
 
-        # ── Assemble ─────────────────────────────────────────────────── #
         root_layout.addWidget(header)
         root_layout.addWidget(search_container)
         root_layout.addWidget(self.scroll_area)

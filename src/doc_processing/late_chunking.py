@@ -1,9 +1,10 @@
 from transformers import AutoTokenizer, AutoModel
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-import torch
+import torch 
 import os
 import bisect
 import config
+import re
 
 
 class LateChunking():
@@ -34,10 +35,32 @@ class LateChunking():
     def _chunk(self, pages):
         self.chunks = []
         self.chunk_pages = []
+
+        marked_pages = []
         for page_num, text in pages:
-            splits = self.splitter.split_text(text)
-            self.chunks.extend(splits)
-            self.chunk_pages.extend([page_num] * len(splits))
+            marked_pages.append((page_num, f"<PAGE_{page_num}> {text}"))
+
+        for page_num, marked_text in marked_pages:
+            splits = self.splitter.split_text(marked_text)
+            
+            for split in splits:
+                # fing every page marker in this chunk
+                markers = re.findall(r'<PAGE_(\d+)>', split)
+
+                if markers:
+                    page_nums_in_chunk = [int(m) for m in markers]
+                    page_start = page_nums_in_chunk[0]
+                    page_end = page_nums_in_chunk[-1]
+                else:
+                    # fallback
+                    page_start = page_num
+                    page_end = page_num
+
+                clean_split = re.sub(r'<PAGE_\d+>\s*', '', split).strip()
+
+                if clean_split:
+                    self.chunks.append(clean_split)
+                    self.chunk_pages.append({"page_start": page_start, "page_end": page_end})
 
     def _tokenize_full(self, corpus):
         prefixed = "search_document: " + corpus
@@ -144,4 +167,24 @@ class LateChunking():
         self.chunk_embeddings = self._embed_windowed(input_ids, token_boundaries)
 
         print(f"[LateChunking] embedded {len(self.chunk_embeddings)} chunks")
+        
         return self.chunk_embeddings
+
+
+    @staticmethod
+    def format_page_citation(page_info):
+        """
+        Helper for downstream citation formatting
+        accepts either a tuple of (page_start, page_end) or legacy int
+        """
+        if isinstance(page_info, dict):
+            start = page_info["page_start"]
+            end = page_info["page_end"]
+        elif isinstance(page_info, tuple):
+            start, end = page_info
+        else: 
+            return f"Page: {page_info}"
+            
+        if start == end:
+            return f"Page: {start}"
+        return f"Pages: {start}-{end}"

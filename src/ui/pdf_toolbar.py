@@ -76,7 +76,6 @@ class PDFToolbar(QWidget):
         layout.setContentsMargins(10, 0, 10, 0)
         layout.setSpacing(4)
 
-        # ── Page navigation ──────────────────────────────────────────── #
         self.btn_prev = self._icon_btn(ICON_PREV_PAGE, "Previous page")
         self.btn_prev.clicked.connect(self._prev_page)
 
@@ -114,7 +113,6 @@ class PDFToolbar(QWidget):
         layout.addWidget(self.btn_next)
         layout.addWidget(_separator())
 
-        # ── Zoom controls ────────────────────────────────────────────── #
         self.btn_zoom_out = self._icon_btn(ICON_ZOOM_OUT, "Zoom out")
         self.btn_zoom_out.clicked.connect(self._zoom_out)
 
@@ -153,7 +151,6 @@ class PDFToolbar(QWidget):
         layout.addWidget(self.btn_zoom_in)
         layout.addWidget(_separator())
 
-        # ── Fit modes ────────────────────────────────────────────────── #
         self.btn_fit_width = self._icon_btn(ICON_FIT_WIDTH, "Fit width")
         self.btn_fit_width.clicked.connect(self.fit_width_requested.emit)
 
@@ -164,7 +161,6 @@ class PDFToolbar(QWidget):
         layout.addWidget(self.btn_fit_page)
         layout.addWidget(_separator())
 
-        # ── Rotate ───────────────────────────────────────────────────── #
         self.btn_rotate = self._icon_btn(ICON_ROTATE, "Rotate clockwise")
         self.btn_rotate.clicked.connect(self.rotate_requested.emit)
         layout.addWidget(self.btn_rotate)

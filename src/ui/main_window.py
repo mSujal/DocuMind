@@ -130,7 +130,6 @@ class MainWindow(QWidget):
         layout.setContentsMargins(0, 0, 0, 0)
         layout.setSpacing(0)
 
-        # ── optional "AI Assistant" title bar ─────────────────────────
         title_bar = QFrame()
         title_bar.setFixedHeight(36)
         title_bar.setStyleSheet(f"""

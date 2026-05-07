@@ -9,7 +9,6 @@ Usage:
     btn.setIconSize(QSize(18, 18))
     btn.setText("")
 
-Requires: PyQt5.QtSvg  (ships with PyQt5)
 """
 
 from PyQt5.QtCore import Qt, QByteArray, QRectF

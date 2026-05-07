@@ -55,10 +55,16 @@ class VectorStore:
         """
         col = self._get_or_create_collection(pdf_path)
 
-        # tensor => python list for storing in chromadb
         embeddings_list = [e.cpu().float().tolist() for e in embeddings]
         ids = [f"chunk-{i}" for i in range(len(chunks))]
-        metadatas = [{"chunk_index": i, "page": chunk_pages[i]} for i in range(len(chunks))]
+        metadatas = [
+            {
+                "chunk_index": i,
+                "page_start": chunk_pages[i]["page_start"] if isinstance(chunk_pages[i], dict) else (chunk_pages[i][0] if isinstance(chunk_pages[i], tuple) else chunk_pages[i]),
+                "page_end":   chunk_pages[i]["page_end"]   if isinstance(chunk_pages[i], dict) else (chunk_pages[i][1] if isinstance(chunk_pages[i], tuple) else chunk_pages[i]),
+            }
+            for i in range(len(chunks))
+        ]
 
         # upsert for re-indexing the same pdf is safe
         col.upsert(
@@ -69,21 +75,20 @@ class VectorStore:
         )
         print(f"[VectorStore] stored {len(chunks)} chunks for '{pdf_path}'")
 
-    def load(self, pdf_path):
-        """
-        Load stored chunks and embeddings for pdfs
 
-        Return:
-            (chunks, embeddings) where embeddings are python list
-        """
+    def load(self, pdf_path):
         col = self._get_or_create_collection(pdf_path)
         result = col.get(include=["documents", "embeddings", "metadatas"])
-        pages = [m["page"] for m in result["metadatas"]]
 
-        chunks = result["documents"]
-        embeddings = result["embeddings"]
+        combined = sorted(
+            zip(result["metadatas"], result["documents"], result["embeddings"]),
+            key = lambda x: x[0]["chunk_index"]
+        )
+        metadatas, chunks, embeddings = zip(*combined) if combined else ([], [], [])
+        pages = [{"page_start": m["page_start"], "page_end": m["page_end"]} for m in metadatas]
+
         print(f"[VectorStore] Loaded {len(chunks)} chunks for '{pdf_path}'")
-        return chunks, embeddings, pages
+        return list(chunks), list(embeddings), pages
 
     def query(self, pdf_path, query_embedding, top_k):
         """
