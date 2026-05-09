@@ -9,7 +9,7 @@ class Extraction:
         """
         Fallback OCR for a single page using Tesseract.
         """
-        images = convert_from_path(pdf_path, first_page=page_num, late_page=pagenum, dpi=300)
+        images = convert_from_path(pdf_path, first_page=page_num, last_page=page_num, dpi=300)
         if not images:
             return ""
         return pytesseract.image_to_string(images[0]).strip()

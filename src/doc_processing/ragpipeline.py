@@ -132,7 +132,7 @@ class RAGPipeline():
 
                 
                 
-    def query_mcq(self, question, save_json=False, output_dir="mcq_output"):
+    def query_mcq(self, question, num_questions, save_json=False, output_dir="mcq_output"):
         retrieved_chunks = self._retrieve(question)
         context = '\n\n'.join(
             f"[{self.lc.format_page_citation(page)}] {chunk}" 
@@ -140,7 +140,7 @@ class RAGPipeline():
         )
 
         prompt = f"""
-        You are a helpful assistant. Based only on the context provided below, generate 5 multiple choice questions, each with EXACTLY 4 options labeled A), B), C), D) — no more, no less. Never use any other format and never should options be more than 4 and in explanation also mention difficulty.
+        You are a helpful assistant. Based only on the context provided below, generate {num_questions} multiple choice questions, each with EXACTLY 4 options labeled A), B), C), D) — no more, no less. Never use any other format and never should options be more than 4 and in explanation also mention difficulty.
         Each context chunk is prefixed with its page number like [N] where N is the page number.
         At the end of each explanation cite the page like: 
         (Source Page: [5]) and in case of multi page (Source Page: [4][5]  ...)
@@ -204,14 +204,23 @@ class RAGPipeline():
             q["question"] = q_match.group(1).strip() if q_match else ""
 
             # ── Options A-D ────────────────────────────────────────────────
-            q["options"] = {}
-            for letter in "ABCD":
-                opt_match = re.search(
-                    rf'{letter}\)\s*(.+?)(?=\n[B-D]\)|\nCorrect Answer:|\Z)',
-                    block, re.DOTALL
-                )
-                q["options"][letter] = opt_match.group(1).strip() if opt_match else ""
+            # q["options"] = {}
+            # for letter, next_stop in zip("ABCD", ["B", "C", "D", "Correct"]):
+            #     if next_stop == "Correct":
+            #         pattern = rf'{letter}\)\s*(.+)(?=\nCorrect Answer:|\Z)'
+            #     else:
+            #         pattern = rf'{letter}\)\s*(.+)(?=\n{next_stop}\)|\nCorrect Answer:|\Z)'
+            #     opt_match = re.search(pattern, block, re.DOTALL)
+            #     q["options"][letter] = opt_match.group(1).strip('\n') if  opt_match else ""
 
+            q["options"] = {}
+            lines = block.split('\n')
+            for line in lines:
+                line = line.strip()
+                for letter in "ABCD":
+                    if line.startswith(f"{letter})"):
+                        q["options"][letter] = line[2:].strip()
+                        break
             # ── Correct answer ─────────────────────────────────────────────
             ans_match = re.search(r'Correct Answer:\s*([A-D])', block)
             q["correct_answer"] = ans_match.group(1).strip() if ans_match else ""

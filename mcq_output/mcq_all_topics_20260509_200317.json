@@ -1,0 +1,150 @@
+{
+  "topic": "all_topics",
+  "generated_at": "2026-05-09T20:03:17",
+  "pdf_path": "/home/sujal/Programming/MinorProject/Demo docs/Manual_DBMS_Sagarmatha_1680228606625.pdf",
+  "questions": [
+    {
+      "question": "In a typical university database, what is the purpose of the Time slot id field?",
+      "options": {
+        "A": "To store the instructor ID",
+        "B": "To store the course name",
+        "C": "To store the time slot for a particular section",
+        "D": "To store the building where the course is held"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "The Time slot id field is used to store the time slot for a particular course section, as seen in the code snippet on Page [37]. (Source Page: [37])",
+      "source_pages": [
+        "37",
+        "37"
+      ]
+    },
+    {
+      "question": "What is the data type for storing the semester in a typical university database?",
+      "options": {
+        "A": "Numeric",
+        "B": "Date",
+        "C": "Varchar",
+        "D": "Boolean"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The semester is stored as varchar in a typical university database, as seen in the code snippet on Page [37]. (Source Page: [37])",
+      "source_pages": [
+        "37",
+        "37"
+      ]
+    },
+    {
+      "question": "How many lecture hours are assigned to the DSA subject in a typical university database?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "As seen in the database table on Page [48], the DSA subject has 6 lecture hours assigned. (Source Page: [48])",
+      "source_pages": [
+        "48",
+        "48"
+      ]
+    },
+    {
+      "question": "What is the primary key constraint on the course_id, sec_id, semester and year fields in a typical university database?",
+      "options": {
+        "A": "Unique",
+        "B": "Primary key",
+        "C": "Foreign key",
+        "D": "Check"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "The primary key constraint is applied to the course_id, sec_id, semester and year fields in the typical university database, as seen in the code snippet on Page [37]. (Source Page: [37])",
+      "source_pages": [
+        "37",
+        "37"
+      ]
+    },
+    {
+      "question": "What is the data type for storing the author ID in a typical university database?",
+      "options": {
+        "A": "Varchar",
+        "B": "Numeric",
+        "C": "Integer",
+        "D": "Float"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The author ID is stored as numeric in a typical university database, as seen in the database table on Page [48]. (Source Page: [48])",
+      "source_pages": [
+        "48",
+        "48"
+      ]
+    },
+    {
+      "question": "How many practical hours are assigned to the DSA subject in a typical university database?",
+      "options": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "5"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "As seen in the database table on Page [48], the DSA subject has 3 practical hours assigned. (Source Page: [48])",
+      "source_pages": [
+        "48",
+        "48"
+      ]
+    },
+    {
+      "question": "What is the primary key of the TOC subject in a typical university database?",
+      "options": {
+        "A": "346CT",
+        "B": "KP05",
+        "C": "4,0",
+        "D": "all of the above"
+      },
+      "correct_answer": "A",
+      "difficulty": "Hard",
+      "explanation": "The primary key of the TOC subject is 346CT, but that is not the same as the primary key it self which would be (course_code, sec_id, semester, year) however the option of A is the course code which is a part of the primary key and is the primary key for this specific question. but technically we should consider the option which mentions course_id as answer but course code in the table is the sub_code so this question can be considered as tricky (Source Page: [48])",
+      "source_pages": [
+        "48"
+      ]
+    },
+    {
+      "question": "What is the purpose of the lecture_hour field in a typical university database?",
+      "options": {
+        "A": "To store the course name",
+        "B": "To store the instructor name",
+        "C": "To store the lecture hours for a particular course",
+        "D": "To store the building where the course is held"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The lecture_hour field is used to store the lecture hours for a particular course, as seen in the database table on Page [48]. (Source Page: [48])",
+      "source_pages": [
+        "48",
+        "48"
+      ]
+    },
+    {
+      "question": "What is the difference between a lock and a write operation in a typical database?",
+      "options": {
+        "A": "Lock is used for reading and write is used for writing",
+        "B": "Lock is used for writing and write is used for reading",
+        "C": "Lock is used to prevent other processes from modifying a resource and write is used to update it",
+        "D": "Lock is used to update a resource and write is used to prevent other processes from modifying it"
+      },
+      "correct_answer": "C",
+      "difficulty": "Hard",
+      "explanation": "A lock operation is used to prevent other processes from modifying a resource, while a write operation is used to update the resource, as seen in the table of operations on Page [137]. (Source Page: [137])",
+      "source_pages": [
+        "137",
+        "137"
+      ]
+    }
+  ]
+}
