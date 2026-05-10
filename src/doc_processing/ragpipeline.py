@@ -132,7 +132,7 @@ class RAGPipeline():
 
                 
                 
-    def query_mcq(self, question, num_questions, save_json=False, output_dir="mcq_output"):
+    def query_mcq(self, question, num_questions=5, save_json=False, output_dir="mcq_output"):
         retrieved_chunks = self._retrieve(question)
         context = '\n\n'.join(
             f"[{self.lc.format_page_citation(page)}] {chunk}" 
