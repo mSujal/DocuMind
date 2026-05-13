@@ -1,0 +1,293 @@
+{
+  "topic": "all_topics",
+  "generated_at": "2026-05-13T12:01:15",
+  "pdf_path": "/home/sujal/Downloads/python.pdf",
+  "questions": [
+    {
+      "question": "Which built-in function is used to return the next element reported by the iterator?",
+      "options": {
+        "A": "next()",
+        "B": "open()",
+        "C": "ord()",
+        "D": "iterable()"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "Refers to the built-in function used to return the next element reported by the iterator as seen in the description.",
+      "source_pages": []
+    },
+    {
+      "question": "What is used to represent an instance of any iterable type?",
+      "options": {
+        "A": "sequence",
+        "B": "iterable",
+        "C": "string",
+        "D": "tuple"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "It is specified in the text that iterable is used to represent an instance of any iterable type.",
+      "source_pages": []
+    },
+    {
+      "question": "Which built-in function is used to open a file with the given name and access mode?",
+      "options": {
+        "A": "next()",
+        "B": "open()",
+        "C": "iterable()",
+        "D": "ord()"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "It mentions the open function for opening a file in the provided snippet.",
+      "source_pages": []
+    },
+    {
+      "question": "Which category of indexable classes includes str, list, and tuple?",
+      "options": {
+        "A": "sequences",
+        "B": "iterables",
+        "C": "collections",
+        "D": "arrays"
+      },
+      "correct_answer": "A",
+      "difficulty": "Medium",
+      "explanation": "According to the text, a sequence represents a more narrow category of indexable classes including str, list, and tuple.",
+      "source_pages": []
+    },
+    {
+      "question": "What is returned by the ord function?",
+      "options": {
+        "A": "Unicode code point of the given character",
+        "B": "Next element reported by the iterator",
+        "C": "Open file access mode",
+        "D": "String data type"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The ord function returns the Unicode code point of the given character, as mentioned in the provided snippet.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the Unicode code point of the given character used for?",
+      "options": {
+        "A": "Sorting algorithms",
+        "B": "File names",
+        "C": "Identifiers for iterable",
+        "D": "Unicode character representation"
+      },
+      "correct_answer": "D",
+      "difficulty": "Medium",
+      "explanation": "The context does mention the Unicode code point, used for representing characters, which is also linked to character representation.",
+      "source_pages": []
+    },
+    {
+      "question": "Which built-in function returns the Unicode code point of the given character?",
+      "options": {
+        "A": "ord()",
+        "B": "next()",
+        "C": "open()",
+        "D": "iterable()"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The description specifically mentions the built-in function ord for returning Unicode code point of the character.",
+      "source_pages": []
+    },
+    {
+      "question": "What data types are considered as sequences?",
+      "options": {
+        "A": "list and tuple",
+        "B": "str, list, and tuple",
+        "C": "set and dict",
+        "D": "int and float"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "According to the description, sequences are a narrow category of indexable classes, including str, list, and tuple.",
+      "source_pages": []
+    },
+    {
+      "question": "What access mode is used by the open function?",
+      "options": {
+        "A": "Read/Write",
+        "B": "Read/Execute",
+        "C": "Read/Write/Execute",
+        "D": "File access mode not specified by the open function"
+      },
+      "correct_answer": "D",
+      "difficulty": "Medium",
+      "explanation": "The access mode is mentioned as part of the open function description, but it doesn't specify all possible access modes.",
+      "source_pages": []
+    },
+    {
+      "question": "What page discusses simple input and output in Python?",
+      "options": {
+        "A": "Page 1",
+        "B": "Page 28",
+        "C": "Page 1.5",
+        "D": "Page 30"
+      },
+      "correct_answer": "D",
+      "difficulty": "Medium",
+      "explanation": "According to the table of contents, simple input and output is discussed on Page 30.",
+      "source_pages": []
+    },
+    {
+      "question": "Section 9.4, when discussing sorting algorithms, what further explores the topic?",
+      "options": {
+        "A": "Iterators",
+        "B": "Sequences",
+        "C": "Identifiers",
+        "D": "Built-in functions"
+      },
+      "correct_answer": "A",
+      "difficulty": "Medium",
+      "explanation": "It's mentioned that Section 9.4 and Section 12.6.1 discuss sorting algorithms with more details about iterators.",
+      "source_pages": []
+    },
+    {
+      "question": "Which section in the Python documentation explains more about built-in functions?",
+      "options": {
+        "A": "Section 1.6",
+        "B": "Section 1.8",
+        "C": "Section 9.4",
+        "D": "Section 12.6.1"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "Though the context does not explicitly mention built-in functions in section 1.8. but since section 1.8 is mentioned, so we can find our related topic in that. Also built-in functions are explored in section 1.5.2.",
+      "source_pages": []
+    },
+    {
+      "question": "What type of data structure is represented by an 'iterable' in Python?",
+      "options": {
+        "A": "A file object",
+        "B": "A sequence of elements",
+        "C": "A data structure that can be iterated over",
+        "D": "A data structure that does not support iteration"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The context states that the identifier 'iterable' is used to represent an instance of any iterable type.",
+      "source_pages": []
+    },
+    {
+      "question": "What is a sequence in Python?",
+      "options": {
+        "A": "A type of data structure that can only hold strings",
+        "B": "A type of data structure that can hold any type of object, such as strings, numbers, or other sequences",
+        "C": "A type of data structure that cannot be modified once created",
+        "D": "A type of data structure that includes str, list, and tuple"
+      },
+      "correct_answer": "D",
+      "difficulty": "Easy",
+      "explanation": "According to the description, a sequence represents a more narrow category of indexable classes including str, list, and tuple.",
+      "source_pages": []
+    },
+    {
+      "question": "Which section discusses iterators and iterable data types?",
+      "options": {
+        "A": "Section 1.5",
+        "B": "Section 1.8",
+        "C": "Section 9.4",
+        "D": "Section 12.6.1"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "The description mentions that Section 1.8 discusses iterators and iterable data types in more detail.",
+      "source_pages": []
+    },
+    {
+      "question": "What is returned by the 'open' function?",
+      "options": {
+        "A": "A file object that can be used for reading and writing",
+        "B": "The next line in a file",
+        "C": "The Unicode code point of a character",
+        "D": "A list of file names"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The description mentions that the 'open' function is used to open a file with the given name and access mode.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the identifier 'iterable' used to represent?",
+      "options": {
+        "A": "A sequence of elements",
+        "B": "A data structure that can be iterated over",
+        "C": "An instance of any iterable type",
+        "D": "A data structure that cannot be modified once created"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The context uses the identifier 'iterable' to represent an instance of any iterable type.",
+      "source_pages": []
+    },
+    {
+      "question": "Which sections discuss sorting algorithms?",
+      "options": {
+        "A": "Section 9.4 and Section 12.6.1",
+        "B": "Section 1.5 and Section 1.8",
+        "C": "Section 1.6 and Section 1.7",
+        "D": "Section 1.8 and Section 9.4"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The description mentions that Section 9.4 and Section 12.6.1 discuss sorting algorithms.",
+      "source_pages": []
+    },
+    {
+      "question": "Which section discusses the built-in functions?",
+      "options": {
+        "A": "Section 1.5",
+        "B": "Section 1.6",
+        "C": "Section 1.8",
+        "D": "Section 1.7"
+      },
+      "correct_answer": "A",
+      "difficulty": "Medium",
+      "explanation": "Since, the topic is about sequences, iterables and so the related section would be 1.5.",
+      "source_pages": []
+    },
+    {
+      "question": "What type of data structure can be opened by the 'open' function?",
+      "options": {
+        "A": "A file object",
+        "B": "A directory",
+        "C": "A data structure that can be iterated over",
+        "D": "A data structure that cannot be modified once created"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The description mentions that the 'open' function is used to open a file with the given name and access mode.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the purpose of the 'ord' function?",
+      "options": {
+        "A": "To get the next line in a file",
+        "B": "To get the Unicode code point of a character",
+        "C": "To open a file in read-only mode",
+        "D": "To determine the sequence of a string"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The description mentions that the 'ord' function returns the Unicode code point of the given character.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the difference between a sequence and an iterable?",
+      "options": {
+        "A": "A sequence is a type of iterable",
+        "B": "A sequence is a more general type of data structure",
+        "C": "An iterable is a type of sequence",
+        "D": "An iterable is a more specific type of data structure"
+      },
+      "correct_answer": "D",
+      "difficulty": "Medium",
+      "explanation": "According to the description, sequences are a narrower category of indexable classes than iterables.\n\n26. Question",
+      "source_pages": []
+    }
+  ]
+}
