@@ -43,6 +43,7 @@ class VectorStore:
             return False
         col = self.client.get_collection(name=name, embedding_function=None)
         return col.count() > 0
+    
 
     def store(self, pdf_path, chunks, embeddings, chunk_pages):
         """
@@ -78,7 +79,7 @@ class VectorStore:
 
     def load(self, pdf_path):
         col = self._get_or_create_collection(pdf_path)
-        result = col.get(include=["documents", "embeddings", "metadatas"])
+        result = col.get(include=["documents", "metadatas"])
 
         combined = sorted(
             zip(result["metadatas"], result["documents"], result["embeddings"]),
@@ -88,7 +89,7 @@ class VectorStore:
         pages = [{"page_start": m["page_start"], "page_end": m["page_end"]} for m in metadatas]
 
         print(f"[VectorStore] Loaded {len(chunks)} chunks for '{pdf_path}'")
-        return list(chunks), list(embeddings), pages
+        return list(chunks), pages
 
     def query(self, pdf_path, query_embedding, top_k):
         """
@@ -105,9 +106,14 @@ class VectorStore:
         results = col.query(
                 query_embedding = [query_embedding],
                 n_results = top_k,
-                include=["documents"]
+                include=["documents", "metadatas"] 
         )
-        return results["documents"][0]
+        chunks = results["documents"][0]
+        pages = [
+                {"page_start": m["page_start"], "page_end" : m["page_end"]}
+                for m in results["metadatas"][0]
+        ]
+        return list(zip(chunks, pages))
 
     def delete(self, pdf_path):
         """Remove all stored data for pdf for re-indexing"""
@@ -117,4 +123,5 @@ class VectorStore:
             print(f"[VectorStore] Deleted collection for '{pdf_path}'")
         except Exception:
             pass
+
 

@@ -35,6 +35,38 @@ class RAGPipeline():
         else:
             print("[RAG] No API key provided, falling back to local model")
             self.use_local = True
+    
+    @staticmethod
+    def _is_noise_chunk(chunk):
+        """Remove the toc section chunks"""
+        lines = [l.strip() for l in chunk.strip().split('\n') if l.strip()]
+        if not lines:
+            return True
+        
+        toc_lines = sum(1 for l in lines if re.search(
+            r'(\.\s*){3,}|\bSection\b.+\d+$|\d+\.\d+.+\d+$', l
+        ))
+
+        if toc_lines / len(lines) > 0.3: # 3o% as threshold
+            return True
+        
+        if len(chunk.split()) < 30:
+            return True
+
+        return False
+
+    def _is_noise_question(self, q):
+        # mostly cross reference 
+        nose_patterns = [
+            r'\bpage\s+\d+\b',  # 'what page discusses...'
+            r'bsection\s+\d+\.\d+\b', # 'which section...' 
+            r'\bchapter\s+\d+\b', # 'see chapter...'
+            r'table of contents',
+            r'discusses.{0,30}topic',
+        ]
+        text = (q["question"] + " " + q["explanation"]).lower() 
+        return any(re.search(p, text, re.IGNORECASE) for p in noise_patterns)
+     
 
     def index(self, pages, pdf_path):
         """
@@ -51,7 +83,7 @@ class RAGPipeline():
         if self.vector_store.is_indexed(pdf_path):
             # Document already indexed and stored in database.
             print(f"[RAGPipeline] '{pdf_path}' already indexed — loading from DB.")
-            self.lc.chunks, self.chunk_embeddings, self.lc.chunk_pages = self.vector_store.load(pdf_path)
+            self.lc.chunks, self.lc.chunk_pages = self.vector_store.load(pdf_path)
         else:
             # Not in database index.
             if pages is None:
@@ -59,6 +91,7 @@ class RAGPipeline():
                     f"pages=None but '{pdf_path}' is not in the vector store. "
                     "Pass the extracted page list to index a new document."
                 )
+            pages = [(p, t) for p, t in pages if not self._is_noise_chunk(t)]
             self.chunk_embeddings = self.lc.run(pages)
             self.vector_store.store(pdf_path, self.lc.chunks, self.chunk_embeddings, self.lc.chunk_pages)
 
@@ -81,22 +114,24 @@ class RAGPipeline():
         return outputs.last_hidden_state[0].mean(dim=0)
 
     def _retrieve(self, query):
-        query_embedding = self._embed_query(query)
-        similarities = []
+        query_embedding = self._embed_query(query).cpu().float().tolist()
+        return self.vector_store.query(self.pdf_path, query_embedding, self.top_k) 
 
-        for i, chunk_emb in enumerate(self.chunk_embeddings):
-            if not isinstance(chunk_emb, torch.Tensor):
-                chunk_emb = torch.tensor(chunk_emb, dtype=torch.float32).to(self.lc.device)
-            score = F.cosine_similarity(
-                query_embedding.unsqueeze(0),
-                chunk_emb.unsqueeze(0)
-            )
-            similarities.append((score.item(), i))
-
-        similarities.sort(reverse=True)
-        top_chunks = similarities[:self.top_k]
-        return [(self.lc.chunks[i], self.lc.chunk_pages[i]) for (_, i) in top_chunks]
-
+        # similarities = []
+        #
+        # for i, chunk_emb in enumerate(self.chunk_embeddings):
+        #     if not isinstance(chunk_emb, torch.Tensor):
+        #         chunk_emb = torch.tensor(chunk_emb, dtype=torch.float32).to(self.lc.device)
+        #     score = F.cosine_similarity(
+        #         query_embedding.unsqueeze(0),
+        #         chunk_emb.unsqueeze(0)
+        #     )
+        #     similarities.append((score.item(), i))
+        #
+        # similarities.sort(reverse=True)
+        # top_chunks = similarities[:self.top_k]
+        # return [(self.lc.chunks[i], self.lc.chunk_pages[i]) for (_, i) in top_chunks]
+        #
     def _query_llm(self, prompt):
         if self.use_local:
             import ollama
@@ -164,6 +199,7 @@ class RAGPipeline():
             parsed   = self._parse_mcq_response(raw_response, question)
             unique_qs = self._deduplicate_mcqs(parsed["questions"])
 
+            unique_qs = [q for q in unique_qs if not self._is_noise_questions(q)]
             if self.mcq_store and unique_qs:
                 self.mcq_store.store(self.pdf_path, unique_qs)
 
@@ -199,11 +235,11 @@ class RAGPipeline():
 
             q = {}
 
-            # ── Question text ──────────────────────────────────────────────
+            # Questions
             q_match = re.search(r'(?:\d+\.\s*)?Question:\s*(.+?)(?=\nA\))', block, re.DOTALL)
             q["question"] = q_match.group(1).strip() if q_match else ""
 
-            # ── Options A-D ────────────────────────────────────────────────
+            # Options
             # q["options"] = {}
             # for letter, next_stop in zip("ABCD", ["B", "C", "D", "Correct"]):
             #     if next_stop == "Correct":
@@ -221,11 +257,11 @@ class RAGPipeline():
                     if line.startswith(f"{letter})"):
                         q["options"][letter] = line[2:].strip()
                         break
-            # ── Correct answer ─────────────────────────────────────────────
+            # Correct answer
             ans_match = re.search(r'Correct Answer:\s*([A-D])', block)
             q["correct_answer"] = ans_match.group(1).strip() if ans_match else ""
 
-            # ── Difficulty + explanation ───────────────────────────────────
+            # Difficulty + explanation 
             exp_match = re.search(
                 r'Explanation:\s*\[(Easy|Medium|Hard)\]\s*(.+?)(?=\nQuestion:|\Z)',
                 block, re.DOTALL
@@ -239,10 +275,10 @@ class RAGPipeline():
                 q["difficulty"]  = ""
                 q["explanation"] = exp_fallback.group(1).strip() if exp_fallback else ""
 
-            # ── Source pages ───────────────────────────────────────────────
+            # Source pages
             q["source_pages"] = re.findall(r'\[(\d+)\]', q["explanation"])
 
-            # ── Embedding for dedup (stripped before JSON save) ────────────
+            # Embedding for dedup (stripped before JSON save) 
             if q["question"]:
                 emb = self._embed_query(q["question"])
                 q["embedding"] = emb.cpu().float().tolist()
@@ -285,12 +321,12 @@ class RAGPipeline():
         for q in questions:
             fp = self.mcq_store.option_fingerprint(q["options"], q["correct_answer"])
 
-            # ── Stage 1: option fingerprint ────────────────────────────────
+            # Stage 1: option fingerprint
             if fp in stored_fingerprints or fp in batch_fingerprints:
                 print(f"[Dedup] Skipped (fingerprint match): {q['question'][:60]}")
                 continue
 
-            # ── Stage 2: semantic similarity ───────────────────────────────
+            # Stage 2: semantic similarity 
             q_tensor = torch.tensor(q["embedding"], dtype=torch.float32).to(self.lc.device)
             is_duplicate = False
 
