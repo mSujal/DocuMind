@@ -1,0 +1,262 @@
+{
+  "topic": "all_topics",
+  "generated_at": "2026-05-13T21:08:08",
+  "pdf_path": "/home/sujal/Programming/MinorProject/Demo/DSA.pdf",
+  "questions": [
+    {
+      "question": "What does the Node class constructor take as parameters in LinkedStack?",
+      "options": {
+        "A": "element, next, and size",
+        "B": "element, next, and head",
+        "C": "element and next",
+        "D": "element, head, and next"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "The Node class has instance variables element and next, which are the parameters for the constructor. (Source Page: [6])",
+      "source_pages": [
+        "6"
+      ]
+    },
+    {
+      "question": "How many instance variables does the Node class have in LinkedStack?",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The Node class has two instance variables, element and next. (Source Page: [6])",
+      "source_pages": [
+        "6"
+      ]
+    },
+    {
+      "question": "What does the top method return in a nonempty stack?",
+      "options": {
+        "A": "The size of the stack",
+        "B": "The element at the top of the stack",
+        "C": "The next node of the top element",
+        "D": "The node at the bottom of the stack"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The top method returns the element at the top of the stack, which is self.head.element. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What does the top method raise if the stack is empty?",
+      "options": {
+        "A": "Full exception",
+        "B": "Empty exception",
+        "C": "Exception",
+        "D": "ValueError"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The top method raises an Empty exception if the stack is empty. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "How many slots are in a node to streamline memory usage in LinkedStack?",
+      "options": {
+        "A": "1",
+        "B": "10",
+        "C": "3",
+        "D": "2"
+      },
+      "correct_answer": "D",
+      "difficulty": "Easy",
+      "explanation": "A node has 2 slots to streamline memory usage. (Source Page: [6])",
+      "source_pages": [
+        "6"
+      ]
+    },
+    {
+      "question": "What happens when the stack is empty in the top method of LinkedStack?",
+      "options": {
+        "A": "It returns the size of the stack",
+        "B": "It raises a KeyError",
+        "C": "It raises an Empty exception",
+        "D": "It removes the top element"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "The top method raises an Empty exception if the stack is empty. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "How much time do the operations in LinkedStack complete in worst-case?",
+      "options": {
+        "A": "Amortized constant time",
+        "B": "Worst-case constant time",
+        "C": "Best-case constant time",
+        "D": "Average constant time"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The operations in LinkedStack complete in worst-case constant time. (Source Page: [8])",
+      "source_pages": [
+        "8"
+      ]
+    },
+    {
+      "question": "What is the purpose of the top method in LinkedStack?",
+      "options": {
+        "A": "To return the size of the stack",
+        "B": "To return the element at the top of the stack",
+        "C": "To remove the top element",
+        "D": "To add a new element"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The top method returns the element at the top of the stack without removing it. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What does the head variable reference in a nonempty stack of LinkedStack?",
+      "options": {
+        "A": "The top element",
+        "B": "The next node",
+        "C": "The size of the stack",
+        "D": "The bottom element"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "In a nonempty stack, self.head references the top element. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What happens when the top element is removed in LinkedStack?",
+      "options": {
+        "A": "The head variable is not updated",
+        "B": "The head variable is updated and the next node is set to the top node",
+        "C": "The size of the stack is not updated",
+        "D": "The size of the stack is updated but the head variable is not updated"
+      },
+      "correct_answer": "B",
+      "difficulty": "Hard",
+      "explanation": "When the top element is removed, the head variable is updated and the next node is set to the top node, and the size of the stack is updated. (Source Page: [8])",
+      "source_pages": [
+        "8"
+      ]
+    },
+    {
+      "question": "What exception is raised when the stack is empty in the pop method of LinkedStack?",
+      "options": {
+        "A": "KeyError",
+        "B": "Empty exception",
+        "C": "ValueError",
+        "D": "Exception"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The pop method raises an Empty exception if the stack is empty. (Source Page: [8])",
+      "source_pages": [
+        "8"
+      ]
+    },
+    {
+      "question": "What is the purpose of the pop method in LinkedStack?",
+      "options": {
+        "A": "To add a new element",
+        "B": "To remove and return the top element",
+        "C": "To return the size of the stack",
+        "D": "To return the element at the top of the stack"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The pop method removes and returns the top element. (Source Page: [8])",
+      "source_pages": [
+        "8"
+      ]
+    },
+    {
+      "question": "What does the is_empty method check in LinkedStack?",
+      "options": {
+        "A": "If the stack is full",
+        "B": "If the stack is empty",
+        "C": "If the top element is None",
+        "D": "If the size of the stack is 0"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The is_empty method checks if the stack is empty. (Source Page: [8])",
+      "source_pages": [
+        "8"
+      ]
+    },
+    {
+      "question": "What operation is represented by the top method in LinkedStack?",
+      "options": {
+        "A": "Last-In-First-Out (LIFO)",
+        "B": "First-In-First-Out (FIFO)",
+        "C": "Push",
+        "D": "Pop"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The top method represents the Last-In-First-Out (LIFO) operation. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What is the return value of the top method in an empty stack of LinkedStack?",
+      "options": {
+        "A": "The size of the stack",
+        "B": "The element at the top of the stack",
+        "C": "The next node",
+        "D": "Nothing"
+      },
+      "correct_answer": "D",
+      "difficulty": "Easy",
+      "explanation": "In an empty stack, the top method returns nothing. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What happens when the top method is called in a nonempty stack of LinkedStack?",
+      "options": {
+        "A": "It raises an Empty exception",
+        "B": "It returns the element at the top of the stack",
+        "C": "It returns the size of the stack",
+        "D": "It removes the top element"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "In a nonempty stack, the top method returns the element at the top of the stack. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    },
+    {
+      "question": "What is the purpose of the LinkedStack class in the context of this chapter?",
+      "options": {
+        "A": "To demonstrate an application of the Node class",
+        "B": "To compare the performance of different stack implementations",
+        "C": "None of the above",
+        "D": "To provide a general-purpose stack implementation"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The LinkedStack class is used to compare the performance of different stack implementations. (Source Page: [7])",
+      "source_pages": [
+        "7"
+      ]
+    }
+  ]
+}

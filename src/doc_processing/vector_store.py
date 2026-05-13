@@ -79,7 +79,7 @@ class VectorStore:
 
     def load(self, pdf_path):
         col = self._get_or_create_collection(pdf_path)
-        result = col.get(include=["documents", "metadatas"])
+        result = col.get(include=["documents", "metadatas", "embeddings"])
 
         combined = sorted(
             zip(result["metadatas"], result["documents"], result["embeddings"]),
@@ -104,7 +104,7 @@ class VectorStore:
         """
         col = self._get_or_create_collection(pdf_path)
         results = col.query(
-                query_embedding = [query_embedding],
+                query_embeddings = [query_embedding],
                 n_results = top_k,
                 include=["documents", "metadatas"] 
         )

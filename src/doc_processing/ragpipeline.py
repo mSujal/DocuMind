@@ -57,7 +57,7 @@ class RAGPipeline():
 
     def _is_noise_question(self, q):
         # mostly cross reference 
-        nose_patterns = [
+        noise_patterns = [
             r'\bpage\s+\d+\b',  # 'what page discusses...'
             r'bsection\s+\d+\.\d+\b', # 'which section...' 
             r'\bchapter\s+\d+\b', # 'see chapter...'
@@ -199,7 +199,7 @@ class RAGPipeline():
             parsed   = self._parse_mcq_response(raw_response, question)
             unique_qs = self._deduplicate_mcqs(parsed["questions"])
 
-            unique_qs = [q for q in unique_qs if not self._is_noise_questions(q)]
+            unique_qs = [q for q in unique_qs if not self._is_noise_question(q)]
             if self.mcq_store and unique_qs:
                 self.mcq_store.store(self.pdf_path, unique_qs)
 
