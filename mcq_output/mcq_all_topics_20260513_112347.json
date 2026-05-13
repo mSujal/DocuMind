@@ -1,0 +1,319 @@
+{
+  "topic": "all_topics",
+  "generated_at": "2026-05-13T11:23:47",
+  "pdf_path": "/home/sujal/Downloads/os_chapter1.pdf",
+  "questions": [
+    {
+      "question": "What is the purpose of studying single-CPU operating systems?",
+      "options": {
+        "A": "To learn about virtualization",
+        "B": "To understand protection mechanisms",
+        "C": "To learn about the basic principles of operating systems",
+        "D": "To discuss advanced topics"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The question requires understanding of the context provided, which states that the basic principles of single-CPU operating systems have been studied.",
+      "source_pages": []
+    },
+    {
+      "question": "What are some examples of threats discussed in Chap 9 of the study?",
+      "options": {
+        "A": "Protection mechanisms and security models",
+        "B": "Viruses and worms",
+        "C": "Cloud computing and distributed systems",
+        "D": "Multicores and parallel computers"
+      },
+      "correct_answer": "B",
+      "difficulty": "Hard",
+      "explanation": "The question requires specific knowledge of Chap 9, which covers operating system security, including threats.",
+      "source_pages": []
+    },
+    {
+      "question": "What do the abbreviations 'm' and 'μ' represent in relation to time measurement?",
+      "options": {
+        "A": "Milli and micro seconds",
+        "B": "Micro and milli seconds",
+        "C": "Seconds and milliseconds",
+        "D": "Hours and minutes"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "This question requires understanding the context provided, which explains the usage of 'm' and 'μ'.",
+      "source_pages": []
+    },
+    {
+      "question": "What is covered in Chap 8 of the study?",
+      "options": {
+        "A": "Basic principles of single-CPU operating systems",
+        "B": "Advanced topics, including multiprocessor systems",
+        "C": "Protection mechanisms and security models",
+        "D": "Virtualization"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "The question requires knowledge of the context provided, which states that Chap 8 covers advanced topics.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the main program of most C programs contained within?",
+      "options": {
+        "A": "argc, argv, envp",
+        "B": "main, argc, argv, envp",
+        "C": "main, main, argc, argv, envp",
+        "D": "argc, argv, envp, main"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The question requires understanding of the context provided, which gives an example of the main program of a C program.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the typical unit for measuring mass?",
+      "options": {
+        "A": "Byte",
+        "B": "Bit",
+        "C": "Kilobyte",
+        "D": "Terabyte"
+      },
+      "correct_answer": "A",
+      "difficulty": "Medium",
+      "explanation": "This question requires understanding of the context provided, which discusses the size of a 1-TB database.",
+      "source_pages": []
+    },
+    {
+      "question": "What is an example of a 100-ps clock tick time in terms of seconds?",
+      "options": {
+        "A": "10−12 seconds",
+        "B": "10−10 seconds",
+        "C": "10−12 seconds is a choice but 10^−10 seconds",
+        "D": "10^+10 seconds"
+      },
+      "correct_answer": "C",
+      "difficulty": "Hard",
+      "explanation": "The question requires understanding the conversion time from pico-seconds to seconds.",
+      "source_pages": []
+    },
+    {
+      "question": "What does the term 'cloud computing' refer to in the context of this study?",
+      "options": {
+        "A": "A type of cloud storage system",
+        "B": "A virtualization solution",
+        "C": "Distributed systems",
+        "D": "Advanced topics discussed in Chap 8"
+      },
+      "correct_answer": "B",
+      "difficulty": "Easy",
+      "explanation": "The question requires understanding of the context provided, which discusses the relation between virtualization and cloud computing.",
+      "source_pages": []
+    },
+    {
+      "question": "What does Chap 7 of the study cover?",
+      "options": {
+        "A": "Advanced topics, including multiprocessor systems",
+        "B": "Basic principles of single-CPU operating systems",
+        "C": "Virtualization",
+        "D": "Operating system security"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The question requires knowledge of the context provided, which states that Chap 7 covers virtualization.",
+      "source_pages": []
+    },
+    {
+      "question": "What is an example of a 1-TB database occupying in terms of bytes?",
+      "options": {
+        "A": "10^16 bytes",
+        "B": "10^12 bytes",
+        "C": "10^8 bytes",
+        "D": "10^4 bytes"
+      },
+      "correct_answer": "B",
+      "difficulty": "Hard",
+      "explanation": "The question requires understanding the conversion size from terabytes (TB) to bytes.",
+      "source_pages": []
+    },
+    {
+      "question": "What does argc represent in a C program?",
+      "options": {
+        "A": "The command line arguments' count",
+        "B": "The number of environment variables",
+        "C": "The program name",
+        "D": "The time taken by the program"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "This question requires understanding of the context provided, which explains the argc variable.",
+      "source_pages": []
+    },
+    {
+      "question": "What is an example of a parallel computer in this study?",
+      "options": {
+        "A": "Single-core system",
+        "B": "Multiprocessor system",
+        "C": "Distributed system",
+        "D": "Virtualized system"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "The question requires knowledge of the context provided, which states that parallel computers are covered in Chap 8.",
+      "source_pages": []
+    },
+    {
+      "question": "What are the typical units of distance measurement?",
+      "options": {
+        "A": "Meter and kilometer",
+        "B": "Second and hour",
+        "C": "Byte and terabyte",
+        "D": "Millisecond and microsecond"
+      },
+      "correct_answer": "A",
+      "difficulty": "Medium",
+      "explanation": "This question requires understanding of basic measurement units.",
+      "source_pages": []
+    },
+    {
+      "question": "What does Chap 1 of the study cover?",
+      "options": {
+        "A": "Basic principles of operating systems",
+        "B": "Advanced topics",
+        "C": "Operating system security",
+        "D": "Cloud computing"
+      },
+      "correct_answer": "A",
+      "difficulty": "Easy",
+      "explanation": "The question requires knowledge of the context provided, which introduces Chap 1.",
+      "source_pages": []
+    },
+    {
+      "question": "What does distributed system refer to in this study?",
+      "options": {
+        "A": "A type of virtualization solution",
+        "B": "A type of parallel computing system",
+        "C": "A system consisting of multiple computers connected by a network",
+        "D": "A system that runs on a single core"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The question requires understanding of the context provided, which discusses distributed systems in Chap 8.",
+      "source_pages": []
+    },
+    {
+      "question": "What does 'C' in C programs typically denote?",
+      "options": {
+        "A": "The compiler used for compilation",
+        "B": "Character in the character set",
+        "C": "Command-line parameters in the main program",
+        "D": "Command-line arguments in the main program"
+      },
+      "correct_answer": "D",
+      "difficulty": "Easy",
+      "explanation": "The question requires understanding of the context provided, which shows an example of a C program.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the time interval between two adjacent '1-TB database' entries?",
+      "options": {
+        "A": "10 seconds",
+        "B": "10^-10 seconds",
+        "C": "10^−12 seconds",
+        "D": "10^-15 seconds"
+      },
+      "correct_answer": "C",
+      "difficulty": "Hard",
+      "explanation": "The question requires understanding the relation between time intervals and database size.",
+      "source_pages": []
+    },
+    {
+      "question": "What are the units of time measurement? Seconds, milliseconds, micro-seconds or years, days and hours",
+      "options": {
+        "A": "1, 2, 3",
+        "B": "2, 3, 4",
+        "C": "1, 2, 3",
+        "D": "3, 4, 5"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "This question requires understanding of basic time measurement units.",
+      "source_pages": []
+    },
+    {
+      "question": "What are the abbreviations 'm' and 'μ' used in this context for?",
+      "options": {
+        "A": "Measuring angles and lengths",
+        "B": "Measuring mass and volume",
+        "C": "Measuring time",
+        "D": "Measuring distance and speed"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "The question requires understanding the context provided, which explains the usage of 'm' and 'μ'.",
+      "source_pages": []
+    },
+    {
+      "question": "What does the variable 'argc' represent?",
+      "options": {
+        "A": "Number of seconds since the start of the epoch",
+        "B": "Time elapsed since the last second",
+        "C": "Command line arguments count",
+        "D": "Number of bytes in the database"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "The question requires knowledge of the context provided.",
+      "source_pages": []
+    },
+    {
+      "question": "What is the correct way to read '10^−12 seconds' out loud?",
+      "options": {
+        "A": "Ten to the power of negative twelve seconds",
+        "B": "Zero raised to the power of negative twelve seconds",
+        "C": "3 to the power of negative twelve seconds",
+        "D": "None of the above"
+      },
+      "correct_answer": "A",
+      "difficulty": "Hard",
+      "explanation": "This question requires understanding the notation used.",
+      "source_pages": []
+    },
+    {
+      "question": "What does the Chap 8 discussion on distributed systems focus on?",
+      "options": {
+        "A": "Protection mechanisms",
+        "B": "Operating system security",
+        "C": "Performance optimization",
+        "D": "Scalability"
+      },
+      "correct_answer": "C",
+      "difficulty": "Medium",
+      "explanation": "The question requires knowledge of the context provided, which discusses the Chap 7 discussion on virtualization.",
+      "source_pages": []
+    },
+    {
+      "question": "What does Chap 9 of the study cover?",
+      "options": {
+        "A": "Advanced topics",
+        "B": "Operating system security",
+        "C": "Cloud computing",
+        "D": "Virtualization"
+      },
+      "correct_answer": "B",
+      "difficulty": "Medium",
+      "explanation": "The question requires knowledge of the context provided, which states that Chap 9 covers operating system security.",
+      "source_pages": []
+    },
+    {
+      "question": "How many command line arguments would the example on page 56 have?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_answer": "C",
+      "difficulty": "Easy",
+      "explanation": "This question requires understanding of the context provided, which gives an example of the main program of a C program.",
+      "source_pages": []
+    }
+  ]
+}
